@@ -1404,7 +1404,7 @@
                 <button id="cvZoomOut" class="cv-control-btn" aria-label="Zoom out">−</button>
                 <span class="cv-zoom-display" id="cvZoomDisplay">100%</span>
                 <button id="cvZoomIn" class="cv-control-btn" aria-label="Zoom in">+</button>
-                <button id="cvDownload" class="cv-download-btn" title="Download image" aria-label="Download image">
+                <button id="cvDownload" class="cv-download-btn" title="Download PDF" aria-label="Download PDF">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M12 3v10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
                         <path d="M8.5 10.5L12 14l3.5-3.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1425,7 +1425,7 @@
                         <rect x="2" y="4" width="20" height="16" rx="3" fill="#ffffff" stroke="#EA4335" stroke-width="2"/>
                         <path d="M3 7l9 7 9-7" fill="none" stroke="#EA4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <span>weijianloh40@gmail.com</span>
+                    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ee9fbf7f4f7fff0f2f1f6aaaedef9f3fff7f2b0fdf1f3">[email&#160;protected]</a></span>
                 </div>
                 <div class="contact-item">
                     <svg class="contact-icon icon-iphone" viewBox="0 0 24 24" aria-hidden="true">
@@ -1466,7 +1466,7 @@
         </div>
     </footer>
     
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Smooth scroll function
         function scrollToSection(sectionId) {
             document.getElementById(sectionId).scrollIntoView({
@@ -1549,15 +1549,15 @@
                 render();
             };
             downloadBtn.onclick = () => {
-                // Force image download
+                // Download PDF version of CV
                 const link = document.createElement('a');
-                link.href = 'https://github.com/Wi-Jan/portfolio-images/raw/main/Loh%20Wei%20Jian%20CV.png';
-                link.download = 'Loh_Wei_Jian_CV.png';
+                link.href = 'https://github.com/Wi-Jan/portfolio-images/raw/main/Loh%20Wei%20Jian%20CV.pdf';
+                link.download = 'Loh_Wei_Jian_CV.pdf';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
             };
-            downloadBtn.onmouseenter = () => { downloadBtn.title = 'Download image'; };
+            downloadBtn.onmouseenter = () => { downloadBtn.title = 'Download PDF'; };
 
             closeBtn.addEventListener('click', closeCvModal);
 
@@ -1889,10 +1889,10 @@
         });
 
         indicators.forEach(indicator => {
-            indicator.addEventListener('click', () => {
-                currentIndex = parseInt(indicator.dataset.slide);
-                updateCarousel(currentIndex);
-            });
+            indicator.addEventListener('click', () => {                
+              currentIndex = parseInt(indicator.dataset.slide);
+              updateCarousel(currentIndex);
+              });
         });
 
         // Initial load

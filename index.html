@@ -278,7 +278,7 @@
 
         /* Sections - Always visible by default */
         .section {
-            padding: 80px 20px;
+            padding: 60px 20px;
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
             margin: 3rem 0;
             border-radius: 25px;
@@ -347,7 +347,7 @@
         .section h2 {
             text-align: center;
             font-size: 2.8rem;
-            margin-bottom: 3.5rem;
+            margin-bottom: 2rem;
             color: #1a1a2e;
             position: relative;
             font-weight: 300;
@@ -515,8 +515,8 @@
         /* Grid layouts for other sections */
         .grid {
             display: grid;
-            gap: 2.5rem;
-            margin: 3rem 1.5rem 0 1.5rem;
+            gap: 2.0rem;
+            margin: 1.5rem 1.5rem 0 1.5rem;
         }
 
         .grid-2 {
@@ -583,6 +583,9 @@
             cursor: pointer;
             background: white;
             position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         
         @media (max-width: 768px) {
@@ -604,15 +607,6 @@
             opacity: 0;
             transition: opacity 0.3s ease;
             z-index: 1;
-        }
-
-        .photography-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-            transition: transform 0.3s ease;
         }
 
         .photography-item:hover {
@@ -803,18 +797,27 @@
 
         .ig-content-placeholder {
             background: linear-gradient(135deg, #6663ff, #ac7ee9);
-            padding: 2.5rem 3rem;
+            padding: 0.35rem 0.35rem 0.8rem 0.35rem;
             border-radius: 12px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
             border: none;
-            max-width: 400px;
+            max-width: 480px;
             width: 100%;
             color: white;
             text-decoration: none;
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .ig-content-placeholder p { color: rgba(255,255,255,0.9); font-size: 1rem; margin-bottom: 0; }
+        .ig-preview-img {
+            width: 100%;
+            max-height: 340px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .ig-content-placeholder p { color: rgba(255,255,255,0.9); font-size: 0.82rem; margin-bottom: 0; }
 
         .ig-content-placeholder p:last-child {
             margin-bottom: 0;
@@ -976,6 +979,18 @@
             display: inline-block;
         }
 
+        .contact-link {
+            text-decoration: none; 
+            color: white;        
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-link:visited {
+            color: white;
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -1054,7 +1069,7 @@
             
             .section {
                 margin: 1rem 0;
-                padding: 40px 20px;
+                padding: 60px 20px;
                 border-radius: 20px;
             }
             
@@ -1190,6 +1205,148 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* ── Photo Slider ── */
+        .photo-slider-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 5px 0 50px;
+        }
+
+        .photo-slider-track {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            transition: none; 
+            position: relative;
+            height: 480px;
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); 
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        .photo-slide {
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            border-radius: 18px;
+            transition: all 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+            flex: 0 0 100%;
+            backface-visibility: hidden;
+            will-change: transform, opacity;
+            transform: translateZ(0);
+        }
+
+        /* Active / centre slide */
+        .photo-slide.ps-active {
+            width: 70%;
+            height: 480px;
+            z-index: 3;
+            filter: none;
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* One step left */
+        .photo-slide.ps-prev {
+            width: 19%;
+            height: 380px;
+            z-index: 2;
+            filter: blur(0px) grayscale(40%);
+            opacity: 0.65;
+            transform: translateX(calc(-155% - 10px)) scale(0.92);
+        }
+
+        /* One step right */
+        .photo-slide.ps-next {
+            width: 19%;
+            height: 380px;
+            z-index: 2;
+            filter: blur(0px) grayscale(40%);
+            opacity: 0.65;
+            transform: translateX(calc(155% + 10px)) scale(0.92);
+        }
+
+        /* Hidden (further slides) */
+        .photo-slide.ps-hidden {
+            width: 10%;
+            height: 100px;
+            z-index: 1;
+            filter: blur(8px) grayscale(60%);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Nav buttons */
+        .photo-slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-60%);
+            z-index: 10;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255,255,255,0.9);
+            color: #1a1a2e;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .photo-slider-btn:hover {
+            background: white;
+            transform: translateY(-60%) scale(1.12);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+        }
+
+        .photo-slider-prev { left: 10px; }
+        .photo-slider-next { right: 10px; }
+
+        /* Dot indicators */
+        .photo-slider-dots {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .photo-slider-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(102,126,234,0.35);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .photo-slider-dot.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .photo-slider-track { height: 280px; }
+            .photo-slide.ps-active  { width: 70%; height: 260px; }
+            .photo-slide.ps-prev    { width: 26%; height: 200px; transform: translateX(calc(-68% - 6px)) scale(0.9); }
+            .photo-slide.ps-next    { width: 26%; height: 200px; transform: translateX(calc(68% + 6px)) scale(0.9); }
+            .photo-slider-btn { width: 36px; height: 36px; font-size: 1rem; }
+        }
 </style>
 </head>
 <body>
@@ -1211,8 +1368,11 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <figure class="profile-portrait">
-                <img src="https://github.com/Wi-Jan/portfolio-images/raw/main/Wei%20Jian.png" alt="Portrait of Wei Jian"/>
+            <figure class="profile-portrait"
+                style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/Wei%20Jian.png'); 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat;">
             </figure>
             <div class="hero-text">
                 <h1>LOH WEI JIAN</h1>
@@ -1247,8 +1407,11 @@
                         </p>
                         <div class="date">Year 2 Semester 2</div>
                     </div>
-                    <div class="project-image">
-                        <img src="https://github.com/Wi-Jan/portfolio-images/raw/main/Design%20of%20Spur%20Gear%20Speed%20Reducer.png" alt="Project 1 Poster">
+                    <div class="project-image"
+                        style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/Design%20of%20Spur%20Gear%20Speed%20Reducer.png');
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;">
                     </div>
                 </div>
 
@@ -1262,8 +1425,11 @@
                         </p>
                         <div class="date">Year 2 Semester 1</div>
                     </div>
-                    <div class="project-image">
-                        <img src="https://github.com/Wi-Jan/portfolio-images/raw/main/MECHA%203.7.pdf.png" alt="Project 2 Poster">
+                    <div class="project-image"
+                        style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/MECHA%203.7.pdf.png');
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;">
                     </div>
                 </div>
 
@@ -1277,8 +1443,11 @@
                         </p>
                         <div class="date">Year 2 Semester 1</div>
                     </div>
-                    <div class="project-image">
-                        <img src="https://github.com/Wi-Jan/portfolio-images/raw/main/MOSQUARIUM%20POSTER.png" alt="Project 3 Poster">
+                    <div class="project-image"
+                        style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/MOSQUARIUM%20POSTER.png');
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;">
                     </div>
                 </div>
             </div>
@@ -1306,26 +1475,24 @@
         <!-- Photography Section -->
         <section id="photography" class="section">
             <h2 class="animate-on-scroll fade-up">Photography Portfolio</h2>
-            <p style="text-align: center; margin-bottom: 2rem; color: #666;" class="animate-on-scroll fade-up">Hobbyist Photographer • Freelance Experience</p>
-            <div class="grid grid-3">
-                <div class="photography-item animate-on-scroll fade-left">
-                    <img src="https://github.com/Wi-Jan/portfolio-images/raw/main/DSC_4948.jpg" alt="Photography 1">
+            <p style="text-align: center; margin-bottom: 0.5rem; color: #666;" class="animate-on-scroll fade-up">Hobbyist Photographer • Freelance Experience</p>
+
+            <!-- Photo Slider -->
+            <div class="photo-slider-wrapper animate-on-scroll fade-up">
+                <div class="photo-slider-track" id="photoSliderTrack">
+                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/DSC_4948.jpg')"></div>
+                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/61931CBB-6984-4C01-9FAC-E36FD29BF403.JPG')"></div>
+                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/2556554B-5D0D-4C0A-B2CA-5E36C0896EBC.JPG')"></div>
+                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0589.jpeg')"></div>
+                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0032.JPG')"></div>
+                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0545.jpg')"></div>
+                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0661.jpg')"></div>
+                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0797.jpg'); background-position: center 37%;"></div>
+                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_1058.jpg')"></div>
                 </div>
-                <div class="photography-item animate-on-scroll fade-up">
-                    <img src="https://github.com/Wi-Jan/portfolio-images/raw/main/61931CBB-6984-4C01-9FAC-E36FD29BF403.JPG" alt="Photography 2">
-                </div>
-                <div class="photography-item animate-on-scroll fade-right">
-                    <img src="https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0037.JPG" alt="Photography 3">
-                </div>
-                <div class="photography-item animate-on-scroll fade-left">
-                    <img src="https://github.com/Wi-Jan/portfolio-images/raw/main/2556554B-5D0D-4C0A-B2CA-5E36C0896EBC.JPG" alt="Photography 4">
-                </div>
-                <div class="photography-item animate-on-scroll fade-up">
-                    <img src="https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0589.jpeg" alt="Photography 5">
-                </div>
-                <div class="photography-item animate-on-scroll fade-right">
-                    <img src="https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0032.JPG" alt="Photography 6">
-                </div>
+                <button class="photo-slider-btn photo-slider-prev" id="photoSliderPrev" aria-label="Previous photo">&#8592;</button>
+                <button class="photo-slider-btn photo-slider-next" id="photoSliderNext" aria-label="Next photo">&#8594;</button>
+                <div class="photo-slider-dots" id="photoSliderDots"></div>
             </div>
         </section>
 
@@ -1343,6 +1510,9 @@
                 <div class="design-carousel-item">
                     <a href="https://www.instagram.com/esum_official" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
                         <div class="ig-content-placeholder">
+                            <img class="ig-preview-img"
+                                src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/Screenshot%202026-04-11%20172539.png"
+                                alt="Design preview for @esum_official" />
                             <h3 class="ig-account-name">@esum_official</h3>
                             <p class="ig-account-title">Engineering Society of Universiti Malaya</p>
                         </div>
@@ -1421,11 +1591,13 @@
             <h2 style="color: white; margin-bottom: 2rem;">Get In Touch</h2>
             <div class="contact-info">
                 <div class="contact-item">
-                    <svg class="contact-icon icon-gmail" viewBox="0 0 24 24" aria-hidden="true">
-                        <rect x="2" y="4" width="20" height="16" rx="3" fill="#ffffff" stroke="#EA4335" stroke-width="2"/>
-                        <path d="M3 7l9 7 9-7" fill="none" stroke="#EA4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ee9fbf7f4f7fff0f2f1f6aaaedef9f3fff7f2b0fdf1f3">[email&#160;protected]</a></span>
+                    <a class="contact-link" href="mailto:weijianloh40@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <svg class="contact-icon icon-gmail" viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="2" y="4" width="20" height="16" rx="3" fill="#ffffff" stroke="#EA4335" stroke-width="2"/>
+                            <path d="M3 7l9 7 9-7" fill="none" stroke="#EA4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>weijianloh40@gmail.com</span>
+                    </a>
                 </div>
                 <div class="contact-item">
                     <svg class="contact-icon icon-iphone" viewBox="0 0 24 24" aria-hidden="true">
@@ -1898,6 +2070,100 @@
         // Initial load
         updateCarousel(currentIndex);
     });
+
+    // Preload all photo slider images
+    (function() {
+        const urls = [
+            'https://github.com/Wi-Jan/portfolio-images/raw/main/DSC_4948.jpg',
+            'https://github.com/Wi-Jan/portfolio-images/raw/main/61931CBB-6984-4C01-9FAC-E36FD29BF403.JPG',
+            'https://github.com/Wi-Jan/portfolio-images/raw/main/2556554B-5D0D-4C0A-B2CA-5E36C0896EBC.JPG',
+            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0589.jpeg',
+            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0032.JPG',
+            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0545.jpg',
+            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0661.jpg',
+            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0797.jpg',
+            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_1058.jpg'
+        ];
+        urls.forEach(url => { const img = new Image(); img.src = url; });
+    })();
+
+    (function() {
+        const track   = document.getElementById('photoSliderTrack');
+        const prevBtn = document.getElementById('photoSliderPrev');
+        const nextBtn = document.getElementById('photoSliderNext');
+        const dotsEl  = document.getElementById('photoSliderDots');
+        const slides  = Array.from(track.querySelectorAll('.photo-slide'));
+        const total   = slides.length;
+        let current   = 0;
+
+        // Build dot indicators
+        slides.forEach((_, i) => {
+            const d = document.createElement('button');
+            d.className = 'photo-slider-dot' + (i === 0 ? ' active' : '');
+            d.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+            d.addEventListener('click', () => goTo(i));
+            dotsEl.appendChild(d);
+        });
+
+        function goTo(index) {
+            current = (index + total) % total;
+            renderSlides();
+        }
+
+        function renderSlides() {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('ps-active', 'ps-prev', 'ps-next', 'ps-hidden');
+                const diff = (i - current + total) % total;
+                if (diff === 0) {
+                    slide.classList.add('ps-active');
+                } else if (diff === 1) {
+                    slide.classList.add('ps-next');
+                } else if (diff === total - 1) {
+                    slide.classList.add('ps-prev');
+                } else {
+                    slide.classList.add('ps-hidden');
+                }
+            });
+            // update dots
+            dotsEl.querySelectorAll('.photo-slider-dot').forEach((d, i) => {
+                d.classList.toggle('active', i === current);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => goTo(current - 1));
+        nextBtn.addEventListener('click', () => goTo(current + 1));
+
+        // Click on side slides to navigate
+        slides.forEach((slide, i) => {
+            slide.addEventListener('click', () => {
+                if (slide.classList.contains('ps-prev')) goTo(current - 1);
+                else if (slide.classList.contains('ps-next')) goTo(current + 1);
+            });
+        });
+
+        // Touch/swipe support
+        let touchStartX = 0;
+        track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend', e => {
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(dx) > 40) dx < 0 ? goTo(current + 1) : goTo(current - 1);
+        }, { passive: true });
+
+        renderSlides();
+    })();
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                el.style.backgroundImage = `url('${el.dataset.bg}')`;
+                observer.unobserve(el);
+            }
+        });
+    });
+
+    document.querySelectorAll('.lazy-bg').forEach(el => observer.observe(el));
+
 </script>
 
 </body>

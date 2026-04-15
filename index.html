@@ -1564,29 +1564,131 @@
         </section>
     </div>
 
-    <!-- CV Modal Viewer -->
-    <div id="cvModal" class="cv-modal" aria-hidden="true" role="dialog" aria-label="CV viewer">
-        <div class="cv-modal-content" role="document">
-            <button id="cvClose" class="cv-close-btn" aria-label="Close CV viewer">×</button>
-            <div id="cvImageContainer" class="cv-image-container">
-                <img id="cvImage" src="https://github.com/Wi-Jan/portfolio-images/raw/main/Loh%20Wei%20Jian%20CV.png" alt="Loh Wei Jian CV"/>
-            </div>
-            <div class="cv-controls">
-                <button id="cvZoomOut" class="cv-control-btn" aria-label="Zoom out">−</button>
-                <span class="cv-zoom-display" id="cvZoomDisplay">100%</span>
-                <button id="cvZoomIn" class="cv-control-btn" aria-label="Zoom in">+</button>
-                <button id="cvDownload" class="cv-download-btn" title="Download PDF" aria-label="Download PDF">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M12 3v10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M8.5 10.5L12 14l3.5-3.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </div>
+<div class="cv-modal" id="cvModal">
+    <button class="cv-close-btn" onclick="closeCV()">&times;</button>
+    <div class="cv-modal-content">
+        <div class="cv-image-container" id="cvContainer">
+            <img alt="Loh Wei Jian CV" id="cvImage" src="https://github.com/Wi-Jan/portfolio-images/blob/main/Loh%20Wei%20Jian%20CV_page-0001.jpg?raw=true"/>
+        </div>
+        
+        <div class="cv-controls">
+            <button class="cv-control-btn" onclick="switchCVPage(1)" id="cvPg1">1</button>
+            <button class="cv-control-btn" onclick="switchCVPage(2)" id="cvPg2">2</button>
+            <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2); margin: 0 10px;"></div>
+            
+            <button class="cv-control-btn" onclick="zoomCV(-0.2)">−</button>
+            <span class="cv-zoom-display" id="zoomDisplay">100%</span>
+            <button class="cv-control-btn" onclick="zoomCV(0.2)">+</button>
+            <button class="cv-control-btn" onclick="resetZoom()">⟲</button>
+            
+            <a href="https://github.com/Wi-Jan/portfolio-images/blob/main/Loh%20Wei%20Jian%20CV.pdf?raw=true" class="cv-download-btn" download target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </a>
         </div>
     </div>
+</div>
 
-    <!-- Footer/Contact -->
+    <script>
+        // CV Viewer Logic - Back to your original behavior
+        const cvModal = document.getElementById('cvModal');
+        const cvImage = document.getElementById('cvImage');
+        const cvContainer = document.getElementById('cvContainer');
+        const zoomDisplay = document.getElementById('zoomDisplay');
+
+        let scale = 1;
+        let pointX = 0;
+        let pointY = 0;
+        let start = { x: 0, y: 0 };
+        let isDragging = false;
+
+        // The links for your pages
+        const cvPages = {
+            1: "https://github.com/Wi-Jan/portfolio-images/blob/main/Loh%20Wei%20Jian%20CV_page-0001.jpg?raw=true",
+            2: "https://github.com/Wi-Jan/portfolio-images/blob/main/Loh%20Wei%20Jian%20CV_page-0002.jpg?raw=true"
+        };
+
+        function openCV() {
+            cvModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            resetZoom();
+        }
+
+        function closeCV() {
+            cvModal.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        // New Function to switch pages without breaking the zoom/pan
+        function switchCVPage(pageNo) {
+            cvImage.src = cvPages[pageNo];
+            resetZoom();
+            // Visual feedback for buttons
+            document.getElementById('cvPg1').style.opacity = pageNo === 1 ? "1" : "0.5";
+            document.getElementById('cvPg2').style.opacity = pageNo === 2 ? "1" : "0.5";
+        }
+
+        function setTransform() {
+            cvImage.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
+            zoomDisplay.textContent = Math.round(scale * 100) + '%';
+            if (scale > 1) {
+                cvContainer.classList.add('can-pan');
+            } else {
+                cvContainer.classList.remove('can-pan');
+            }
+        }
+
+        function zoomCV(delta) {
+            const newScale = Math.min(Math.max(0.5, scale + delta), 4);
+            if (newScale !== scale) {
+                scale = newScale;
+                if (scale <= 1) {
+                    pointX = 0;
+                    pointY = 0;
+                }
+                setTransform();
+            }
+        }
+
+        function resetZoom() {
+            scale = 1;
+            pointX = 0;
+            pointY = 0;
+            setTransform();
+        }
+
+        // Your original Drag/Pan Logic
+        cvContainer.onmousedown = function(e) {
+            if (scale <= 1) return;
+            e.preventDefault();
+            start = { x: e.clientX - pointX, y: e.clientY - pointY };
+            isDragging = true;
+            cvContainer.classList.add('dragging');
+        };
+
+        window.onmousemove = function(e) {
+            if (!isDragging) return;
+            pointX = e.clientX - start.x;
+            pointY = e.clientY - start.y;
+            setTransform();
+        };
+
+        window.onmouseup = function() {
+            isDragging = false;
+            cvContainer.classList.remove('dragging');
+        };
+
+        // Your original Wheel Logic
+        cvContainer.onwheel = function(e) {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -0.2 : 0.2;
+            zoomCV(delta);
+        };
+
+        // Initialize button state
+        switchCVPage(1);
+    </script>
+
+<!-- Footer/Contact -->
     <footer id="contact">
         <div class="container">
             <h2 style="color: white; margin-bottom: 2rem;">Get In Touch</h2>

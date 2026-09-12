@@ -5,391 +5,323 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Loh Wei Jian — Mechanical Engineering · Photography · Design</title>
 <meta name="description" content="Portfolio of Loh Wei Jian, third-year Mechanical Engineering student at Universiti Malaya, Manufacturing Engineering Intern at Plexus, photographer and designer.">
-<meta name="theme-color" content="#0a0d16">
+<meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="Loh Wei Jian — Portfolio">
 <meta property="og:description" content="Mechanical Engineering student · Photographer · Designer">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0d16'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='30' fill='%23a596ff'%3EWJ%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='26' fill='%23fff'%3EWJ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp" imagesrcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait-500.webp 500w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp 1000w" imagesizes="(max-width: 900px) 40vw, 300px">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp" imagesrcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait-500.webp 500w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp 1000w" imagesizes="(max-width: 900px) 46vw, 340px">
 <style>
-/* ─────────────────────────────────────────────────────────────
-   DESIGN TOKENS
-   ───────────────────────────────────────────────────────────── */
+/* ────────────────────────────── tokens ────────────────────────────── */
 :root{
-  --bg:#0a0d16;            /* page ground */
-  --bg-2:#0f1320;          /* raised surface */
-  --bg-3:#151a2b;          /* hover surface */
-  --line:rgba(255,255,255,.08);
-  --line-2:rgba(255,255,255,.14);
-  --ink:#f3efe7;           /* primary text, warm paper */
-  --ink-2:#b9b6ad;         /* secondary text */
-  --ink-3:#7f7d78;         /* muted */
-  --acc:#a596ff;           /* violet accent */
-  --acc-2:#6d5cf0;
-  --acc-glow:rgba(139,120,255,.28);
-  --radius:18px;
-  --radius-s:12px;
-  --font-display:"Fraunces", Georgia, "Times New Roman", serif;
-  --font-body:"Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --bg:#f7f8fa;          /* page */
+  --bg-2:#eef1f5;        /* soft band */
+  --card:#ffffff;
+  --line:#e4e7ec;
+  --line-2:#d0d5dd;
+  --ink:#0f172a;         /* headings */
+  --ink-2:#334155;       /* body */
+  --ink-3:#64748b;       /* muted */
+  --acc:#1d4ed8;         /* blue */
+  --acc-2:#1e40af;
+  --acc-soft:#e8efff;
+  --ok:#16a34a;
+  --shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px -12px rgba(15,23,42,.12);
+  --shadow-2:0 2px 4px rgba(15,23,42,.05),0 24px 48px -20px rgba(15,23,42,.22);
+  --r:16px;--r-s:10px;
+  --fd:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;
+  --fb:"Figtree","Segoe UI",system-ui,sans-serif;
   --ease:cubic-bezier(.22,1,.36,1);
-  --nav-h:72px;
+  --nav:72px;
   --pad:clamp(20px,5vw,64px);
-  --maxw:1180px;
+  --maxw:1140px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{
-  font-family:var(--font-body);
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.6;
-  font-size:16px;
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
+body{font-family:var(--fb);background:var(--bg);color:var(--ink-2);font-size:17px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-::selection{background:var(--acc);color:#0a0d16}
-
-/* drafting-sheet grain + grid, painted once, fixed, cheap */
-.grain{
-  position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:
-    linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
-  background-size:72px 72px;
-  mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 100%);
-  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 100%);
-}
-.glow{
-  position:fixed;z-index:0;pointer-events:none;border-radius:50%;
-  filter:blur(90px);opacity:.55;
-}
-.glow-a{width:60vw;height:60vw;max-width:800px;max-height:800px;top:-20vw;right:-15vw;background:radial-gradient(circle,var(--acc-glow),transparent 65%)}
-.glow-b{width:50vw;height:50vw;max-width:640px;max-height:640px;bottom:-25vw;left:-20vw;background:radial-gradient(circle,rgba(80,120,255,.18),transparent 65%)}
-@media (max-width:760px){.glow{filter:blur(60px)}}
-
-main{position:relative;z-index:1}
+[hidden]{display:none!important}
+::selection{background:var(--acc);color:#fff}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
 
-/* ─────────────────────────────────────────────────────────────
-   TYPOGRAPHY
-   ───────────────────────────────────────────────────────────── */
-h1,h2,h3,.display{font-family:var(--font-display);font-weight:400;letter-spacing:-.01em;line-height:1.05}
-h2{font-size:clamp(2.1rem,4.6vw,3.6rem)}
-h3{font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.2}
-em.ac{font-style:italic;color:var(--acc);font-weight:300}
-.eyebrow{
-  font-family:var(--font-body);font-size:.72rem;font-weight:600;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:14px;margin-bottom:18px;
-}
-.eyebrow::before{content:"";width:28px;height:1px;background:var(--acc);display:inline-block}
-.eyebrow b{color:var(--acc);font-weight:600}
-.lede{color:var(--ink-2);font-size:clamp(1rem,1.3vw,1.15rem);max-width:60ch}
+h1,h2,h3,h4{font-family:var(--fd);color:var(--ink);letter-spacing:-.02em;line-height:1.15;font-weight:700}
+h2{font-size:clamp(1.9rem,3.6vw,2.7rem)}
+h3{font-size:clamp(1.15rem,1.7vw,1.35rem);font-weight:700}
+.label{font-family:var(--fd);font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);display:inline-flex;align-items:center;gap:10px;margin-bottom:14px}
+.label::before{content:"";width:22px;height:2px;background:var(--acc);border-radius:2px}
+.lede{color:var(--ink-2);max-width:62ch;font-size:clamp(1rem,1.2vw,1.1rem)}
+.muted{color:var(--ink-3)}
 
-/* ─────────────────────────────────────────────────────────────
-   NAV
-   ───────────────────────────────────────────────────────────── */
-.nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);
-  display:flex;align-items:center;
-  transform:translateY(0);transition:transform .45s var(--ease),background .3s,border-color .3s;
-  border-bottom:1px solid transparent;
-}
-.nav.scrolled{background:rgba(10,13,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;z-index:120;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--acc),#3b82f6);pointer-events:none}
+
+/* ────────────────────────────── nav ────────────────────────────── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav);display:flex;align-items:center;
+  background:rgba(255,255,255,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;
+  transition:transform .45s var(--ease),border-color .3s,box-shadow .3s}
+.nav.scrolled{border-color:var(--line);box-shadow:0 4px 20px -12px rgba(15,23,42,.15)}
 .nav.hidden{transform:translateY(-100%)}
-.nav .wrap{width:100%;display:flex;align-items:center;justify-content:space-between}
-.brand{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.02em;display:flex;align-items:baseline;gap:6px}
-.brand i{font-style:italic;color:var(--acc)}
+.nav .wrap{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--fd);font-weight:800;font-size:1.05rem;color:var(--ink);display:flex;align-items:center;gap:10px;white-space:nowrap;flex:0 0 auto}
+.brand i{width:32px;height:32px;border-radius:9px;background:var(--acc);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:.8rem;font-weight:800;letter-spacing:.02em}
 .links{display:flex;gap:2px;list-style:none}
-.links a{
-  display:block;padding:8px 14px;border-radius:999px;font-size:.86rem;font-weight:500;color:var(--ink-2);
-  transition:color .2s,background .2s;
-}
-.links a:hover,.links a.active{color:var(--ink);background:rgba(255,255,255,.06)}
-.burger{display:none;width:44px;height:44px;border-radius:12px;align-items:center;justify-content:center;flex-direction:column;gap:5px;margin-right:-8px}
-.burger span{width:20px;height:1.5px;background:var(--ink);transition:transform .35s var(--ease),opacity .2s}
-.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.links a{position:relative;display:block;padding:8px 10px;border-radius:8px;font-size:.86rem;white-space:nowrap;font-weight:500;color:var(--ink-2);transition:color .2s,background .2s}
+.links a:hover{color:var(--ink);background:var(--bg-2)}
+.links a.active{color:var(--acc);font-weight:600}
+.links a.active::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;border-radius:2px;background:var(--acc)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;white-space:nowrap;flex:0 0 auto;border-radius:999px;background:var(--ink);color:#fff;font-weight:600;font-size:.85rem;transition:background .2s,transform .2s var(--ease)}
+.nav-cta:hover{background:var(--acc);transform:translateY(-1px)}
+.burger{display:none;width:44px;height:44px;border-radius:10px;align-items:center;justify-content:center;flex-direction:column;gap:5px;margin-right:-8px}
+.burger span{width:20px;height:2px;border-radius:2px;background:var(--ink);transition:transform .35s var(--ease),opacity .2s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.menu{
-  position:fixed;inset:0;z-index:90;background:rgba(10,13,22,.96);
-  display:flex;flex-direction:column;justify-content:center;padding:0 var(--pad);
-  opacity:0;pointer-events:none;transition:opacity .35s;
-}
-.menu.open{opacity:1;pointer-events:auto}
-.menu a{
-  font-family:var(--font-display);font-size:clamp(2rem,9vw,3rem);padding:10px 0;color:var(--ink);
-  display:flex;align-items:baseline;gap:18px;border-bottom:1px solid var(--line);
-  transform:translateY(16px);opacity:0;transition:transform .5s var(--ease),opacity .4s;
-}
-.menu a small{font-family:var(--font-body);font-size:.7rem;letter-spacing:.2em;color:var(--acc);font-weight:600}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.menu{position:fixed;inset:var(--nav) 0 0 0;z-index:90;background:rgba(255,255,255,.97);padding:10px var(--pad) 40px;overflow:auto;
+  opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .3s,transform .4s var(--ease)}
+.menu.open{opacity:1;pointer-events:auto;transform:none}
+.menu a{display:flex;align-items:center;justify-content:space-between;padding:16px 4px;border-bottom:1px solid var(--line);font-family:var(--fd);font-weight:600;font-size:1.25rem;color:var(--ink);
+  transform:translateY(10px);opacity:0;transition:transform .45s var(--ease),opacity .35s}
+.menu a small{font-size:.72rem;font-weight:700;letter-spacing:.14em;color:var(--acc)}
 .menu.open a{transform:none;opacity:1}
-.menu.open a:nth-child(1){transition-delay:.05s}.menu.open a:nth-child(2){transition-delay:.09s}.menu.open a:nth-child(3){transition-delay:.13s}.menu.open a:nth-child(4){transition-delay:.17s}.menu.open a:nth-child(5){transition-delay:.21s}.menu.open a:nth-child(6){transition-delay:.25s}.menu.open a:nth-child(7){transition-delay:.29s}.menu.open a:nth-child(8){transition-delay:.33s}.menu.open a:nth-child(9){transition-delay:.37s}.menu.open a:nth-child(10){transition-delay:.41s}
-@media (max-width:900px){.links{display:none}.burger{display:flex}}
+.menu.open a:nth-child(1){transition-delay:.04s}.menu.open a:nth-child(2){transition-delay:.07s}.menu.open a:nth-child(3){transition-delay:.10s}.menu.open a:nth-child(4){transition-delay:.13s}.menu.open a:nth-child(5){transition-delay:.16s}.menu.open a:nth-child(6){transition-delay:.19s}.menu.open a:nth-child(7){transition-delay:.22s}.menu.open a:nth-child(8){transition-delay:.25s}.menu.open a:nth-child(9){transition-delay:.28s}
+@media (max-width:1180px){.brand em{display:none}}
+@media (max-width:960px){.links,.nav-cta{display:none}.burger{display:flex}.brand em{display:inline}}
 
-/* ─────────────────────────────────────────────────────────────
-   HERO
-   ───────────────────────────────────────────────────────────── */
-.hero{
-  min-height:100svh;display:grid;align-items:end;
-  padding-top:calc(var(--nav-h) + 24px);padding-bottom:0;position:relative;overflow:hidden;
-}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:end;width:100%}
-.hero-copy{align-self:center;padding-bottom:clamp(24px,6vh,72px)}
-.hero-kicker{display:inline-flex;max-width:100%;text-align:left;align-items:center;gap:10px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);
-  padding:8px 14px 8px 10px;border:1px solid var(--line-2);border-radius:999px;margin-bottom:28px;background:rgba(255,255,255,.03)}
-.hero-kicker .dot{width:8px;height:8px;border-radius:50%;background:#7CFF9B;box-shadow:0 0 0 4px rgba(124,255,155,.15)}
-.hero h1{font-size:clamp(3.4rem,10vw,7.6rem);line-height:.92;letter-spacing:-.03em}
-.hero h1 .l2{display:block;font-style:italic;font-weight:300;color:var(--acc);padding-left:.08em}
-.hero-sub{margin-top:26px;font-size:clamp(1rem,1.5vw,1.2rem);color:var(--ink-2);max-width:46ch}
-.hero-roles{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
-.hero-roles span::before{content:"— ";color:var(--acc)}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
-.btn{
-  display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:600;font-size:.92rem;
-  border:1px solid var(--line-2);color:var(--ink);transition:transform .25s var(--ease),background .25s,border-color .25s,color .25s;
-  background:rgba(255,255,255,.03);
-}
-.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28)}
-.btn.primary{background:var(--ink);color:#0a0d16;border-color:var(--ink)}
-.btn.primary:hover{background:#fff}
+/* ────────────────────────────── hero ────────────────────────────── */
+.hero{position:relative;padding:calc(var(--nav) + 48px) 0 0;overflow:hidden;background:#fff;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(800px 420px at 85% 10%,rgba(29,78,216,.10),transparent 60%),
+    radial-gradient(600px 400px at 10% 90%,rgba(59,130,246,.08),transparent 60%),
+    linear-gradient(rgba(15,23,42,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(15,23,42,.045) 1px,transparent 1px);
+  background-size:auto,auto,56px 56px,56px 56px;
+  -webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,56px);align-items:end;min-height:calc(100svh - var(--nav))}
+.hero-copy{padding:24px 0 clamp(48px,8vh,96px);align-self:center}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;border-radius:999px;background:var(--acc-soft);color:var(--acc-2);font-weight:600;font-size:.82rem;margin-bottom:24px}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(22,163,74,.15)}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02;letter-spacing:-.035em;font-weight:800}
+.hero h1 span{color:var(--acc)}
+.hero-sub{margin-top:22px;font-size:clamp(1.05rem,1.35vw,1.2rem);max-width:50ch;color:var(--ink-2)}
+.hero-roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.hero-roles span{padding:6px 12px;border-radius:999px;border:1px solid var(--line-2);background:#fff;font-size:.82rem;font-weight:600;color:var(--ink-2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;font-weight:600;font-size:.95rem;border:1px solid var(--line-2);background:#fff;color:var(--ink);
+  transition:transform .25s var(--ease),box-shadow .25s,background .2s,border-color .2s,color .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--ink-3)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn.primary:hover{background:var(--acc-2);border-color:var(--acc-2)}
 .btn svg{width:16px;height:16px}
-.hero-figure{position:relative;justify-self:end;align-self:end;height:min(74svh,700px);max-width:100%;display:flex;align-items:flex-end}
-.hero-figure::before{
-  content:"";position:absolute;inset:auto 6% -10% 6%;height:70%;border-radius:50%;
-  background:radial-gradient(ellipse at 50% 60%,var(--acc-glow),transparent 70%);filter:blur(30px);
-}
-.hero-figure img{position:relative;height:100%;width:auto;max-width:100%;object-fit:contain;object-position:bottom;
-  filter:drop-shadow(0 30px 50px rgba(0,0,0,.55));
-  -webkit-mask-image:linear-gradient(#000 82%,transparent 100%);mask-image:linear-gradient(#000 82%,transparent 100%)}
-.hero-meta{position:absolute;left:0;bottom:22%;transform:translateX(-58%);display:none}
-.scroll-cue{position:absolute;right:var(--pad);bottom:28px;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:10px}
-.scroll-cue::after{content:"";width:1px;height:44px;background:linear-gradient(var(--acc),transparent);animation:cue 2.2s var(--ease) infinite}
-@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-@media (max-width:480px){.hero-kicker{font-size:.66rem;letter-spacing:.1em;padding:7px 12px 7px 9px}}
+.hero-figure{position:relative;justify-self:center;align-self:end;width:min(100%,420px);margin:0}
+.hero-figure .panel{position:absolute;left:0;right:0;bottom:0;height:78%;border-radius:28px 28px 0 0;
+  background:linear-gradient(180deg,#e9efff 0%,#dbe6ff 100%);border:1px solid #d6e0ff;border-bottom:0}
+.hero-figure img{position:relative;height:min(68svh,620px);width:auto;max-width:100%;margin:0 auto;object-fit:contain;object-position:bottom;
+  filter:drop-shadow(0 24px 30px rgba(15,23,42,.22))}
+.hero-tag{position:absolute;left:-8px;bottom:22%;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-shadow:var(--shadow-2);font-size:.8rem;line-height:1.3}
+.hero-tag b{display:block;font-family:var(--fd);color:var(--ink);font-size:.88rem}
+.hero-tag.r{left:auto;right:-8px;bottom:48%}
 @media (max-width:900px){
-  .hero{align-items:start}
-  .hero .wrap{grid-template-columns:1fr;gap:0}
-  .hero-copy{order:2;align-self:start;padding-bottom:72px;padding-top:8px}
-  .hero-figure{order:1;justify-self:center;height:min(46svh,400px)}
-  .hero-figure img{-webkit-mask-image:linear-gradient(#000 78%,transparent 100%);mask-image:linear-gradient(#000 78%,transparent 100%)}
-  .hero h1{font-size:clamp(3rem,15vw,5rem)}
-  .scroll-cue{display:none}
+  .hero .wrap{grid-template-columns:1fr;min-height:0;gap:0}
+  .hero-copy{order:2;padding:28px 0 56px}
+  .hero-figure{order:1;width:min(74vw,320px)}
+  .hero-figure img{height:min(44svh,380px)}
+  .hero-tag{display:none}
 }
 
-/* page-load orchestration (hero only) */
-.rise{opacity:0;transform:translateY(22px);animation:rise .9s var(--ease) forwards}
-.rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.18s}.rise.d3{animation-delay:.28s}.rise.d4{animation-delay:.38s}.rise.d5{animation-delay:.48s}
+html.anim .rise{opacity:0;transform:translateY(18px);animation:rise .8s var(--ease) forwards}
+.rise.d1{animation-delay:.05s}.rise.d2{animation-delay:.15s}.rise.d3{animation-delay:.25s}.rise.d4{animation-delay:.35s}.rise.d5{animation-delay:.45s}
 @keyframes rise{to{opacity:1;transform:none}}
-.hero-figure{opacity:0;animation:figIn 1.2s var(--ease) .15s forwards}
-@keyframes figIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+html.anim .hero-figure{opacity:0;animation:figIn 1s var(--ease) .2s forwards}
+@keyframes figIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 
-/* ─────────────────────────────────────────────────────────────
-   SECTIONS & CARDS
-   ───────────────────────────────────────────────────────────── */
-section{padding:clamp(72px,10vw,128px) 0;position:relative}
-section + section{border-top:1px solid var(--line)}
-.sec-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
-.sec-head .num{font-family:var(--font-display);font-style:italic;font-size:clamp(3rem,7vw,5.5rem);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);user-select:none}
-@media (max-width:640px){.sec-head{grid-template-columns:1fr}.sec-head .num{display:none}}
+/* ────────────────────────────── sections ────────────────────────────── */
+section{padding:clamp(64px,9vw,112px) 0;position:relative}
+section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:clamp(32px,4.5vw,56px)}
+.sec-head p{margin-top:12px}
+.sec-head .n{font-family:var(--fd);font-weight:800;font-size:clamp(2.4rem,5vw,4rem);line-height:1;color:var(--line-2);user-select:none}
+@media (max-width:640px){.sec-head{grid-template-columns:1fr}.sec-head .n{display:none}}
 
-.card{
-  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
-  border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,3vw,32px);
-  position:relative;overflow:hidden;
-  transition:border-color .3s,transform .4s var(--ease);
-}
-.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
-  background:radial-gradient(600px 200px at var(--mx,50%) -20%,rgba(165,150,255,.12),transparent 60%);opacity:0;transition:opacity .4s}
-.card:hover{border-color:var(--line-2)}
-.card:hover::after{opacity:1}
-.chip{display:inline-flex;align-items:center;padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.02em;
-  border:1px solid var(--line-2);color:var(--ink-2);background:rgba(255,255,255,.03);white-space:nowrap}
-.chip.ac{color:var(--acc);border-color:rgba(165,150,255,.35);background:rgba(165,150,255,.08)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,2.6vw,28px);box-shadow:var(--shadow);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .3s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2);border-color:var(--line-2)}
+.chip{display:inline-flex;align-items:center;padding:6px 11px;border-radius:8px;font-size:.8rem;font-weight:600;background:var(--bg-2);color:var(--ink-2);white-space:nowrap;border:1px solid transparent}
+.chip.ac{background:var(--acc-soft);color:var(--acc-2)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.date{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.date{font-family:var(--fd);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
 
-/* reveal-on-scroll: transform/opacity only */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
 .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.rise,.hero-figure{animation:none;opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.rise,.hero-figure{animation:none;opacity:1;transform:none}}
 
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(28px,5vw,72px);align-items:start}
-.about-text{font-family:var(--font-display);font-size:clamp(1.35rem,2.3vw,1.9rem);line-height:1.35;font-weight:300;color:var(--ink)}
-.about-text em{font-style:italic;color:var(--acc)}
-.facts{display:grid;gap:0;border-top:1px solid var(--line)}
-.fact{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);font-size:.95rem}
-.fact b{font-weight:600;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);padding-top:4px}
-.fact span{color:var(--ink-2)}
+/* about */
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(28px,5vw,72px);align-items:start}
+.about-text{font-size:clamp(1.15rem,1.6vw,1.4rem);line-height:1.55;color:var(--ink);font-weight:500}
+.about-text b{color:var(--acc);font-weight:600}
+.about-text p + p{margin-top:16px;font-size:.92em;color:var(--ink-2);font-weight:400}
+.facts{border-top:1px solid var(--line)}
+.fact{display:grid;grid-template-columns:100px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.fact b{font-family:var(--fd);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);padding-top:4px}
 @media (max-width:820px){.about-grid{grid-template-columns:1fr}}
 
-/* EDUCATION */
+/* education */
 .edu{display:grid;gap:14px}
 .edu .card{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:start}
-.edu .card h3{margin-bottom:6px}
-.edu .card p{color:var(--ink-2)}
-.edu .chips{margin-top:16px}
+.edu h3{margin-bottom:4px}
+.edu .chips{margin-top:14px}
 @media (max-width:640px){.edu .card{grid-template-columns:1fr;gap:8px}}
 
-/* PROJECTS */
-.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.proj{padding:0;display:flex;flex-direction:column}
-.proj .poster{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0d1120;cursor:zoom-in}
-.proj .poster img{width:100%;height:100%;object-fit:cover;object-position:top;transform:scale(1.001);transition:transform 1.2s var(--ease)}
-.proj:hover .poster img{transform:scale(1.04)}
-.proj .poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,13,22,.85));pointer-events:none}
-.proj .poster .zoom{position:absolute;right:14px;bottom:14px;width:38px;height:38px;border-radius:50%;background:rgba(10,13,22,.7);border:1px solid var(--line-2);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
-.proj .poster .zoom svg{width:16px;height:16px}
-.proj .body{padding:clamp(20px,2.6vw,28px);display:grid;gap:12px}
-.proj .body .top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
-.proj p{color:var(--ink-2);font-size:.95rem}
-.proj ul{list-style:none;display:grid;gap:8px;color:var(--ink-2);font-size:.93rem}
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.proj{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.proj .poster{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--bg-2);cursor:zoom-in;border-bottom:1px solid var(--line)}
+.proj .poster img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 1.1s var(--ease)}
+.proj:hover .poster img{transform:scale(1.035)}
+.proj .zoom{position:absolute;right:12px;bottom:12px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.92);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink);box-shadow:var(--shadow)}
+.proj .zoom svg{width:16px;height:16px}
+.proj .body{padding:clamp(20px,2.6vw,26px);display:grid;gap:12px}
+.proj .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.proj .course{color:var(--ink-3);font-size:.92rem;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.proj ul{list-style:none;display:grid;gap:8px;font-size:.95rem}
 .proj li{padding-left:18px;position:relative}
-.proj li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:1px;background:var(--acc)}
-.proj .team{font-size:.8rem;color:var(--ink-3);border-top:1px solid var(--line);padding-top:12px}
-.proj.noimg{background:linear-gradient(160deg,rgba(165,150,255,.10),rgba(255,255,255,.02));justify-content:space-between}
-.proj.noimg .art{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.proj.noimg .art svg{width:60%;height:60%;opacity:.9}
-@media (max-width:760px){.projects{grid-template-columns:1fr}.proj .poster{aspect-ratio:3/2}.proj.noimg .art{aspect-ratio:auto;height:180px}}
+.proj li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:2px;border-radius:2px;background:var(--acc)}
+.proj .team{font-size:.82rem;color:var(--ink-3);border-top:1px solid var(--line);padding-top:12px}
+@media (max-width:760px){.projects{grid-template-columns:1fr}.proj .poster{aspect-ratio:3/2}}
 
-/* LEADERSHIP */
+/* leadership */
 .orgs{display:grid;gap:18px}
 .org{padding:0;overflow:hidden}
-.org .head{display:grid;grid-template-columns:1fr auto;gap:18px;padding:clamp(20px,2.6vw,28px) clamp(20px,2.6vw,28px) 0;align-items:start}
-.org .head h3{margin-bottom:4px}
-.org .head p{color:var(--ink-2);font-size:.92rem;max-width:56ch}
-.org .roles{display:grid;gap:6px;min-width:220px;text-align:right}
-.org .roles div{font-size:.86rem;color:var(--ink-2)}
-.org .roles div b{color:var(--ink);font-weight:600}
-.org .roles div small{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
-.strip{display:flex;gap:12px;overflow-x:auto;padding:22px clamp(20px,2.6vw,28px) clamp(20px,2.6vw,28px);scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
-.strip::-webkit-scrollbar{display:none}
-.strip figure{flex:0 0 auto;scroll-snap-align:start;width:min(72vw,300px);border-radius:var(--radius-s);overflow:hidden;background:#0d1120;position:relative;cursor:zoom-in}
-.strip figure img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform 1s var(--ease)}
-.strip figure:hover img{transform:scale(1.04)}
-.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:.74rem;color:var(--ink);background:linear-gradient(transparent,rgba(10,13,22,.85));letter-spacing:.02em}
-.strip-hint{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);padding:0 clamp(20px,2.6vw,28px);margin-top:18px;display:flex;align-items:center;gap:8px}
+.org .head{display:grid;grid-template-columns:1fr auto;gap:18px;padding:clamp(20px,2.6vw,26px) clamp(20px,2.6vw,26px) 0;align-items:start}
+.org .head p{font-size:.95rem;max-width:58ch;margin-top:4px}
+.org .roles{display:grid;gap:8px;min-width:230px;text-align:right}
+.org .roles div{font-size:.88rem}
+.org .roles b{font-family:var(--fd);color:var(--ink);font-weight:700}
+.org .roles small{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.strip-bar{display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,2.6vw,26px) 0}
+.strip-hint{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:8px;font-weight:600}
 .strip-hint svg{width:14px;height:14px}
-@media (max-width:640px){.org .head{grid-template-columns:1fr}.org .roles{text-align:left;min-width:0}}
+.strip-nav{display:flex;gap:8px}
+.strip-nav button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--ink);transition:background .2s,color .2s,border-color .2s,opacity .2s}
+.strip-nav button:hover{background:var(--acc);color:#fff;border-color:var(--acc)}
+.strip-nav button[disabled]{opacity:.35;pointer-events:none}
+.strip-nav svg{width:16px;height:16px}
+.strip{display:flex;gap:12px;overflow-x:auto;padding:14px clamp(20px,2.6vw,26px) clamp(20px,2.6vw,26px);scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;cursor:grab}
+.strip.dragging{cursor:grabbing;scroll-snap-type:none}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 auto;scroll-snap-align:start;width:min(70vw,290px);border-radius:var(--r-s);overflow:hidden;background:var(--bg-2);position:relative;cursor:zoom-in;border:1px solid var(--line)}
+.strip figure img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .9s var(--ease);pointer-events:none}
+.strip figure:hover img{transform:scale(1.04)}
+.strip figcaption{padding:9px 12px;font-size:.78rem;color:var(--ink-2);background:#fff;border-top:1px solid var(--line);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:640px){.org .head{grid-template-columns:1fr}.org .roles{text-align:left;min-width:0}.strip-nav{display:none}}
 
-/* EXPERIENCE (timeline) */
-.timeline{display:grid;gap:0;position:relative}
+/* experience */
 .tl{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line);position:relative}
 .tl:last-child{border-bottom:1px solid var(--line)}
-.tl .when{padding-top:6px}
 .tl .when .date{display:block}
-.tl .when .loc{font-size:.8rem;color:var(--ink-3);margin-top:4px}
+.tl .when .loc{font-size:.82rem;color:var(--ink-3);margin-top:4px}
 .tl h3{margin-bottom:2px}
-.tl .co{color:var(--acc);font-weight:600;font-size:.9rem;margin-bottom:8px}
-.tl p{color:var(--ink-2);font-size:.95rem;max-width:64ch}
-.tl.now::before{content:"";position:absolute;left:-18px;top:34px;width:8px;height:8px;border-radius:50%;background:#7CFF9B;box-shadow:0 0 0 4px rgba(124,255,155,.15)}
+.tl .co{color:var(--acc);font-weight:600;font-size:.92rem;margin-bottom:8px}
+.tl p{font-size:.97rem;max-width:64ch}
+.tl .now-tag{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#15803d;margin-top:8px}
+.tl .now-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok)}
 .tl .with-photo{display:grid;grid-template-columns:1fr 240px;gap:22px;align-items:start}
-.tl .photo{border-radius:var(--radius-s);overflow:hidden;cursor:zoom-in}
+.tl .photo{border-radius:var(--r-s);overflow:hidden;cursor:zoom-in;border:1px solid var(--line);box-shadow:var(--shadow)}
 .tl .photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
-@media (max-width:760px){.tl{grid-template-columns:1fr;gap:6px}.tl.now::before{left:auto;right:0;top:30px}.tl .with-photo{grid-template-columns:1fr}.tl .photo{max-width:360px}}
+@media (max-width:760px){.tl{grid-template-columns:1fr;gap:6px}.tl .with-photo{grid-template-columns:1fr}.tl .photo{max-width:360px}}
 
-/* SKILLS */
+/* skills */
 .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.skill h3{font-size:1.05rem;margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.skill h3 span{width:26px;height:26px;border-radius:8px;background:rgba(165,150,255,.12);color:var(--acc);display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-body);font-size:.72rem;font-weight:700}
+.skill h3{font-size:1.02rem;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.skill h3 span{width:28px;height:28px;border-radius:8px;background:var(--acc-soft);color:var(--acc-2);display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800}
 @media (max-width:900px){.skills{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.skills{grid-template-columns:1fr}}
 
-/* PHOTOGRAPHY — coverflow, transform/opacity only */
+/* photography — coverflow (transform/opacity only) */
+section.photo{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .cf{position:relative;margin-top:8px;--h:520px}
 .cf-stage{position:relative;height:var(--h);overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.cf-slide{position:absolute;left:50%;top:50%;border-radius:16px;overflow:hidden;background:#0d1120;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.cf-slide{position:absolute;left:50%;top:50%;border-radius:14px;overflow:hidden;background:#dfe4ec;
   transform:translate(-50%,-50%) scale(.6);opacity:0;will-change:transform,opacity;
-  transition:transform .75s var(--ease),opacity .55s var(--ease);box-shadow:0 30px 60px rgba(0,0,0,.45);cursor:pointer;
-  contain:layout paint}
+  transition:transform .75s var(--ease),opacity .55s var(--ease);box-shadow:0 20px 40px -18px rgba(15,23,42,.35);cursor:pointer;contain:layout paint}
 .cf-slide img{width:100%;height:100%;object-fit:cover;pointer-events:none}
 .cf-slide.is-active{cursor:zoom-in}
-.cf-slide::after{content:"";position:absolute;inset:0;background:rgba(10,13,22,var(--dim,0));transition:background .55s var(--ease);pointer-events:none}
+.cf-slide::after{content:"";position:absolute;inset:0;background:rgba(238,241,245,var(--dim,0));transition:background .55s var(--ease);pointer-events:none}
 .cf-ui{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:22px}
-.cf-btn{width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s var(--ease)}
-.cf-btn:hover{background:rgba(255,255,255,.08);transform:scale(1.06)}
+.cf-btn{width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--ink);box-shadow:var(--shadow);transition:transform .2s var(--ease),background .2s,color .2s,border-color .2s}
+.cf-btn:hover{transform:scale(1.06);background:var(--acc);color:#fff;border-color:var(--acc)}
 .cf-btn svg{width:18px;height:18px}
 .cf-dots{display:flex;gap:6px;align-items:center}
-.cf-dot{width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.22);transition:width .35s var(--ease),background .3s}
+.cf-dot{width:6px;height:6px;border-radius:999px;background:var(--line-2);transition:width .35s var(--ease),background .3s}
 .cf-dot.on{width:22px;background:var(--acc)}
-.cf-count{font-family:var(--font-display);font-style:italic;color:var(--ink-3);font-size:1rem;min-width:56px;text-align:center}
-@media (max-width:760px){.cf{--h:min(66vw,360px)}.cf-slide{border-radius:12px;box-shadow:0 18px 30px rgba(0,0,0,.4)}}
+.cf-count{font-family:var(--fd);font-weight:600;color:var(--ink-3);font-size:.9rem;min-width:56px;text-align:center}
+@media (max-width:760px){.cf{--h:min(64vw,360px)}.cf-slide{border-radius:12px}.cf-dots{display:none}}
 @media (prefers-reduced-motion:reduce){.cf-slide{transition:none}}
 
-/* DESIGN */
-.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.ig{aspect-ratio:1;padding:22px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer}
-.ig .mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#f9ce34,#ee2a7b 55%,#6228d7);display:flex;align-items:center;justify-content:center}
-.ig .mark svg{width:20px;height:20px}
-.ig h3{font-size:1.15rem;margin-bottom:6px}
-.ig p{font-size:.82rem;color:var(--ink-2)}
-.ig .go{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:600;display:flex;align-items:center;gap:8px;margin-top:14px}
+/* design (instagram) */
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ig{display:flex;flex-direction:column;gap:14px;align-items:flex-start;padding:22px}
+.ig .avatar{width:72px;height:72px;border-radius:50%;padding:3px;background:linear-gradient(135deg,#f9ce34,#ee2a7b 55%,#6228d7)}
+.ig .avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;background:#fff;border:2px solid #fff}
+.ig h3{font-size:1.05rem}
+.ig p{font-size:.86rem;color:var(--ink-3);min-height:2.6em}
+.ig .go{font-size:.78rem;font-weight:700;color:var(--acc);display:inline-flex;align-items:center;gap:6px;margin-top:auto}
 .ig .go svg{width:12px;height:12px;transition:transform .3s var(--ease)}
-.ig:hover .go svg{transform:translate(3px,-3px)}
-.ig.featured{grid-column:1/-1;aspect-ratio:auto;min-height:260px;display:grid;grid-template-columns:1fr 1.1fr;gap:20px;padding:0;overflow:hidden}
-.ig.featured .txt{padding:22px;display:flex;flex-direction:column;justify-content:space-between}
-.ig.featured .shot{position:relative;min-height:220px}
-.ig.featured .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top;-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%);mask-image:linear-gradient(90deg,transparent,#000 22%);transition:transform 1.2s var(--ease)}
-.ig.featured:hover .shot img{transform:scale(1.03)}
-@media (max-width:900px){.ig-grid{grid-template-columns:repeat(2,1fr)}.ig.featured{grid-template-columns:1fr}.ig.featured .shot{order:-1;min-height:170px}.ig.featured .shot img{-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent);mask-image:linear-gradient(180deg,#000 55%,transparent);object-position:center top}.ig.featured .txt{padding-top:0}}
-@media (max-width:480px){.ig-grid{grid-template-columns:1fr}}
-@media (max-width:480px){.ig{aspect-ratio:auto;min-height:200px}}
+.ig:hover .go svg{transform:translate(2px,-2px)}
+@media (max-width:900px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:420px){.ig-grid{grid-template-columns:1fr}}
 
-/* CONTACT */
+/* contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
-.contact h2{font-size:clamp(2.6rem,6vw,5rem)}
-.contact .lede{margin-top:18px}
-.clist{display:grid;gap:0;border-top:1px solid var(--line)}
-.clist .row{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);transition:padding .3s var(--ease)}
+.contact h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+.contact .lede{margin-top:16px}
+.clist{border-top:1px solid var(--line)}
+.clist .row{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);transition:padding .3s var(--ease)}
 .clist a.row:hover{padding-left:8px}
-.clist .ic{width:44px;height:44px;border-radius:12px;border:1px solid var(--line-2);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.03)}
+.clist .ic{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--acc);box-shadow:var(--shadow)}
 .clist .ic svg{width:18px;height:18px}
-.clist b{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
-.clist span{color:var(--ink)}
+.clist b{display:block;font-family:var(--fd);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.clist span.v{color:var(--ink);font-weight:500}
 .clist .arr{color:var(--ink-3)}
 @media (max-width:820px){.contact{grid-template-columns:1fr}}
 
-footer{padding:36px 0 calc(28px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--ink-3);font-size:.8rem}
+footer{padding:32px 0 calc(28px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--ink-3);font-size:.85rem;background:#fff}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
-/* ─────────────────────────────────────────────────────────────
-   VIEWER (CV + posters + photos)
-   ───────────────────────────────────────────────────────────── */
-.viewer{position:fixed;inset:0;z-index:200;background:rgba(6,8,14,.92);display:flex;flex-direction:column;
-  opacity:0;pointer-events:none;transition:opacity .3s}
+/* ────────────────────────────── viewer ────────────────────────────── */
+.viewer{position:fixed;inset:0;z-index:200;background:rgba(15,23,42,.94);display:flex;flex-direction:column;opacity:0;pointer-events:none;transition:opacity .3s}
 .viewer.open{opacity:1;pointer-events:auto}
-.viewer .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:max(12px,env(safe-area-inset-top)) 16px 12px;flex:0 0 auto}
-.viewer .title{font-size:.86rem;color:var(--ink-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.viewer .tools{display:flex;gap:8px;align-items:center}
-.vbtn{height:40px;min-width:40px;padding:0 12px;border-radius:999px;border:1px solid var(--line-2);display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:.84rem;font-weight:600;background:rgba(255,255,255,.04)}
-.vbtn:hover{background:rgba(255,255,255,.1)}
+.viewer .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:max(12px,env(safe-area-inset-top)) 16px 12px;flex:0 0 auto;color:#fff;position:relative;z-index:2}
+.viewer .title{font-size:.88rem;color:rgba(255,255,255,.85);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.viewer .title small{color:rgba(255,255,255,.5);margin-left:8px}
+.viewer .tools{display:flex;gap:8px;align-items:center;flex:0 0 auto}
+.vbtn{height:40px;min-width:40px;padding:0 12px;border-radius:999px;border:1px solid rgba(255,255,255,.2);display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:.84rem;font-weight:600;background:rgba(255,255,255,.06);color:#fff;transition:background .2s}
+.vbtn:hover{background:rgba(255,255,255,.18)}
 .vbtn svg{width:16px;height:16px}
 .viewer .canvas{flex:1;position:relative;overflow:hidden;touch-action:none;cursor:grab}
 .viewer .canvas.drag{cursor:grabbing}
-.viewer .canvas img{position:absolute;left:0;top:0;transform-origin:0 0;max-width:none;will-change:transform;user-select:none;-webkit-user-drag:none;pointer-events:none}
-.viewer .hint{position:absolute;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);pointer-events:none;white-space:nowrap}
-.viewer .loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--ink-3);font-family:var(--font-display);font-style:italic}
+.viewer .canvas img{position:absolute;left:0;top:0;transform-origin:0 0;max-width:none;will-change:transform;user-select:none;-webkit-user-drag:none;pointer-events:none;background:#fff;transition:opacity .25s}
+.viewer .arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;display:flex;align-items:center;justify-content:center;z-index:3;transition:background .2s,transform .2s var(--ease);backdrop-filter:blur(6px)}
+.viewer .arrow:hover{background:rgba(255,255,255,.25);transform:translateY(-50%) scale(1.06)}
+.viewer .arrow svg{width:22px;height:22px}
+.viewer .arrow.prev{left:16px}.viewer .arrow.next{right:16px}
+.viewer .loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7)}
+@media (max-width:640px){.viewer .arrow{width:44px;height:44px;bottom:calc(48px + env(safe-area-inset-bottom));top:auto;transform:none}.viewer .arrow:hover{transform:none}.viewer .arrow.prev{left:12px}.viewer .arrow.next{right:12px}.vbtn#vPct{display:none}}
 body.locked{overflow:hidden}
 </style>
 </head>
 <body>
-<div class="grain" aria-hidden="true"></div>
-<div class="glow glow-a" aria-hidden="true"></div>
-<div class="glow glow-b" aria-hidden="true"></div>
+<script>if(document.visibilityState==="visible"&&!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("anim");setTimeout(function(){document.documentElement.classList.remove("anim")},2500);}</script>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
-<!-- NAV -->
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Back to top">Wei<i>Jian</i></a>
+    <a class="brand" href="#top" aria-label="Back to top"><i>WJ</i><em style="font-style:normal">Loh Wei Jian</em></a>
     <ul class="links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
@@ -401,59 +333,65 @@ body.locked{overflow:hidden}
       <li><a href="#design">Design</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="nav-cta" id="navCv">View CV</button>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 <nav class="menu" id="menu" aria-label="Mobile">
-  <a href="#about"><small>01</small>About</a>
-  <a href="#education"><small>02</small>Education</a>
-  <a href="#projects"><small>03</small>Projects</a>
-  <a href="#leadership"><small>04</small>Leadership</a>
-  <a href="#experience"><small>05</small>Experience</a>
-  <a href="#skills"><small>06</small>Skills</a>
-  <a href="#photography"><small>07</small>Photography</a>
-  <a href="#design"><small>08</small>Design</a>
-  <a href="#contact"><small>09</small>Contact</a>
+  <a href="#about">About<small>01</small></a>
+  <a href="#education">Education<small>02</small></a>
+  <a href="#projects">Projects<small>03</small></a>
+  <a href="#leadership">Leadership<small>04</small></a>
+  <a href="#experience">Experience<small>05</small></a>
+  <a href="#skills">Skills<small>06</small></a>
+  <a href="#photography">Photography<small>07</small></a>
+  <a href="#design">Design<small>08</small></a>
+  <a href="#contact">Contact<small>09</small></a>
 </nav>
 
 <main id="top">
 <!-- HERO -->
-<section class="hero" id="hero" style="padding:0;border:0">
-  <div class="wrap" style="padding-top:calc(var(--nav-h) + 24px)">
+<section class="hero" id="hero">
+  <div class="wrap">
     <div class="hero-copy">
-      <div class="hero-kicker rise d1"><span class="dot"></span>Manufacturing Engineering Intern · Plexus</div>
-      <h1 class="rise d2">Loh<span class="l2">Wei Jian</span></h1>
-      <p class="hero-sub rise d3">Third-year Mechanical Engineering student at Universiti Malaya who designs in SolidWorks by day, leads student chapters by evening, and shoots photographs whenever the light is good.</p>
-      <div class="hero-roles rise d4"><span>Engineer</span><span>Photographer</span><span>Designer</span></div>
+      <div class="pill rise d1"><span class="dot"></span>Manufacturing Engineering Intern at Plexus</div>
+      <h1 class="rise d2">Loh Wei Jian<br><span>Mechanical Engineer</span> in the making.</h1>
+      <p class="hero-sub rise d3">Third-year Mechanical Engineering student at Universiti Malaya. I design and simulate in SolidWorks and ANSYS, lead student engineering societies, and shoot photographs on the side.</p>
+      <div class="hero-roles rise d4"><span>Engineering</span><span>Leadership</span><span>Photography</span><span>Design</span></div>
       <div class="cta rise d5">
         <button class="btn primary" id="openCv">View my CV
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
         </button>
-        <a class="btn" href="#photography">See photography</a>
+        <a class="btn" href="#projects">See projects</a>
       </div>
     </div>
     <figure class="hero-figure">
+      <div class="panel" aria-hidden="true"></div>
       <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp"
            srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait-500.webp 500w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp 1000w"
-           sizes="(max-width: 900px) 40vw, 300px" width="1000" height="2353" alt="Portrait of Loh Wei Jian" fetchpriority="high" decoding="async">
+           sizes="(max-width: 900px) 46vw, 340px" width="1000" height="2353" alt="Portrait of Loh Wei Jian" fetchpriority="high" decoding="async">
+      <div class="hero-tag"><b>Universiti Malaya</b>B.Eng. Mechanical, 2023 – 2027</div>
+      <div class="hero-tag r"><b>Plexus Corp.</b>Bayan Lepas, Penang</div>
     </figure>
   </div>
-  <div class="scroll-cue">Scroll</div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow"><b>01</b> About</div><h2>Engineering with a <em class="ac">photographer's eye</em></h2></div>
-      <div class="num">01</div>
+      <div><div class="label">01 · About</div><h2>Engineering with a photographer's eye</h2></div>
+      <div class="n">01</div>
     </div>
     <div class="about-grid">
-      <p class="about-text reveal">I'm a third-year Mechanical Engineering student at Universiti Malaya with hands-on experience in <em>SolidWorks design</em>, <em>ANSYS simulation</em> and Arduino-based prototyping. Outside the lab I've led departments across four student organisations at once, building websites, publicity and events. Currently I'm on a manufacturing engineering internship at Plexus in Penang.</p>
+      <div class="about-text reveal">
+        <p>I'm a third-year Mechanical Engineering student at Universiti Malaya with hands-on experience in <b>SolidWorks design</b>, <b>ANSYS FEA simulation</b> and Arduino-based prototyping.</p>
+        <p>Outside the lab I have led departments across four student organisations at the same time, building websites, publicity and events. I'm currently on a manufacturing engineering internship at Plexus in Penang, working across product engineering and manufacturing engineering.</p>
+      </div>
       <div class="facts reveal" style="--d:.1s">
         <div class="fact"><b>Based</b><span>Kuala Lumpur · from Ipoh, Perak</span></div>
         <div class="fact"><b>Studying</b><span>B.Eng. Mechanical Engineering, Universiti Malaya</span></div>
-        <div class="fact"><b>Now</b><span>Manufacturing Engineering Intern, Plexus Corp., Bayan Lepas</span></div>
+        <div class="fact"><b>Now</b><span>Manufacturing Engineering Intern, Plexus Corp.</span></div>
         <div class="fact"><b>Languages</b><span>English · Malay · Mandarin</span></div>
         <div class="fact"><b>Interests</b><span>Photography, graphic design, CAD, event organising</span></div>
       </div>
@@ -462,18 +400,18 @@ body.locked{overflow:hidden}
 </section>
 
 <!-- EDUCATION -->
-<section id="education">
+<section id="education" class="alt">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow"><b>02</b> Education</div><h2>Where the <em class="ac">fundamentals</em> come from</h2></div>
-      <div class="num">02</div>
+      <div><div class="label">02 · Education</div><h2>Where the fundamentals come from</h2></div>
+      <div class="n">02</div>
     </div>
     <div class="edu">
       <article class="card reveal">
         <div><span class="date">2023 — Present</span><br><span class="date" style="color:var(--acc)">Expected 2027</span></div>
         <div>
           <h3>Bachelor of Mechanical Engineering</h3>
-          <p>Universiti Malaya · Faculty of Engineering</p>
+          <p class="muted">Universiti Malaya · Faculty of Engineering</p>
           <div class="chips">
             <span class="chip">Machine Design</span><span class="chip">Materials Science</span><span class="chip">Mechanical Vibrations</span><span class="chip">Thermodynamics</span><span class="chip">Control Systems</span><span class="chip">Mechatronics</span><span class="chip">Engineering Mathematics</span><span class="chip">Programming</span>
           </div>
@@ -483,7 +421,7 @@ body.locked{overflow:hidden}
         <div><span class="date">2022 — 2023</span></div>
         <div>
           <h3>Matriculation, Pure Science Stream</h3>
-          <p>Kolej Matrikulasi Perak</p>
+          <p class="muted">Kolej Matrikulasi Perak</p>
         </div>
       </article>
     </div>
@@ -494,18 +432,33 @@ body.locked{overflow:hidden}
 <section id="projects">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow"><b>03</b> University projects</div><h2>Designed, simulated, <em class="ac">built</em></h2></div>
-      <div class="num">03</div>
+      <div><div class="label">03 · University projects</div><h2>Designed, simulated, built</h2><p class="lede">Four design projects from mechatronics to machine elements. Tap a poster to read it full-screen.</p></div>
+      <div class="n">03</div>
     </div>
-    <div class="projects">
+    <div class="projects" id="projects-grid">
       <article class="card proj reveal">
-        <div class="poster" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer.webp" data-title="Design of Spur Gear Speed Reducer — KIG2017 poster">
-          <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer-640.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer-640.webp 640w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer.webp 1200w" sizes="(max-width:760px) 92vw, 560px" width="1200" height="1699" loading="lazy" decoding="async" alt="Spur gear speed reducer project poster">
+        <div class="poster" data-group="posters" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/barnacle-cleaner.webp" data-title="HullVanguard — Eco-Friendly Barnacle Cleaner (IDP poster)">
+          <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/barnacle-cleaner-640.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/barnacle-cleaner-640.webp 640w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/barnacle-cleaner.webp 1200w" sizes="(max-width:760px) 92vw, 540px" width="1200" height="1699" loading="lazy" decoding="async" alt="HullVanguard barnacle cleaner project poster">
+          <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+        </div>
+        <div class="body">
+          <div class="top"><h3>HullVanguard — Eco-Friendly Barnacle Cleaner</h3><span class="date">2026</span></div>
+          <div class="course">Integrated Design Project · Year 3 <span class="chip ac">SDG 14 Life Below Water</span></div>
+          <ul>
+            <li>User-requirement surveys and stakeholder analysis of the pain points in traditional hull maintenance.</li>
+            <li>3D models and assembly drawings, with a decision matrix to evaluate concept options for a paint-safe, high-torque cleaning head.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card proj reveal" style="--d:.08s">
+        <div class="poster" data-group="posters" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer.webp" data-title="Design of Spur Gear Speed Reducer — KIG2017 poster">
+          <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer-640.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer-640.webp 640w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer.webp 1200w" sizes="(max-width:760px) 92vw, 540px" width="1200" height="1699" loading="lazy" decoding="async" alt="Spur gear speed reducer project poster">
           <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
         </div>
         <div class="body">
           <div class="top"><h3>Spur Gear Speed Reducer</h3><span class="date">June 2025</span></div>
-          <p>KIG2017 Design on Machine Elements</p>
+          <div class="course">KIG2017 Design on Machine Elements</div>
           <ul>
             <li>Designed a 1:2 ratio speed reducer and validated it with FEA in SolidWorks and ANSYS.</li>
             <li>Analysed von Mises stress, resultant displacement and factor of safety to refine the housing and gear pair.</li>
@@ -514,14 +467,14 @@ body.locked{overflow:hidden}
         </div>
       </article>
 
-      <article class="card proj reveal" style="--d:.08s">
-        <div class="poster" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones.webp" data-title="Ice-Cap Mapping Drones — KIG2012 poster">
-          <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones-640.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones-640.webp 640w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones.webp 1200w" sizes="(max-width:760px) 92vw, 560px" width="1200" height="1600" loading="lazy" decoding="async" alt="Ice-cap mapping drones project poster">
+      <article class="card proj reveal">
+        <div class="poster" data-group="posters" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones.webp" data-title="Ice-Cap Mapping Drones — KIG2012 poster">
+          <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones-640.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones-640.webp 640w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones.webp 1200w" sizes="(max-width:760px) 92vw, 540px" width="1200" height="1600" loading="lazy" decoding="async" alt="Ice-cap mapping drones project poster">
           <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
         </div>
         <div class="body">
           <div class="top"><h3>Ice-Cap Mapping Drones</h3><span class="date">January 2025</span></div>
-          <p>KIG2012 Mechatronics I · <span class="chip ac" style="padding:3px 9px;font-size:.7rem">SDG 13 Climate Action</span></p>
+          <div class="course">KIG2012 Mechatronics I <span class="chip ac">SDG 13 Climate Action</span></div>
           <ul>
             <li>Teardown analysis of drone electronics; simulated transistor, pull-down resistor and decoupling capacitor behaviour in TinkerCAD.</li>
             <li>Arduino control logic using PWM for motor speed and digital signal processing for switch-state monitoring.</li>
@@ -530,14 +483,14 @@ body.locked{overflow:hidden}
         </div>
       </article>
 
-      <article class="card proj reveal">
-        <div class="poster" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium.webp" data-title="Mosquarium — KIG2016 poster">
-          <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium-640.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium-640.webp 640w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium.webp 1200w" sizes="(max-width:760px) 92vw, 560px" width="1200" height="1698" loading="lazy" decoding="async" alt="Mosquarium project poster">
+      <article class="card proj reveal" style="--d:.08s">
+        <div class="poster" data-group="posters" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium.webp" data-title="Mosquarium — KIG2016 poster">
+          <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium-640.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium-640.webp 640w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium.webp 1200w" sizes="(max-width:760px) 92vw, 540px" width="1200" height="1698" loading="lazy" decoding="async" alt="Mosquarium project poster">
           <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
         </div>
         <div class="body">
           <div class="top"><h3>Mosquarium — Mosquito Trapper</h3><span class="date">January 2025</span></div>
-          <p>KIG2016 Product Design &amp; Innovation</p>
+          <div class="course">KIG2016 Product Design &amp; Innovation</div>
           <ul>
             <li>Integrated a UV light attraction system with an electric neutraliser grid.</li>
             <li>Optimised for low energy consumption at 9 V / 4.5 W.</li>
@@ -545,39 +498,17 @@ body.locked{overflow:hidden}
           <div class="team">With Tang Jun Jie, Wong Jiahon, Ng Xiu Li, Darius Loh &amp; Cheah Zhan Sen</div>
         </div>
       </article>
-
-      <article class="card proj noimg reveal" style="--d:.08s">
-        <div class="art" aria-hidden="true">
-          <svg viewBox="0 0 240 180" fill="none" stroke="rgba(165,150,255,.55)" stroke-width="1.2">
-            <path d="M20 120c40 20 160 20 200 0" /><path d="M30 105c40 18 140 18 180 0"/>
-            <path d="M40 60h160l-20 45H60z" stroke="rgba(243,239,231,.6)"/>
-            <path d="M120 60V20M100 20h40" stroke="rgba(243,239,231,.6)"/>
-            <circle cx="70" cy="140" r="10"/><circle cx="120" cy="150" r="14"/><circle cx="170" cy="140" r="10"/>
-            <path d="M70 130v-8M120 136v-10M170 130v-8" />
-            <path d="M0 165h240" stroke-dasharray="3 6"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="top"><h3>Eco-Friendly Barnacle Cleaner</h3><span class="date" style="color:#7CFF9B">Ongoing</span></div>
-          <p>Integrated Design Project · <span class="chip ac" style="padding:3px 9px;font-size:.7rem">SDG 14 Life Below Water</span></p>
-          <ul>
-            <li>User-requirement surveys and stakeholder analysis of traditional hull-maintenance pain points.</li>
-            <li>3D models and assembly drawings, with a decision matrix to evaluate concept options.</li>
-          </ul>
-        </div>
-      </article>
     </div>
   </div>
 </section>
 
 <!-- LEADERSHIP -->
-<section id="leadership">
+<section id="leadership" class="alt">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow"><b>04</b> Leadership &amp; co-curricular</div><h2>Four organisations, <em class="ac">one calendar</em></h2></div>
-      <div class="num">04</div>
+      <div><div class="label">04 · Leadership &amp; co-curricular</div><h2>Four organisations, one calendar</h2><p class="lede">Between 2023 and 2026 I served concurrently as director and executive across Universiti Malaya's engineering societies: running budgets, building websites and publicity, and organising visits from Penang to Korea and China.</p></div>
+      <div class="n">04</div>
     </div>
-    <p class="lede reveal" style="margin-bottom:36px">Between 2023 and 2026 I served concurrently as director and executive across Universiti Malaya's engineering societies: running budgets, building websites and publicity, and organising visits from Penang to Korea and China. Swipe through the strips.</p>
     <div class="orgs" id="orgs"></div>
   </div>
 </section>
@@ -586,17 +517,18 @@ body.locked{overflow:hidden}
 <section id="experience">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow"><b>05</b> Work experience</div><h2>From the <em class="ac">shop floor</em> to the stage</h2></div>
-      <div class="num">05</div>
+      <div><div class="label">05 · Work experience</div><h2>From the shop floor to the stage</h2></div>
+      <div class="n">05</div>
     </div>
     <div class="timeline">
-      <article class="tl now reveal">
+      <article class="tl reveal">
         <div class="when"><span class="date">Jul 2026 — Present</span><span class="loc">Bayan Lepas, Penang · On-site</span></div>
         <div class="with-photo">
           <div>
             <h3>Manufacturing Engineering Intern</h3>
             <div class="co">Plexus Corp.</div>
             <p>Internship in Product Engineering and Manufacturing Engineering at Plexus Manufacturing Sdn. Bhd., an electronics manufacturing services provider.</p>
+            <span class="now-tag">Current</span>
           </div>
           <div class="photo" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/leadership/plexus-01-check-in-at-plexus-logo.webp" data-title="Check-in at Plexus, Bayan Lepas">
             <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/leadership/plexus-01-check-in-at-plexus-logo-480.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/leadership/plexus-01-check-in-at-plexus-logo-480.webp 480w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/leadership/plexus-01-check-in-at-plexus-logo.webp 1000w" sizes="(max-width:760px) 90vw, 240px" width="1000" height="763" loading="lazy" decoding="async" alt="Wei Jian at the Plexus lobby wall">
@@ -640,11 +572,11 @@ body.locked{overflow:hidden}
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" class="alt">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow"><b>06</b> Skills</div><h2>The <em class="ac">toolbox</em></h2></div>
-      <div class="num">06</div>
+      <div><div class="label">06 · Skills</div><h2>The toolbox</h2></div>
+      <div class="n">06</div>
     </div>
     <div class="skills">
       <div class="card skill reveal"><h3><span>01</span>CAD &amp; simulation</h3><div class="chips"><span class="chip">SolidWorks</span><span class="chip">ANSYS</span><span class="chip">FEA</span><span class="chip">Assembly drawings</span></div></div>
@@ -658,13 +590,12 @@ body.locked{overflow:hidden}
 </section>
 
 <!-- PHOTOGRAPHY -->
-<section id="photography">
+<section id="photography" class="photo">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow"><b>07</b> Photography</div><h2>Light, <em class="ac">caught</em></h2></div>
-      <div class="num">07</div>
+      <div><div class="label">07 · Photography</div><h2>Light, caught</h2><p class="lede">Hobbyist turned freelance. Street, travel and architecture, mostly from Malaysia, China and Korea. Tap a photo to view it full-screen, then use the arrows or swipe.</p></div>
+      <div class="n">07</div>
     </div>
-    <p class="lede reveal" style="margin-bottom:8px">Hobbyist turned freelance. Street, travel and portrait work, mostly from Malaysia and China. Tap a photo to view it full-screen.</p>
   </div>
   <div class="cf reveal" id="cf" aria-roledescription="carousel" aria-label="Photography">
     <div class="cf-stage" id="cfStage"></div>
@@ -681,57 +612,36 @@ body.locked{overflow:hidden}
 <section id="design">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="eyebrow"><b>08</b> Design &amp; media</div><h2>Two years of <em class="ac">publicity</em> work</h2></div>
-      <div class="num">08</div>
+      <div><div class="label">08 · Design &amp; media</div><h2>Two years of publicity work</h2><p class="lede">Posters, social content, event branding and organisational websites for the societies I served. Their feeds carry most of it.</p></div>
+      <div class="n">08</div>
     </div>
-    <p class="lede reveal" style="margin-bottom:36px">Posters, social content, event branding and organisational websites for the societies I served. The feeds below carry most of it.</p>
-    <div class="ig-grid">
-      <a class="card ig featured reveal" href="https://www.instagram.com/esum_official" target="_blank" rel="noopener noreferrer">
-        <div class="txt">
-          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span>
-          <div><h3>@esum_official</h3><p>Engineering Society of Universiti Malaya · Director 2024/25 · Executive 2023/24. Feed design, event posters and the society website.</p><span class="go">Open on Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
-        </div>
-        <div class="shot"><img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/design/esum-instagram.webp" width="900" height="378" loading="lazy" decoding="async" alt="Screenshot of the @esum_official Instagram profile"></div>
-      </a>
-      <a class="card ig reveal" style="--d:.06s" href="https://www.instagram.com/imecheum" target="_blank" rel="noopener noreferrer">
-        <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span>
-        <div><h3>@imecheum</h3><p>IMechE UM Student Chapter · Multimedia</p><span class="go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
-      </a>
-      <a class="card ig reveal" style="--d:.12s" href="https://www.instagram.com/um.technothon" target="_blank" rel="noopener noreferrer">
-        <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span>
-        <div><h3>@um.technothon</h3><p>UM Technothon 2025 · Director</p><span class="go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
-      </a>
-      <a class="card ig reveal" style="--d:.18s" href="https://www.instagram.com/daxiang_um" target="_blank" rel="noopener noreferrer">
-        <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span>
-        <div><h3>@daxiang_um</h3><p>PBCUM 19th Crosstalk Performance Night · Director</p><span class="go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
-      </a>
-    </div>
+    <div class="ig-grid" id="igGrid"></div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="alt">
   <div class="wrap contact">
     <div class="reveal">
-      <div class="eyebrow"><b>09</b> Contact</div>
-      <h2>Let's <em class="ac">talk.</em></h2>
+      <div class="label">09 · Contact</div>
+      <h2>Let's talk.</h2>
       <p class="lede">Open to internship conversations, photography commissions and design collaborations. Email is fastest.</p>
       <div class="cta"><button class="btn primary" id="openCv2">View my CV</button><a class="btn" href="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/LOH%20WEI%20JIAN_CV.pdf" target="_blank" rel="noopener">Download PDF</a></div>
     </div>
     <div class="clist reveal" style="--d:.1s">
-      <a class="row" href="mailto:weijianloh40@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></span><div><b>Email</b><span>weijianloh40@gmail.com</span></div><span class="arr">↗</span></a>
-      <a class="row" href="tel:+601118573899"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2.5" width="10" height="19" rx="3"/><path d="M11 18.5h2"/></svg></span><div><b>Phone</b><span>+60 11-1857 3899</span></div><span class="arr">↗</span></a>
-      <a class="row" href="https://www.linkedin.com/in/weijian0227/" target="_blank" rel="noopener noreferrer"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5v9M6.5 5.6v.1M10.5 17.5v-5a2.5 2.5 0 0 1 5 0v5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><div><b>LinkedIn</b><span>linkedin.com/in/weijian0227</span></div><span class="arr">↗</span></a>
-      <a class="row" href="https://www.instagram.com/wei_jianloh/" target="_blank" rel="noopener noreferrer"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><div><b>Instagram</b><span>@wei_jianloh</span></div><span class="arr">↗</span></a>
-      <a class="row" href="https://linktr.ee/weijianloh40" target="_blank" rel="noopener noreferrer"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v18M5 9l7 5 7-5M5 15l7-5 7 5"/></svg></span><div><b>Linktree</b><span>linktr.ee/weijianloh40</span></div><span class="arr">↗</span></a>
-      <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>Location</b><span>Kuala Lumpur / Ipoh, Malaysia</span></div><span></span></div>
+      <a class="row" href="mailto:weijianloh40@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></span><div><b>Email</b><span class="v">weijianloh40@gmail.com</span></div><span class="arr">↗</span></a>
+      <a class="row" href="tel:+601118573899"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2.5" width="10" height="19" rx="3"/><path d="M11 18.5h2"/></svg></span><div><b>Phone</b><span class="v">+60 11-1857 3899</span></div><span class="arr">↗</span></a>
+      <a class="row" href="https://www.linkedin.com/in/weijian0227/" target="_blank" rel="noopener noreferrer"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 10v7M7.5 7v.1M11.5 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg></span><div><b>LinkedIn</b><span class="v">linkedin.com/in/weijian0227</span></div><span class="arr">↗</span></a>
+      <a class="row" href="https://www.instagram.com/wei_jianloh/" target="_blank" rel="noopener noreferrer"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><div><b>Instagram</b><span class="v">@wei_jianloh</span></div><span class="arr">↗</span></a>
+      <a class="row" href="https://linktr.ee/weijianloh40" target="_blank" rel="noopener noreferrer"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v18M5 9l7 5 7-5M5 15l7-5 7 5"/></svg></span><div><b>Linktree</b><span class="v">linktr.ee/weijianloh40</span></div><span class="arr">↗</span></a>
+      <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>Location</b><span class="v">Kuala Lumpur / Ipoh, Malaysia</span></div><span></span></div>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap"><span>© 2026 Loh Wei Jian</span><span>Designed &amp; built with care · Universiti Malaya</span></div>
+  <div class="wrap"><span>© 2026 Loh Wei Jian</span><span>Universiti Malaya · Mechanical Engineering</span></div>
 </footer>
 
 <!-- VIEWER -->
@@ -742,7 +652,7 @@ body.locked{overflow:hidden}
       <button class="vbtn" id="vOut" aria-label="Zoom out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></button>
       <span class="vbtn" id="vPct" style="min-width:64px;pointer-events:none">100%</span>
       <button class="vbtn" id="vIn" aria-label="Zoom in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
-      <a class="vbtn" id="vDl" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v11M8 10l4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span class="vdl-label">PDF</span></a>
+      <a class="vbtn" id="vDl" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v11M8 10l4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span>PDF</span></a>
       <button class="vbtn" id="vClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
   </div>
@@ -750,31 +660,41 @@ body.locked{overflow:hidden}
     <div class="loading" id="vLoading">loading…</div>
     <img id="vImg" alt="">
   </div>
-  <div class="hint" id="vHint">Pinch or scroll to zoom · drag to pan · double-tap to reset</div>
+  <button class="arrow prev" id="vPrev" aria-label="Previous image" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <button class="arrow next" id="vNext" aria-label="Next image" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
 </div>
 
 <script>
-/* ═════════════════════════════════════════════════════════════
-   CONTENT DATA — edit these arrays to add or reorder photos.
+/* ═══════════════════════════════════════════════════════════════
+   CONTENT DATA — edit these arrays to add or reorder content.
    Every image lives in the portfolio-images repo under /web.
-   ═════════════════════════════════════════════════════════════ */
+   ═══════════════════════════════════════════════════════════════ */
 const IMG = 'https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/';
 
 /* Photography coverflow.  file = base name in web/photography (without extension).
-   Each photo needs two files: NAME.webp (1600px) and NAME-800.webp (800px).
-   o = 'l' landscape or 'p' portrait.  */
+   Each photo needs two files: NAME.webp (1600px long edge) and NAME-800.webp (800px).
+   o = 'l' landscape or 'p' portrait.  Order here = order in the slider. */
 const PHOTOS = [
   { file:'p01-street-lanterns', o:'l', alt:'Street lined with red lanterns' },
+  { file:'p12-img1157',         o:'l', alt:'Modern campus building beside a pond' },
   { file:'p10-opera',           o:'p', alt:'Chinese opera performer in white robes' },
+  { file:'p13-img1285',         o:'l', alt:'Tree-lined avenue with city towers' },
   { file:'p02-temple-eaves',    o:'l', alt:'Ornate temple roof eaves' },
-  { file:'p06-lakeside',        o:'p', alt:'Two people by a winter lake' },
+  { file:'p14-img1413',         o:'l', alt:'Red maple against a brick building' },
   { file:'p05-blossoms',        o:'l', alt:'Pink blossoms against blue sky' },
-  { file:'p11-lantern-tower',   o:'p', alt:'Lantern-lit tower at dusk' },
+  { file:'p15-img1546',         o:'l', alt:'Jet ski cutting across the sea' },
   { file:'p07-colonnade',       o:'l', alt:'Stone colonnade among trees' },
-  { file:'p03-pond-pines',      o:'p', alt:'Pines reflected in a rocky pond' },
-  { file:'p04-cafe-portrait',   o:'l', alt:'Portrait in a café' },
   { file:'p09-pavilion-gate',   o:'p', alt:'Red pavilion seen through a gate' },
+  { file:'p04-cafe-portrait',   o:'l', alt:'Portrait in a café' },
   { file:'p08-career-day',      o:'l', alt:'Portrait at a career day' },
+];
+
+/* Instagram accounts for the Design section (avatar files live in web/design). */
+const IG = [
+  { handle:'esum_official', org:'Engineering Society of Universiti Malaya', role:'Director 2024/25 · Executive 2023/24', avatar:'ig-esum_official' },
+  { handle:'imecheum',      org:'IMechE UM Student Chapter',                role:'Treasurer · Director · Multimedia',   avatar:'ig-imecheum' },
+  { handle:'umtechnothon',  org:'UM Technothon',                            role:'Director 2025',                       avatar:'ig-umtechnothon' },
+  { handle:'daxiang_um',    org:'PBCUM Crosstalk Performance Night',        role:'Director, 19th edition',              avatar:'ig-daxiang_um' },
 ];
 
 /* Leadership organisations and their photo strips (files in web/leadership). */
@@ -828,25 +748,28 @@ const ORGS = [
 const CV_IMAGE = IMG + 'cv/loh-wei-jian-cv-page-1.jpg';
 const CV_PDF   = 'https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/LOH%20WEI%20JIAN_CV.pdf';
 
-/* ═════════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════
    RUNTIME
-   ═════════════════════════════════════════════════════════════ */
+   ═══════════════════════════════════════════════════════════════ */
 (() => {
 const $ = (s, r=document) => r.querySelector(s);
 const $$ = (s, r=document) => [...r.querySelectorAll(s)];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
 
-/* ---------- NAV: glass on scroll, hide on scroll-down (rAF throttled) ---------- */
-const nav = $('#nav');
+/* nav: shadow on scroll, hide on scroll-down, progress bar (one rAF per frame) */
+const nav = $('#nav'), progress = $('#progress');
 let lastY = 0, ticking = false;
 function onScroll(){
-  const y = window.scrollY;
-  nav.classList.toggle('scrolled', y > 24);
+  const y = window.scrollY, max = document.documentElement.scrollHeight - innerHeight;
+  nav.classList.toggle('scrolled', y > 8);
   if (y > 320 && y > lastY + 6) nav.classList.add('hidden');
   else if (y < lastY - 6 || y < 120) nav.classList.remove('hidden');
+  progress.style.transform = `scaleX(${max > 0 ? Math.min(1, y / max) : 0})`;
   lastY = y; ticking = false;
 }
 addEventListener('scroll', () => { if(!ticking){ requestAnimationFrame(onScroll); ticking = true; } }, {passive:true});
+onScroll();
 
 /* mobile menu */
 const burger = $('#burger'), menu = $('#menu');
@@ -858,53 +781,85 @@ function setMenu(open){
 burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
 $$('#menu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
-/* active link highlight */
+/* active link */
 const sections = $$('main section[id]');
-const linkFor = id => $(`#navLinks a[href="#${id}"]`);
 const spy = new IntersectionObserver(es => {
-  es.forEach(e => { if (e.isIntersecting){ $$('#navLinks a').forEach(a => a.classList.remove('active')); const l = linkFor(e.target.id); if (l) l.classList.add('active'); } });
-}, { rootMargin:'-45% 0px -50% 0px' });
-sections.forEach(s => spy.observe(s));
+  es.forEach(e => { if (e.isIntersecting){ $$('#navLinks a').forEach(a => a.classList.remove('active')); const l = $(`#navLinks a[href="#${e.target.id}"]`); if (l) l.classList.add('active'); } });
+}, { rootMargin:'-40% 0px -55% 0px' });
+sections.forEach(s => { spy.observe(s); s.style.scrollMarginTop = '56px'; });
 
-/* ---------- Reveal on scroll (once) ---------- */
+/* reveal on scroll (once) */
 const rev = new IntersectionObserver(es => {
   es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); rev.unobserve(e.target); } });
-}, { threshold:.12, rootMargin:'0px 0px -6% 0px' });
-const observeReveals = root => $$('.reveal', root).forEach(el => rev.observe(el));
+}, { threshold:.1, rootMargin:'0px 0px -5% 0px' });
 
-/* card spotlight follows pointer (desktop only, cheap: one CSS var) */
-if (matchMedia('(hover:hover)').matches){
-  document.addEventListener('pointermove', e => {
-    const c = e.target.closest('.card'); if(!c) return;
-    const r = c.getBoundingClientRect(); c.style.setProperty('--mx', ((e.clientX - r.left)/r.width*100) + '%');
-  }, {passive:true});
-}
-
-/* ---------- Leadership strips ---------- */
-const orgsEl = $('#orgs');
-orgsEl.innerHTML = ORGS.map((o, i) => `
+/* ---------- leadership strips ---------- */
+$('#orgs').innerHTML = ORGS.map((o, i) => `
   <article class="card org reveal" style="--d:${i*0.05}s">
     <div class="head">
       <div><h3>${o.name}</h3><p>${o.sub}</p></div>
       <div class="roles">${o.roles.map(r => `<div><b>${r[0]}</b><small>${r[1]}</small></div>`).join('')}</div>
     </div>
-    <div class="strip-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg> ${o.photos.length} photo${o.photos.length>1?'s':''} · swipe</div>
-    <div class="strip">
+    <div class="strip-bar">
+      <div class="strip-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg> ${o.photos.length} photo${o.photos.length>1?'s':''} · scroll or drag</div>
+      <div class="strip-nav">
+        <button type="button" data-dir="-1" aria-label="Scroll photos left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button type="button" data-dir="1" aria-label="Scroll photos right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="strip" data-group="org${i}">
       ${o.photos.map(p => `
-        <figure data-view="${IMG}leadership/${p[0]}.webp" data-title="${o.name} — ${p[1]}">
-          <img src="${IMG}leadership/${p[0]}-480.webp" srcset="${IMG}leadership/${p[0]}-480.webp 480w, ${IMG}leadership/${p[0]}.webp 1000w" sizes="(max-width:760px) 72vw, 300px" loading="lazy" decoding="async" alt="${p[1]}" width="480" height="320">
+        <figure data-group="org${i}" data-view="${IMG}leadership/${p[0]}.webp" data-title="${esc(o.name)} — ${esc(p[1])}">
+          <img src="${IMG}leadership/${p[0]}-480.webp" srcset="${IMG}leadership/${p[0]}-480.webp 480w, ${IMG}leadership/${p[0]}.webp 1000w" sizes="(max-width:760px) 70vw, 290px" loading="lazy" decoding="async" alt="${esc(p[1])}" width="480" height="320">
           <figcaption>${p[1]}</figcaption>
         </figure>`).join('')}
     </div>
   </article>`).join('');
 
-/* ---------- Photography coverflow ---------- */
+/* strip behaviour: wheel → horizontal, drag-to-scroll with the mouse, arrow buttons */
+$$('.strip').forEach(strip => {
+  const bar = strip.previousElementSibling;
+  const [bPrev, bNext] = $$('button', bar);
+  const step = () => Math.max(200, strip.clientWidth * .7);
+  bPrev.addEventListener('click', () => strip.scrollBy({left:-step(), behavior:'smooth'}));
+  bNext.addEventListener('click', () => strip.scrollBy({left: step(), behavior:'smooth'}));
+  const updateBtns = () => { bPrev.disabled = strip.scrollLeft < 4; bNext.disabled = strip.scrollLeft > strip.scrollWidth - strip.clientWidth - 4; };
+  strip.addEventListener('scroll', updateBtns, {passive:true}); addEventListener('resize', updateBtns, {passive:true}); updateBtns();
+  /* mouse wheel over a strip: scroll down = next photo, scroll up = previous photo (page-friendly at both ends) */
+  let wheelAt = 0;
+  strip.addEventListener('wheel', e => {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;           /* trackpad already horizontal */
+    const dir = Math.sign(e.deltaY); if (!dir) return;
+    const max = strip.scrollWidth - strip.clientWidth;
+    if ((dir < 0 && strip.scrollLeft <= 1) || (dir > 0 && strip.scrollLeft >= max - 1)) return; /* strip finished: let the page scroll on */
+    e.preventDefault();
+    const now = Date.now(); if (now - wheelAt < 220) return; wheelAt = now;
+    const fig = strip.querySelector('figure'); const stepPx = fig ? fig.offsetWidth + 12 : 300;
+    strip.scrollBy({ left: dir * stepPx, behavior: 'smooth' });
+  }, {passive:false});
+  let down = false, moved = false, x0 = 0, s0 = 0;
+  strip.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; moved = false; x0 = e.clientX; s0 = strip.scrollLeft; });
+  strip.addEventListener('pointermove', e => { if (!down) return; const dx = e.clientX - x0; if (Math.abs(dx) > 6){ moved = true; strip.classList.add('dragging'); strip.scrollLeft = s0 - dx; } });
+  const endDrag = () => { if (!down) return; down = false; strip.classList.remove('dragging'); setTimeout(() => moved = false, 0); };
+  strip.addEventListener('pointerup', endDrag); strip.addEventListener('pointerleave', endDrag); strip.addEventListener('pointercancel', endDrag);
+  strip.addEventListener('click', e => { if (moved){ e.stopPropagation(); e.preventDefault(); } }, true);
+});
+
+/* ---------- instagram cards ---------- */
+$('#igGrid').innerHTML = IG.map((a, i) => `
+  <a class="card ig reveal" style="--d:${i*0.06}s" href="https://www.instagram.com/${a.handle}/" target="_blank" rel="noopener noreferrer">
+    <span class="avatar"><img src="${IMG}design/${a.avatar}.webp" width="160" height="160" loading="lazy" decoding="async" alt="${a.handle} profile picture"></span>
+    <div><h3>@${a.handle}</h3><p>${a.org}<br>${a.role}</p></div>
+    <span class="go">Open on Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+  </a>`).join('');
+
+/* ---------- photography coverflow ---------- */
 const stage = $('#cfStage'), dotsEl = $('#cfDots'), countEl = $('#cfCount');
 const N = PHOTOS.length; let cur = 0, timer = null, visible = false;
 stage.innerHTML = PHOTOS.map((p, i) => `
   <div class="cf-slide" data-i="${i}">
     <img src="${IMG}photography/${p.file}-800.webp" srcset="${IMG}photography/${p.file}-800.webp 800w, ${IMG}photography/${p.file}.webp 1600w"
-         sizes="(max-width:760px) 70vw, 760px" alt="${p.alt}" loading="${i<3?'eager':'lazy'}" decoding="async">
+         sizes="(max-width:760px) 70vw, 760px" alt="${esc(p.alt)}" loading="${i<3?'eager':'lazy'}" decoding="async">
   </div>`).join('');
 dotsEl.innerHTML = PHOTOS.map((_, i) => `<button class="cf-dot" aria-label="Go to photo ${i+1}" data-i="${i}"></button>`).join('');
 const slides = $$('.cf-slide', stage), dots = $$('.cf-dot', dotsEl);
@@ -913,11 +868,10 @@ function layout(){
   const H = stage.clientHeight, W = stage.clientWidth, mobile = W < 760;
   const h0 = H * (mobile ? .96 : .94);
   const dims = o => o === 'p' ? [h0 * 2/3, h0] : [Math.min(h0 * 1.5, W * (mobile ? .82 : .66)), h0];
-  const gap = mobile ? 10 : 22;
-  const s1 = mobile ? .78 : .74, s2 = mobile ? .62 : .58;
+  const gap = mobile ? 10 : 22, s1 = mobile ? .78 : .74, s2 = mobile ? .62 : .58;
   const [aw] = dims(PHOTOS[cur].o);
   for (let k = 0; k < N; k++){
-    const el = slides[k]; const d = ((k - cur) % N + N) % N; const rel = d > N/2 ? d - N : d; // -N/2..N/2
+    const el = slides[k]; const d = ((k - cur) % N + N) % N; const rel = d > N/2 ? d - N : d;
     const [w, h] = dims(PHOTOS[k].o);
     el.style.width = w + 'px'; el.style.height = h + 'px';
     let x = 0, s = 1, op = 1, dim = 0, z = 5;
@@ -925,8 +879,8 @@ function layout(){
       const a = Math.abs(rel), sign = Math.sign(rel);
       const [nw] = dims(PHOTOS[(cur + sign + N) % N].o);
       const off1 = aw/2 + gap + (nw * s1)/2;
-      if (a === 1){ x = sign * off1; s = s1; op = 1; dim = .35; z = 4; }
-      else if (a === 2 && !mobile){ const [nw2] = dims(PHOTOS[(cur + 2*sign + N) % N].o); x = sign * (off1 + (nw*s1)/2 + gap + (nw2*s2)/2); s = s2; op = 1; dim = .6; z = 3; }
+      if (a === 1){ x = sign * off1; s = s1; dim = .35; z = 4; }
+      else if (a === 2 && !mobile){ const [nw2] = dims(PHOTOS[(cur + 2*sign + N) % N].o); x = sign * (off1 + (nw*s1)/2 + gap + (nw2*s2)/2); s = s2; dim = .6; z = 3; }
       else { x = sign * (W/2 + w); s = .5; op = 0; dim = .8; z = 1; }
     }
     el.style.zIndex = z; el.style.opacity = op; el.style.setProperty('--dim', dim);
@@ -940,14 +894,14 @@ function go(i){ cur = (i + N) % N; layout(); }
 $('#cfPrev').addEventListener('click', () => { go(cur-1); restart(); });
 $('#cfNext').addEventListener('click', () => { go(cur+1); restart(); });
 dots.forEach(d => d.addEventListener('click', () => { go(+d.dataset.i); restart(); }));
+let sx = 0, sy = 0, dragging = false, dragged = false;
+const photoItems = PHOTOS.map(p => ({ src: IMG + 'photography/' + p.file + '.webp', title: p.alt }));
 stage.addEventListener('click', e => {
   const el = e.target.closest('.cf-slide'); if (!el || dragged) return;
   const i = +el.dataset.i;
-  if (i === cur) openViewer(IMG + 'photography/' + PHOTOS[cur].file + '.webp', PHOTOS[cur].alt);
+  if (i === cur) openViewer(photoItems, cur, { onChange: idx => go(idx) });
   else { const d = ((i - cur) % N + N) % N; go(d > N/2 ? cur-1 : cur+1); restart(); }
 });
-/* swipe: pointer events, vertical scroll untouched via touch-action: pan-y */
-let sx = 0, sy = 0, dragging = false, dragged = false;
 stage.addEventListener('pointerdown', e => { sx = e.clientX; sy = e.clientY; dragging = true; dragged = false; }, {passive:true});
 stage.addEventListener('pointermove', e => { if (dragging && Math.abs(e.clientX - sx) > 8) dragged = true; }, {passive:true});
 stage.addEventListener('pointerup', e => {
@@ -957,26 +911,31 @@ stage.addEventListener('pointerup', e => {
   setTimeout(() => dragged = false, 0);
 }, {passive:true});
 stage.addEventListener('pointercancel', () => dragging = false);
+/* mouse wheel over the stage steps through photos (horizontal or vertical wheel) */
+let wheelLock = 0;
+stage.addEventListener('wheel', e => {
+  const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+  if (Math.abs(d) < 8) return; e.preventDefault();
+  const now = Date.now(); if (now - wheelLock < 450) return; wheelLock = now;
+  go(d > 0 ? cur+1 : cur-1); restart();
+}, {passive:false});
 document.addEventListener('keydown', e => {
-  if ($('#viewer').classList.contains('open')) return;
-  if (!visible) return;
+  if ($('#viewer').classList.contains('open') || !visible) return;
   if (e.key === 'ArrowRight'){ go(cur+1); restart(); } else if (e.key === 'ArrowLeft'){ go(cur-1); restart(); }
 });
-/* gentle autoplay only while on screen and not hovered */
 function restart(){ clearInterval(timer); if (reduced || !visible) return; timer = setInterval(() => go(cur+1), 5200); }
-const cfWatch = new IntersectionObserver(es => { visible = es[0].isIntersecting; restart(); }, { threshold:.35 });
-cfWatch.observe(stage);
+new IntersectionObserver(es => { visible = es[0].isIntersecting; restart(); }, { threshold:.35 }).observe(stage);
 stage.addEventListener('pointerenter', () => clearInterval(timer));
 stage.addEventListener('pointerleave', restart);
 let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(layout, 120); }, {passive:true});
 layout();
-/* run first layout without transition so nothing flies in */
 slides.forEach(s => s.style.transition = 'none'); requestAnimationFrame(() => requestAnimationFrame(() => slides.forEach(s => s.style.transition = '')));
 
-/* ---------- Viewer: fit, pinch, wheel, drag, double-tap ---------- */
-const viewer = $('#viewer'), vImg = $('#vImg'), vCanvas = $('#vCanvas'), vTitle = $('#vTitle'), vPct = $('#vPct'), vDl = $('#vDl'), vLoading = $('#vLoading');
+/* ---------- viewer: gallery with arrows, swipe, pinch, wheel zoom, drag, double-tap ---------- */
+const viewer = $('#viewer'), vImg = $('#vImg'), vCanvas = $('#vCanvas'), vTitle = $('#vTitle'), vPct = $('#vPct'), vDl = $('#vDl'), vLoading = $('#vLoading'), vPrev = $('#vPrev'), vNext = $('#vNext');
 let scale = 1, fit = 1, tx = 0, ty = 0, natW = 0, natH = 0;
-const pointers = new Map(); let pinchStart = 0, pinchScale = 1, lastTap = 0, panStart = null;
+let gal = [], gi = 0, galOpts = {};
+const pointers = new Map(); let pinchStart = 0, pinchScale = 1, lastTap = 0, panStart = null, swipeX = 0, swipeY = 0, swiped = false;
 function render(){ vImg.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`; vPct.textContent = Math.round(scale/fit*100) + '%'; }
 function clamp(){
   const cw = vCanvas.clientWidth, ch = vCanvas.clientHeight, w = natW*scale, h = natH*scale;
@@ -985,29 +944,45 @@ function clamp(){
 }
 function fitImage(){
   natW = vImg.naturalWidth; natH = vImg.naturalHeight; if(!natW) return;
-  const cw = vCanvas.clientWidth, ch = vCanvas.clientHeight;
-  fit = Math.min(cw/natW, ch/natH, 1.5); scale = fit; clamp(); render();
+  fit = Math.min(vCanvas.clientWidth/natW, vCanvas.clientHeight/natH, 1.5); scale = fit; clamp(); render();
 }
 function zoomAt(f, cx, cy){
   const ns = Math.min(fit*5, Math.max(fit, scale*f)); const r = ns/scale;
   tx = cx - (cx - tx)*r; ty = cy - (cy - ty)*r; scale = ns; clamp(); render();
 }
-function openViewer(src, title, pdf){
-  vTitle.textContent = title || ''; vDl.hidden = !pdf; if (pdf) vDl.href = pdf;
-  vLoading.style.display = 'flex'; vImg.style.opacity = 0; vImg.src = src; vImg.alt = title || '';
-  viewer.classList.add('open'); document.body.classList.add('locked');
+function showIndex(i){
+  gi = (i + gal.length) % gal.length; const it = gal[gi];
+  vTitle.innerHTML = esc(it.title || '') + (gal.length > 1 ? `<small>${gi+1} / ${gal.length}</small>` : '');
+  vDl.hidden = !it.pdf; if (it.pdf) vDl.href = it.pdf;
+  vLoading.style.display = 'flex'; vImg.style.opacity = 0; vImg.alt = it.title || '';
   const done = () => { vLoading.style.display = 'none'; vImg.style.opacity = 1; fitImage(); };
-  if (vImg.complete && vImg.naturalWidth) done(); else vImg.onload = done;
+  vImg.onload = done; vImg.src = it.src; if (vImg.complete && vImg.naturalWidth) done();
+  /* warm the neighbours */
+  if (gal.length > 1){ [gi+1, gi-1].forEach(k => { const n = new Image(); n.src = gal[(k + gal.length) % gal.length].src; }); }
+  if (galOpts.onChange) galOpts.onChange(gi);
+}
+function openViewer(items, index = 0, opts = {}){
+  gal = Array.isArray(items) ? items : [items]; galOpts = opts;
+  const multi = gal.length > 1; vPrev.hidden = !multi; vNext.hidden = !multi;
+  viewer.classList.add('open'); document.body.classList.add('locked');
+  showIndex(index);
 }
 function closeViewer(){ viewer.classList.remove('open'); document.body.classList.remove('locked'); }
+const stepViewer = d => { if (gal.length > 1) showIndex(gi + d); };
+vPrev.addEventListener('click', () => stepViewer(-1)); vNext.addEventListener('click', () => stepViewer(1));
 $('#vClose').addEventListener('click', closeViewer);
 $('#vIn').addEventListener('click', () => zoomAt(1.35, vCanvas.clientWidth/2, vCanvas.clientHeight/2));
 $('#vOut').addEventListener('click', () => zoomAt(1/1.35, vCanvas.clientWidth/2, vCanvas.clientHeight/2));
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeViewer(); });
+document.addEventListener('keydown', e => {
+  if (!viewer.classList.contains('open')){ if (e.key === 'Escape') setMenu(false); return; }
+  if (e.key === 'Escape') closeViewer();
+  else if (e.key === 'ArrowRight') stepViewer(1);
+  else if (e.key === 'ArrowLeft') stepViewer(-1);
+});
 vCanvas.addEventListener('wheel', e => { e.preventDefault(); const r = vCanvas.getBoundingClientRect(); zoomAt(e.deltaY < 0 ? 1.12 : 1/1.12, e.clientX - r.left, e.clientY - r.top); }, {passive:false});
 vCanvas.addEventListener('pointerdown', e => {
   vCanvas.setPointerCapture(e.pointerId); pointers.set(e.pointerId, {x:e.clientX, y:e.clientY});
-  if (pointers.size === 1){ panStart = {x:e.clientX - tx, y:e.clientY - ty}; vCanvas.classList.add('drag'); }
+  if (pointers.size === 1){ panStart = {x:e.clientX - tx, y:e.clientY - ty}; swipeX = e.clientX; swipeY = e.clientY; swiped = false; vCanvas.classList.add('drag'); }
   if (pointers.size === 2){ const [a,b] = [...pointers.values()]; pinchStart = Math.hypot(a.x-b.x, a.y-b.y); pinchScale = scale; }
 });
 vCanvas.addEventListener('pointermove', e => {
@@ -1016,30 +991,45 @@ vCanvas.addEventListener('pointermove', e => {
     const [a,b] = [...pointers.values()]; const d = Math.hypot(a.x-b.x, a.y-b.y); const r = vCanvas.getBoundingClientRect();
     const cx = (a.x+b.x)/2 - r.left, cy = (a.y+b.y)/2 - r.top; const target = Math.min(fit*5, Math.max(fit, pinchScale * d/pinchStart));
     zoomAt(target/scale, cx, cy);
-  } else if (panStart){ tx = e.clientX - panStart.x; ty = e.clientY - panStart.y; clamp(); render(); }
+  } else if (panStart){
+    if (scale > fit*1.02){ tx = e.clientX - panStart.x; ty = e.clientY - panStart.y; clamp(); render(); }
+    else { const dx = e.clientX - swipeX; vImg.style.transform = `translate(${tx + dx*.6}px,${ty}px) scale(${scale})`; if (Math.abs(dx) > 8) swiped = true; }
+  }
 });
 const up = e => {
-  pointers.delete(e.pointerId);
+  const wasSingle = pointers.size === 1; pointers.delete(e.pointerId);
   if (pointers.size === 0){
     vCanvas.classList.remove('drag'); panStart = null;
-    const now = Date.now(); if (now - lastTap < 300){ const r = vCanvas.getBoundingClientRect(); if (scale > fit*1.05){ scale = fit; clamp(); render(); } else zoomAt(2.2, e.clientX - r.left, e.clientY - r.top); } lastTap = now;
+    if (wasSingle && scale <= fit*1.02){
+      const dx = e.clientX - swipeX, dy = e.clientY - swipeY;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) && gal.length > 1){ stepViewer(dx < 0 ? 1 : -1); return; }
+      render();
+    }
+    if (swiped) return;
+    /* tap on the empty backdrop closes; double-tap on the image zooms */
+    const onImage = e.clientX >= tx + vCanvas.getBoundingClientRect().left && e.clientX <= tx + natW*scale + vCanvas.getBoundingClientRect().left && e.clientY >= ty + vCanvas.getBoundingClientRect().top && e.clientY <= ty + natH*scale + vCanvas.getBoundingClientRect().top;
+    const now = Date.now();
+    if (now - lastTap < 300){ const r = vCanvas.getBoundingClientRect(); if (scale > fit*1.05){ scale = fit; clamp(); render(); } else zoomAt(2.2, e.clientX - r.left, e.clientY - r.top); lastTap = 0; return; }
+    lastTap = now;
+    if (!onImage) setTimeout(() => { if (lastTap === now && viewer.classList.contains('open')) closeViewer(); }, 280);
   } else if (pointers.size === 1){ const p = [...pointers.values()][0]; panStart = {x:p.x - tx, y:p.y - ty}; }
 };
 vCanvas.addEventListener('pointerup', up); vCanvas.addEventListener('pointercancel', up);
 addEventListener('resize', () => { if (viewer.classList.contains('open')) fitImage(); });
 
-/* open viewer from any [data-view] element (posters, strips, photos) */
+/* open viewer from any [data-view] element; elements sharing data-group become one gallery */
 document.addEventListener('click', e => {
   const t = e.target.closest('[data-view]'); if (!t) return;
-  openViewer(t.dataset.view, t.dataset.title || '');
+  const g = t.dataset.group;
+  if (g){
+    const els = $$(`[data-view][data-group="${g}"]`);
+    openViewer(els.map(el => ({ src: el.dataset.view, title: el.dataset.title || '' })), els.indexOf(t));
+  } else openViewer({ src: t.dataset.view, title: t.dataset.title || '' });
 });
-const openCv = () => openViewer(CV_IMAGE, 'Loh Wei Jian — CV', CV_PDF);
-$('#openCv').addEventListener('click', openCv); $('#openCv2').addEventListener('click', openCv);
+const openCv = () => openViewer({ src: CV_IMAGE, title: 'Loh Wei Jian — CV', pdf: CV_PDF });
+['openCv','openCv2','navCv'].forEach(id => $('#'+id).addEventListener('click', openCv));
 
-/* smooth anchor scroll offset for the fixed nav (CSS scroll-margin) */
-sections.forEach(s => s.style.scrollMarginTop = '48px');
-
-observeReveals(document);
+$$('.reveal').forEach(el => rev.observe(el));
 })();
 </script>
 </body>

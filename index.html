@@ -1,2234 +1,1046 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>LOH WEI JIAN - Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Loh Wei Jian — Mechanical Engineering · Photography · Design</title>
+<meta name="description" content="Portfolio of Loh Wei Jian, third-year Mechanical Engineering student at Universiti Malaya, Manufacturing Engineering Intern at Plexus, photographer and designer.">
+<meta name="theme-color" content="#0a0d16">
+<meta property="og:title" content="Loh Wei Jian — Portfolio">
+<meta property="og:description" content="Mechanical Engineering student · Photographer · Designer">
+<meta property="og:image" content="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0d16'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='30' fill='%23a596ff'%3EWJ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp" imagesrcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait-500.webp 500w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp 1000w" imagesizes="(max-width: 900px) 40vw, 300px">
 <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0a1929 100%);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Enhanced Navigation - Modern Hide/Show */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: transparent;
-            backdrop-filter: none;
-            z-index: 1000;
-            padding: 2rem 0;
-            transform: translateY(0);
-            opacity: 1;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        nav.scrolled {
-            background: rgba(26, 26, 46, 0.95);
-            backdrop-filter: blur(20px);
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        nav.nav-hidden {
-            transform: translateY(-100%);
-            opacity: 0;
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled .logo {
-            font-size: 1.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.9);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            font-weight: 500;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-            position: relative;
-            padding: 0.5rem 0;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #0a1929 100%);
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(1deg); }
-        }
-
-        .hero-content {
-            z-index: 2;
-            animation: fadeInUp 1s ease;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .hero-text {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .hero-text .cta-button { margin-top: 0.25rem; }
-
-        @media (min-width: 992px) {
-            .hero-content {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                align-items: center;
-                gap: 4rem;
-                text-align: center;
-                height: 100%;
-            }
-            .profile-portrait { order: 2; margin: 0; align-self: end; height: 100vh; }
-            .hero-text { 
-                order: 1; 
-                align-items: center; 
-                text-align: center; 
-                transform: translateX(15%);
-                position: relative;
-            }
-        }
-
-        /* Profile portrait (frameless, waist-up crop) */
-        .profile-portrait {
-            width: clamp(240px, 34vw, 560px);
-            aspect-ratio: 3 / 4;
-            margin: 0 auto 1.8rem;
-            overflow: hidden;
-            border-radius: 16px;
-            filter: drop-shadow(0 22px 50px rgba(0, 0, 0, 0.45));
-            animation: fadeInUp 0.9s ease both;
-            background: transparent;
-        }
-
-        .profile-portrait img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 18%; /* focus on face/chest; trims legs */
-            transform: scale(1.14);
-            will-change: transform;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 900;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            white-space: nowrap;
-        }
-
-        .hero p {
-            font-size: 1.6rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            font-weight: 300;
-            letter-spacing: 0.02em;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 18px 40px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            will-change: transform;
-            cursor: pointer;
-            backdrop-filter: blur(15px);
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-            font-weight: 500;
-            font-size: 1.1rem;
-            letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
-            color: #1a1a2e;
-            transform: translateY(-4px) scale(1.02);
-            border-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        /* Sections - Always visible by default */
-        .section {
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            margin: 3rem 0;
-            border-radius: 25px;
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            position: relative;
-            overflow: hidden;
-        }
-
-
-
-        /* Animated elements - visible by default, animate on scroll */
-        .animate-on-scroll {
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .animate-on-scroll.fade-up {
-            transform: translateY(0);
-        }
-
-        .animate-on-scroll.fade-left {
-            transform: translateX(0);
-        }
-
-        .animate-on-scroll.fade-right {
-            transform: translateX(0);
-        }
-
-        .animate-on-scroll.scale {
-            transform: scale(1);
-        }
-
-        .animate-on-scroll.rotate {
-            transform: rotate(0deg) translateY(0);
-        }
-
-        /* Hidden state for animation */
-        .animate-on-scroll.hidden.fade-up {
-            opacity: 0;
-            transform: translateY(40px);
-        }
-
-        .animate-on-scroll.hidden.fade-left {
-            opacity: 0;
-            transform: translateX(-40px);
-        }
-
-        .animate-on-scroll.hidden.fade-right {
-            opacity: 0;
-            transform: translateX(40px);
-        }
-
-        .animate-on-scroll.hidden.scale {
-            opacity: 0;
-            transform: scale(0.8);
-        }
-
-        .animate-on-scroll.hidden.rotate {
-            opacity: 0;
-            transform: rotate(-5deg) translateY(20px);
-        }
-
-        .section h2 {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-            color: #1a1a2e;
-            position: relative;
-            font-weight: 300;
-            letter-spacing: -0.02em;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 2px;
-        }
-
-        .section h2::before {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.3), transparent);
-        }
-
-        /* Combined Education & Projects Section */
-        .education-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            margin: 0 1.5rem 4rem 1.5rem;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .education-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .education-header h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .education-header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* Project Items - Alternating Layout with Responsive Heights */
-        .projects-container {
-            padding: 0 1.5rem;
-        }
-
-        .project-item {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-item.project-left {
-            flex-direction: row-reverse;
-        }
-
-        .project-content {
-            flex: 1;
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 0 0 4px 4px;
-        }
-
-        .project-image {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 15px;
-            background: white;
-            padding: 6px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Specific sizing for different poster ratios */
-        .project-item:nth-child(1) .project-image {
-            aspect-ratio: 2245/3179;
-        }
-
-        .project-item:nth-child(2) .project-image {
-            aspect-ratio: 3456/4608;
-        }
-
-        .project-item:nth-child(3) .project-image {
-            aspect-ratio: 1587/2245;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: auto;
-            object-fit: unset;
-            object-position: center;
-        }
-
-        .project-image:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-content h3 {
-            color: #333;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .project-content p {
-            color: #666;
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-
-        .project-content .date {
-            color: #999;
-            font-size: 0.9rem;
-            font-style: italic;
-            margin-top: auto;
-        }
-
-        /* Grid layouts for other sections */
-        .grid {
-            display: grid;
-            gap: 2.0rem;
-            margin: 1.5rem 1.5rem 0 1.5rem;
-        }
-
-        .grid-2 {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .grid-3 {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-
-        /* Cards */
-        .card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            will-change: transform;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 20px 20px 0 0;
-        }
-
-        .card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .card h3 {
-            color: #333;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .card p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .card .date {
-            color: #999;
-            font-size: 0.9rem;
-            font-style: italic;
-        }
-
-        /* Photography items - Direct image display with shadows */
-        .photography-item {
-            aspect-ratio: 3 / 2;
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            cursor: pointer;
-            background: white;
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        
-        @media (max-width: 768px) {
-            .photography-item {
-                margin: 0 auto 1.5rem auto;
-                max-width: 90%;
-                display: block;
-            }
-        }
-
-        .photography-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-        }
-
-        .photography-item:hover {
-            transform: translateY(-12px) scale(1.03);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
-        }
-
-        .photography-item:hover::before {
-            opacity: 1;
-        }
-
-        .photography-item:hover img {
-            transform: scale(1.05);
-        }
-
-        /* CV Modal Viewer */
-        .cv-modal {
-            position: fixed;
-            inset: 0;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            background: rgba(10, 12, 24, 0.85);
-            backdrop-filter: blur(4px);
-            z-index: 2000;
-            padding: 2rem;
-        }
-        .cv-modal.open { display: flex; }
-        .cv-modal-content {
-            position: relative;
-            width: min(1000px, 95vw);
-            height: min(90vh, 1200px);
-            border-radius: 16px;
-            background: transparent;
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
-            border: none;
-            overflow: hidden;
-        }
-        .cv-image-container {
-            position: absolute;
-            inset: 0;
-            background: transparent;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: default;
-            touch-action: none;
-        }
-        .cv-image-container.can-pan { cursor: grab; }
-        .cv-image-container.dragging { cursor: grabbing; }
-        #cvImage {
-            max-width: none;
-            width: auto;
-            height: auto;
-            transform: translate(0px, 0px) scale(1);
-            transform-origin: center center;
-            transition: transform 0.1s ease-out;
-            user-select: none;
-            -webkit-user-drag: none;
-        }
-        .cv-controls {
-            position: absolute;
-            bottom: 18px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            padding: 6px 10px;
-            border-radius: 14px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-            backdrop-filter: blur(10px);
-        }
-        .cv-control-btn, .cv-download-btn {
-            border: none;
-            background: rgba(255, 255, 255, 0.15);
-            color: #ffffff;
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
-            transition: transform 0.15s ease, background 0.15s ease;
-        }
-        .cv-control-btn:hover, .cv-download-btn:hover {
-            transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.25);
-            box-shadow: 0 14px 26px rgba(0, 0, 0, 0.4);
-        }
-        
-        .cv-close-btn:hover {
-            background: rgba(255, 255, 255, 1);
-            transform: scale(1.1);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-        }
-        .cv-download-btn svg { width: 18px; height: 18px; }
-        .cv-close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 24px;
-            line-height: 1;
-            padding: 0;
-            background: rgba(255, 255, 255, 0.9);
-            color: #333;
-            border: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: all 0.2s ease;
-            z-index: 1000;
-        }
-        .cv-zoom-display { color: #fff; min-width: 50px; text-align: center; font-size: 0.9rem; opacity: 0.95; }
-
-        /* Design Portfolio Carousel Styles */
-        .design-carousel-wrapper {
-            position: relative;
-            overflow: hidden;
-            max-width: 900px;
-            margin: 2rem auto;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            touch-action: pan-y pinch-zoom;
-        }
-        
-        @media (max-width: 768px) {
-            .design-carousel-wrapper {
-                max-width: 90%;
-                margin: 1rem auto;
-                border-radius: 16px;
-            }
-            
-            .design-carousel-item {
-                padding: 1rem;
-                min-height: 180px;
-            }
-            
-            .ig-content-placeholder {
-                max-width: 280px;
-                padding: 1.5rem 2rem;
-                margin: 0 auto;
-            }
-            
-            .ig-account-name {
-                font-size: 1.4rem;
-            }
-        }
-
-        .design-carousel-container {
-            display: flex;
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            touch-action: pan-y pinch-zoom;
-        }
-
-        .design-carousel-item {
-            flex: 0 0 100%;
-            padding: 2rem;
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            text-align: center;
-            min-height: 280px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .ig-account-name {
-            font-size: 1.8rem;
-            font-weight: 600;
-            background: linear-gradient(135deg, #ffc0d9, #ffd6a5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-
-        .ig-content-placeholder {
-            background: linear-gradient(135deg, #6663ff, #ac7ee9);
-            padding: 0.35rem 0.35rem 0.8rem 0.35rem;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            border: none;
-            max-width: 480px;
-            width: 100%;
-            color: white;
-            text-decoration: none;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .ig-preview-img {
-            width: 100%;
-            max-height: 340px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .ig-content-placeholder p { color: rgba(255,255,255,0.9); font-size: 0.82rem; margin-bottom: 0; }
-
-        .ig-content-placeholder p:last-child {
-            margin-bottom: 0;
-        }
-
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.95);
-            border: 2px solid rgba(0, 0, 0, 0.1);
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            z-index: 100;
-            border-radius: 50%;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            color: #333;
-            font-weight: bold;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1;
-        }
-
-        .carousel-btn:hover {
-            background: white;
-            transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            border-color: rgba(0, 0, 0, 0.2);
-        }
-
-        .carousel-btn:active {
-            transform: translateY(-50%) scale(0.95);
-        }
-
-        .carousel-btn.prev {
-            left: 15px;
-        }
-
-        .carousel-btn.next {
-            right: 15px;
-        }
-
-        .carousel-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.95);
-        }
-
-        .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ddd;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .indicator.active {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            transform: scale(1.2);
-        }
-
-        .indicator:hover {
-            background: #999;
-        }
-
-        .ig-content-placeholder:hover { transform: translateY(-3px) scale(1.03); transition: transform 0.25s ease, box-shadow 0.25s ease; box-shadow: 0 15px 35px rgba(0,0,0,0.25); }
-
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            color: white;
-            text-align: center;
-            padding: 4rem 0;
-            margin-top: 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.5;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
-            padding: 1rem 1.5rem;
-            border-radius: 30px;
-            backdrop-filter: blur(15px);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .contact-item:hover {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
-            transform: translateY(-3px) scale(1.02);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .contact-item:hover::before {
-            left: 100%;
-        }
-
-        /* Make entire contact pill clickable when used as an anchor */
-        a.contact-item {
-            color: white;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        a.contact-item:visited {
-            color: white;
-        }
-        a.contact-item:focus-visible {
-            outline: 2px solid rgba(255, 255, 255, 0.6);
-            outline-offset: 2px;
-        }
-
-        /* Contact icons */
-        .contact-icon {
-            width: 22px;
-            height: 22px;
-            display: inline-block;
-        }
-
-        .contact-link {
-            text-decoration: none; 
-            color: white;        
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .contact-link:visited {
-            color: white;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInFromLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInFromRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .slide-in-left {
-            animation: slideInFromLeft 0.8s ease-out;
-        }
-
-        .slide-in-right {
-            animation: slideInFromRight 0.8s ease-out;
-        }
-
-        .scale-in {
-            animation: scaleIn 0.8s ease-out;
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.8rem;
-                letter-spacing: -0.01em;
-            }
-            
-            .hero p {
-                font-size: 1.3rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .section {
-                margin: 1rem 0;
-                padding: 60px 20px;
-                border-radius: 20px;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav {
-                padding: 1.5rem 0;
-            }
-
-            .project-item { 
-                flex-direction: column !important; 
-                gap: 1.4rem; 
-                text-align: center;
-                align-items: center;
-            }
-
-            .project-image {
-                min-height: 300px;
-                max-height: 400px !important;
-                order: -1;
-            }
-
-            .project-item:nth-child(1) .project-image,
-            .project-item:nth-child(2) .project-image,
-            .project-item:nth-child(3) .project-image {
-                aspect-ratio: auto;
-                height: 300px;
-                width: 100%;
-            }
-            
-            .project-content {
-                order: 1;
-                text-align: center;
-            }
-
-            .design-carousel-item {
-                padding: 1.5rem 1rem;
-                min-height: 250px;
-            }
-
-            .ig-account-title {
-                font-size: 1.1rem;
-                font-weight: 500;
-                color: #555;
-                margin-top: 0.5rem;
-            }
-            
-            .carousel-btn {
-                font-size: 1.2rem;
-                padding: 0.8rem 1rem;
-            }
-
-            .carousel-btn.prev {
-                left: 5px;
-            }
-
-            .carousel-btn.next {
-                right: 5px;
-            }
-            
-            .carousel-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 16px;
-            }
-
-            .section h2 {
-                font-size: 2.2rem;
-            }
-
-            .card {
-                padding: 1.5rem;
-                margin: 0 auto;
-                max-width: 90%;
-                text-align: center;
-            }
-
-            .project-content {
-                padding: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .cta-button {
-                padding: 15px 30px;
-                font-size: 1rem;
-            }
-
-            .section h2 {
-                font-size: 1.8rem;
-            }
-        }
-
-                /* Fix Design Carousel text & button spacing on small devices */
-        @media (max-width: 480px) {
-            .ig-content-placeholder {
-                padding: 1.2rem 1.5rem; /* less padding so text fits */
-                max-width: 90%;         /* allow it to fill more width */
-            }
-            .ig-account-name {
-                font-size: 1.2rem;      /* smaller text so no wrapping issue */
-            }
-            .ig-account-title {
-                font-size: 0.9rem;
-            }
-            .carousel-btn {
-                width: 32px;
-                height: 32px;
-                font-size: 14px;
-            }
-        }
-
-        /* Fix work experience cards stacking on mobile */
-        @media (max-width: 768px) {
-            .grid-2 {
-                grid-template-columns: 1fr; /* single column */
-            }
-            .card {
-                max-width: 100%;
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* ── Photo Slider ── */
-        .photo-slider-wrapper {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            padding: 5px 0 50px;
-        }
-
-        .photo-slider-track {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0;
-            transition: none; 
-            position: relative;
-            height: 480px;
-            display: flex;
-            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); 
-            will-change: transform;
-            transform: translateZ(0);
-        }
-
-        .photo-slide {
-            position: absolute;
-            background-size: cover;
-            background-position: center;
-            border-radius: 18px;
-            transition: all 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-            flex: 0 0 100%;
-            backface-visibility: hidden;
-            will-change: transform, opacity;
-            transform: translateZ(0);
-        }
-
-        /* Active / centre slide */
-        .photo-slide.ps-active {
-            width: 70%;
-            height: 480px;
-            z-index: 3;
-            filter: none;
-            opacity: 1;
-            transform: translateX(0) scale(1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        /* One step left */
-        .photo-slide.ps-prev {
-            width: 19%;
-            height: 380px;
-            z-index: 2;
-            filter: blur(0px) grayscale(40%);
-            opacity: 0.65;
-            transform: translateX(calc(-155% - 10px)) scale(0.92);
-        }
-
-        /* One step right */
-        .photo-slide.ps-next {
-            width: 19%;
-            height: 380px;
-            z-index: 2;
-            filter: blur(0px) grayscale(40%);
-            opacity: 0.65;
-            transform: translateX(calc(155% + 10px)) scale(0.92);
-        }
-
-        /* Hidden (further slides) */
-        .photo-slide.ps-hidden {
-            width: 10%;
-            height: 100px;
-            z-index: 1;
-            filter: blur(8px) grayscale(60%);
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        /* Nav buttons */
-        .photo-slider-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-60%);
-            z-index: 10;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            border: none;
-            background: rgba(255,255,255,0.9);
-            color: #1a1a2e;
-            font-size: 1.3rem;
-            cursor: pointer;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-            transition: all 0.25s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(8px);
-        }
-
-        .photo-slider-btn:hover {
-            background: white;
-            transform: translateY(-60%) scale(1.12);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.25);
-        }
-
-        .photo-slider-prev { left: 10px; }
-        .photo-slider-next { right: 10px; }
-
-        /* Dot indicators */
-        .photo-slider-dots {
-            position: absolute;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-        }
-
-        .photo-slider-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(102,126,234,0.35);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-        }
-
-        .photo-slider-dot.active {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            width: 24px;
-            border-radius: 4px;
-        }
-
-        @media (max-width: 768px) {
-            .photo-slider-track { height: 280px; }
-            .photo-slide.ps-active  { width: 70%; height: 260px; }
-            .photo-slide.ps-prev    { width: 26%; height: 200px; transform: translateX(calc(-68% - 6px)) scale(0.9); }
-            .photo-slide.ps-next    { width: 26%; height: 200px; transform: translateX(calc(68% + 6px)) scale(0.9); }
-            .photo-slider-btn { width: 36px; height: 36px; font-size: 1rem; }
-        }
+/* ─────────────────────────────────────────────────────────────
+   DESIGN TOKENS
+   ───────────────────────────────────────────────────────────── */
+:root{
+  --bg:#0a0d16;            /* page ground */
+  --bg-2:#0f1320;          /* raised surface */
+  --bg-3:#151a2b;          /* hover surface */
+  --line:rgba(255,255,255,.08);
+  --line-2:rgba(255,255,255,.14);
+  --ink:#f3efe7;           /* primary text, warm paper */
+  --ink-2:#b9b6ad;         /* secondary text */
+  --ink-3:#7f7d78;         /* muted */
+  --acc:#a596ff;           /* violet accent */
+  --acc-2:#6d5cf0;
+  --acc-glow:rgba(139,120,255,.28);
+  --radius:18px;
+  --radius-s:12px;
+  --font-display:"Fraunces", Georgia, "Times New Roman", serif;
+  --font-body:"Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --nav-h:72px;
+  --pad:clamp(20px,5vw,64px);
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:var(--font-body);
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+  font-size:16px;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--acc);color:#0a0d16}
+
+/* drafting-sheet grain + grid, painted once, fixed, cheap */
+.grain{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 100%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 100%);
+}
+.glow{
+  position:fixed;z-index:0;pointer-events:none;border-radius:50%;
+  filter:blur(90px);opacity:.55;
+}
+.glow-a{width:60vw;height:60vw;max-width:800px;max-height:800px;top:-20vw;right:-15vw;background:radial-gradient(circle,var(--acc-glow),transparent 65%)}
+.glow-b{width:50vw;height:50vw;max-width:640px;max-height:640px;bottom:-25vw;left:-20vw;background:radial-gradient(circle,rgba(80,120,255,.18),transparent 65%)}
+@media (max-width:760px){.glow{filter:blur(60px)}}
+
+main{position:relative;z-index:1}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+/* ─────────────────────────────────────────────────────────────
+   TYPOGRAPHY
+   ───────────────────────────────────────────────────────────── */
+h1,h2,h3,.display{font-family:var(--font-display);font-weight:400;letter-spacing:-.01em;line-height:1.05}
+h2{font-size:clamp(2.1rem,4.6vw,3.6rem)}
+h3{font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.2}
+em.ac{font-style:italic;color:var(--acc);font-weight:300}
+.eyebrow{
+  font-family:var(--font-body);font-size:.72rem;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:14px;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--acc);display:inline-block}
+.eyebrow b{color:var(--acc);font-weight:600}
+.lede{color:var(--ink-2);font-size:clamp(1rem,1.3vw,1.15rem);max-width:60ch}
+
+/* ─────────────────────────────────────────────────────────────
+   NAV
+   ───────────────────────────────────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);
+  display:flex;align-items:center;
+  transform:translateY(0);transition:transform .45s var(--ease),background .3s,border-color .3s;
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{background:rgba(10,13,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav.hidden{transform:translateY(-100%)}
+.nav .wrap{width:100%;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.02em;display:flex;align-items:baseline;gap:6px}
+.brand i{font-style:italic;color:var(--acc)}
+.links{display:flex;gap:2px;list-style:none}
+.links a{
+  display:block;padding:8px 14px;border-radius:999px;font-size:.86rem;font-weight:500;color:var(--ink-2);
+  transition:color .2s,background .2s;
+}
+.links a:hover,.links a.active{color:var(--ink);background:rgba(255,255,255,.06)}
+.burger{display:none;width:44px;height:44px;border-radius:12px;align-items:center;justify-content:center;flex-direction:column;gap:5px;margin-right:-8px}
+.burger span{width:20px;height:1.5px;background:var(--ink);transition:transform .35s var(--ease),opacity .2s}
+.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.menu{
+  position:fixed;inset:0;z-index:90;background:rgba(10,13,22,.96);
+  display:flex;flex-direction:column;justify-content:center;padding:0 var(--pad);
+  opacity:0;pointer-events:none;transition:opacity .35s;
+}
+.menu.open{opacity:1;pointer-events:auto}
+.menu a{
+  font-family:var(--font-display);font-size:clamp(2rem,9vw,3rem);padding:10px 0;color:var(--ink);
+  display:flex;align-items:baseline;gap:18px;border-bottom:1px solid var(--line);
+  transform:translateY(16px);opacity:0;transition:transform .5s var(--ease),opacity .4s;
+}
+.menu a small{font-family:var(--font-body);font-size:.7rem;letter-spacing:.2em;color:var(--acc);font-weight:600}
+.menu.open a{transform:none;opacity:1}
+.menu.open a:nth-child(1){transition-delay:.05s}.menu.open a:nth-child(2){transition-delay:.09s}.menu.open a:nth-child(3){transition-delay:.13s}.menu.open a:nth-child(4){transition-delay:.17s}.menu.open a:nth-child(5){transition-delay:.21s}.menu.open a:nth-child(6){transition-delay:.25s}.menu.open a:nth-child(7){transition-delay:.29s}.menu.open a:nth-child(8){transition-delay:.33s}.menu.open a:nth-child(9){transition-delay:.37s}.menu.open a:nth-child(10){transition-delay:.41s}
+@media (max-width:900px){.links{display:none}.burger{display:flex}}
+
+/* ─────────────────────────────────────────────────────────────
+   HERO
+   ───────────────────────────────────────────────────────────── */
+.hero{
+  min-height:100svh;display:grid;align-items:end;
+  padding-top:calc(var(--nav-h) + 24px);padding-bottom:0;position:relative;overflow:hidden;
+}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:end;width:100%}
+.hero-copy{align-self:center;padding-bottom:clamp(24px,6vh,72px)}
+.hero-kicker{display:inline-flex;max-width:100%;text-align:left;align-items:center;gap:10px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);
+  padding:8px 14px 8px 10px;border:1px solid var(--line-2);border-radius:999px;margin-bottom:28px;background:rgba(255,255,255,.03)}
+.hero-kicker .dot{width:8px;height:8px;border-radius:50%;background:#7CFF9B;box-shadow:0 0 0 4px rgba(124,255,155,.15)}
+.hero h1{font-size:clamp(3.4rem,10vw,7.6rem);line-height:.92;letter-spacing:-.03em}
+.hero h1 .l2{display:block;font-style:italic;font-weight:300;color:var(--acc);padding-left:.08em}
+.hero-sub{margin-top:26px;font-size:clamp(1rem,1.5vw,1.2rem);color:var(--ink-2);max-width:46ch}
+.hero-roles{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.hero-roles span::before{content:"— ";color:var(--acc)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:600;font-size:.92rem;
+  border:1px solid var(--line-2);color:var(--ink);transition:transform .25s var(--ease),background .25s,border-color .25s,color .25s;
+  background:rgba(255,255,255,.03);
+}
+.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28)}
+.btn.primary{background:var(--ink);color:#0a0d16;border-color:var(--ink)}
+.btn.primary:hover{background:#fff}
+.btn svg{width:16px;height:16px}
+.hero-figure{position:relative;justify-self:end;align-self:end;height:min(74svh,700px);max-width:100%;display:flex;align-items:flex-end}
+.hero-figure::before{
+  content:"";position:absolute;inset:auto 6% -10% 6%;height:70%;border-radius:50%;
+  background:radial-gradient(ellipse at 50% 60%,var(--acc-glow),transparent 70%);filter:blur(30px);
+}
+.hero-figure img{position:relative;height:100%;width:auto;max-width:100%;object-fit:contain;object-position:bottom;
+  filter:drop-shadow(0 30px 50px rgba(0,0,0,.55));
+  -webkit-mask-image:linear-gradient(#000 82%,transparent 100%);mask-image:linear-gradient(#000 82%,transparent 100%)}
+.hero-meta{position:absolute;left:0;bottom:22%;transform:translateX(-58%);display:none}
+.scroll-cue{position:absolute;right:var(--pad);bottom:28px;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:10px}
+.scroll-cue::after{content:"";width:1px;height:44px;background:linear-gradient(var(--acc),transparent);animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media (max-width:480px){.hero-kicker{font-size:.66rem;letter-spacing:.1em;padding:7px 12px 7px 9px}}
+@media (max-width:900px){
+  .hero{align-items:start}
+  .hero .wrap{grid-template-columns:1fr;gap:0}
+  .hero-copy{order:2;align-self:start;padding-bottom:72px;padding-top:8px}
+  .hero-figure{order:1;justify-self:center;height:min(46svh,400px)}
+  .hero-figure img{-webkit-mask-image:linear-gradient(#000 78%,transparent 100%);mask-image:linear-gradient(#000 78%,transparent 100%)}
+  .hero h1{font-size:clamp(3rem,15vw,5rem)}
+  .scroll-cue{display:none}
+}
+
+/* page-load orchestration (hero only) */
+.rise{opacity:0;transform:translateY(22px);animation:rise .9s var(--ease) forwards}
+.rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.18s}.rise.d3{animation-delay:.28s}.rise.d4{animation-delay:.38s}.rise.d5{animation-delay:.48s}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero-figure{opacity:0;animation:figIn 1.2s var(--ease) .15s forwards}
+@keyframes figIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+
+/* ─────────────────────────────────────────────────────────────
+   SECTIONS & CARDS
+   ───────────────────────────────────────────────────────────── */
+section{padding:clamp(72px,10vw,128px) 0;position:relative}
+section + section{border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.sec-head .num{font-family:var(--font-display);font-style:italic;font-size:clamp(3rem,7vw,5.5rem);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);user-select:none}
+@media (max-width:640px){.sec-head{grid-template-columns:1fr}.sec-head .num{display:none}}
+
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+  border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,3vw,32px);
+  position:relative;overflow:hidden;
+  transition:border-color .3s,transform .4s var(--ease);
+}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(600px 200px at var(--mx,50%) -20%,rgba(165,150,255,.12),transparent 60%);opacity:0;transition:opacity .4s}
+.card:hover{border-color:var(--line-2)}
+.card:hover::after{opacity:1}
+.chip{display:inline-flex;align-items:center;padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.02em;
+  border:1px solid var(--line-2);color:var(--ink-2);background:rgba(255,255,255,.03);white-space:nowrap}
+.chip.ac{color:var(--acc);border-color:rgba(165,150,255,.35);background:rgba(165,150,255,.08)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.date{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+
+/* reveal-on-scroll: transform/opacity only */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.rise,.hero-figure{animation:none;opacity:1;transform:none}}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(28px,5vw,72px);align-items:start}
+.about-text{font-family:var(--font-display);font-size:clamp(1.35rem,2.3vw,1.9rem);line-height:1.35;font-weight:300;color:var(--ink)}
+.about-text em{font-style:italic;color:var(--acc)}
+.facts{display:grid;gap:0;border-top:1px solid var(--line)}
+.fact{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.fact b{font-weight:600;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);padding-top:4px}
+.fact span{color:var(--ink-2)}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr}}
+
+/* EDUCATION */
+.edu{display:grid;gap:14px}
+.edu .card{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:start}
+.edu .card h3{margin-bottom:6px}
+.edu .card p{color:var(--ink-2)}
+.edu .chips{margin-top:16px}
+@media (max-width:640px){.edu .card{grid-template-columns:1fr;gap:8px}}
+
+/* PROJECTS */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.proj{padding:0;display:flex;flex-direction:column}
+.proj .poster{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0d1120;cursor:zoom-in}
+.proj .poster img{width:100%;height:100%;object-fit:cover;object-position:top;transform:scale(1.001);transition:transform 1.2s var(--ease)}
+.proj:hover .poster img{transform:scale(1.04)}
+.proj .poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,13,22,.85));pointer-events:none}
+.proj .poster .zoom{position:absolute;right:14px;bottom:14px;width:38px;height:38px;border-radius:50%;background:rgba(10,13,22,.7);border:1px solid var(--line-2);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
+.proj .poster .zoom svg{width:16px;height:16px}
+.proj .body{padding:clamp(20px,2.6vw,28px);display:grid;gap:12px}
+.proj .body .top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.proj p{color:var(--ink-2);font-size:.95rem}
+.proj ul{list-style:none;display:grid;gap:8px;color:var(--ink-2);font-size:.93rem}
+.proj li{padding-left:18px;position:relative}
+.proj li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:1px;background:var(--acc)}
+.proj .team{font-size:.8rem;color:var(--ink-3);border-top:1px solid var(--line);padding-top:12px}
+.proj.noimg{background:linear-gradient(160deg,rgba(165,150,255,.10),rgba(255,255,255,.02));justify-content:space-between}
+.proj.noimg .art{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.proj.noimg .art svg{width:60%;height:60%;opacity:.9}
+@media (max-width:760px){.projects{grid-template-columns:1fr}.proj .poster{aspect-ratio:3/2}.proj.noimg .art{aspect-ratio:auto;height:180px}}
+
+/* LEADERSHIP */
+.orgs{display:grid;gap:18px}
+.org{padding:0;overflow:hidden}
+.org .head{display:grid;grid-template-columns:1fr auto;gap:18px;padding:clamp(20px,2.6vw,28px) clamp(20px,2.6vw,28px) 0;align-items:start}
+.org .head h3{margin-bottom:4px}
+.org .head p{color:var(--ink-2);font-size:.92rem;max-width:56ch}
+.org .roles{display:grid;gap:6px;min-width:220px;text-align:right}
+.org .roles div{font-size:.86rem;color:var(--ink-2)}
+.org .roles div b{color:var(--ink);font-weight:600}
+.org .roles div small{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.strip{display:flex;gap:12px;overflow-x:auto;padding:22px clamp(20px,2.6vw,28px) clamp(20px,2.6vw,28px);scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 auto;scroll-snap-align:start;width:min(72vw,300px);border-radius:var(--radius-s);overflow:hidden;background:#0d1120;position:relative;cursor:zoom-in}
+.strip figure img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform 1s var(--ease)}
+.strip figure:hover img{transform:scale(1.04)}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:.74rem;color:var(--ink);background:linear-gradient(transparent,rgba(10,13,22,.85));letter-spacing:.02em}
+.strip-hint{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);padding:0 clamp(20px,2.6vw,28px);margin-top:18px;display:flex;align-items:center;gap:8px}
+.strip-hint svg{width:14px;height:14px}
+@media (max-width:640px){.org .head{grid-template-columns:1fr}.org .roles{text-align:left;min-width:0}}
+
+/* EXPERIENCE (timeline) */
+.timeline{display:grid;gap:0;position:relative}
+.tl{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line);position:relative}
+.tl:last-child{border-bottom:1px solid var(--line)}
+.tl .when{padding-top:6px}
+.tl .when .date{display:block}
+.tl .when .loc{font-size:.8rem;color:var(--ink-3);margin-top:4px}
+.tl h3{margin-bottom:2px}
+.tl .co{color:var(--acc);font-weight:600;font-size:.9rem;margin-bottom:8px}
+.tl p{color:var(--ink-2);font-size:.95rem;max-width:64ch}
+.tl.now::before{content:"";position:absolute;left:-18px;top:34px;width:8px;height:8px;border-radius:50%;background:#7CFF9B;box-shadow:0 0 0 4px rgba(124,255,155,.15)}
+.tl .with-photo{display:grid;grid-template-columns:1fr 240px;gap:22px;align-items:start}
+.tl .photo{border-radius:var(--radius-s);overflow:hidden;cursor:zoom-in}
+.tl .photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+@media (max-width:760px){.tl{grid-template-columns:1fr;gap:6px}.tl.now::before{left:auto;right:0;top:30px}.tl .with-photo{grid-template-columns:1fr}.tl .photo{max-width:360px}}
+
+/* SKILLS */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill h3{font-size:1.05rem;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.skill h3 span{width:26px;height:26px;border-radius:8px;background:rgba(165,150,255,.12);color:var(--acc);display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-body);font-size:.72rem;font-weight:700}
+@media (max-width:900px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.skills{grid-template-columns:1fr}}
+
+/* PHOTOGRAPHY — coverflow, transform/opacity only */
+.cf{position:relative;margin-top:8px;--h:520px}
+.cf-stage{position:relative;height:var(--h);overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.cf-slide{position:absolute;left:50%;top:50%;border-radius:16px;overflow:hidden;background:#0d1120;
+  transform:translate(-50%,-50%) scale(.6);opacity:0;will-change:transform,opacity;
+  transition:transform .75s var(--ease),opacity .55s var(--ease);box-shadow:0 30px 60px rgba(0,0,0,.45);cursor:pointer;
+  contain:layout paint}
+.cf-slide img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cf-slide.is-active{cursor:zoom-in}
+.cf-slide::after{content:"";position:absolute;inset:0;background:rgba(10,13,22,var(--dim,0));transition:background .55s var(--ease);pointer-events:none}
+.cf-ui{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:22px}
+.cf-btn{width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s var(--ease)}
+.cf-btn:hover{background:rgba(255,255,255,.08);transform:scale(1.06)}
+.cf-btn svg{width:18px;height:18px}
+.cf-dots{display:flex;gap:6px;align-items:center}
+.cf-dot{width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.22);transition:width .35s var(--ease),background .3s}
+.cf-dot.on{width:22px;background:var(--acc)}
+.cf-count{font-family:var(--font-display);font-style:italic;color:var(--ink-3);font-size:1rem;min-width:56px;text-align:center}
+@media (max-width:760px){.cf{--h:min(66vw,360px)}.cf-slide{border-radius:12px;box-shadow:0 18px 30px rgba(0,0,0,.4)}}
+@media (prefers-reduced-motion:reduce){.cf-slide{transition:none}}
+
+/* DESIGN */
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ig{aspect-ratio:1;padding:22px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer}
+.ig .mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#f9ce34,#ee2a7b 55%,#6228d7);display:flex;align-items:center;justify-content:center}
+.ig .mark svg{width:20px;height:20px}
+.ig h3{font-size:1.15rem;margin-bottom:6px}
+.ig p{font-size:.82rem;color:var(--ink-2)}
+.ig .go{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:600;display:flex;align-items:center;gap:8px;margin-top:14px}
+.ig .go svg{width:12px;height:12px;transition:transform .3s var(--ease)}
+.ig:hover .go svg{transform:translate(3px,-3px)}
+.ig.featured{grid-column:1/-1;aspect-ratio:auto;min-height:260px;display:grid;grid-template-columns:1fr 1.1fr;gap:20px;padding:0;overflow:hidden}
+.ig.featured .txt{padding:22px;display:flex;flex-direction:column;justify-content:space-between}
+.ig.featured .shot{position:relative;min-height:220px}
+.ig.featured .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top;-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%);mask-image:linear-gradient(90deg,transparent,#000 22%);transition:transform 1.2s var(--ease)}
+.ig.featured:hover .shot img{transform:scale(1.03)}
+@media (max-width:900px){.ig-grid{grid-template-columns:repeat(2,1fr)}.ig.featured{grid-template-columns:1fr}.ig.featured .shot{order:-1;min-height:170px}.ig.featured .shot img{-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent);mask-image:linear-gradient(180deg,#000 55%,transparent);object-position:center top}.ig.featured .txt{padding-top:0}}
+@media (max-width:480px){.ig-grid{grid-template-columns:1fr}}
+@media (max-width:480px){.ig{aspect-ratio:auto;min-height:200px}}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.contact h2{font-size:clamp(2.6rem,6vw,5rem)}
+.contact .lede{margin-top:18px}
+.clist{display:grid;gap:0;border-top:1px solid var(--line)}
+.clist .row{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);transition:padding .3s var(--ease)}
+.clist a.row:hover{padding-left:8px}
+.clist .ic{width:44px;height:44px;border-radius:12px;border:1px solid var(--line-2);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.03)}
+.clist .ic svg{width:18px;height:18px}
+.clist b{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.clist span{color:var(--ink)}
+.clist .arr{color:var(--ink-3)}
+@media (max-width:820px){.contact{grid-template-columns:1fr}}
+
+footer{padding:36px 0 calc(28px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--ink-3);font-size:.8rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ─────────────────────────────────────────────────────────────
+   VIEWER (CV + posters + photos)
+   ───────────────────────────────────────────────────────────── */
+.viewer{position:fixed;inset:0;z-index:200;background:rgba(6,8,14,.92);display:flex;flex-direction:column;
+  opacity:0;pointer-events:none;transition:opacity .3s}
+.viewer.open{opacity:1;pointer-events:auto}
+.viewer .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:max(12px,env(safe-area-inset-top)) 16px 12px;flex:0 0 auto}
+.viewer .title{font-size:.86rem;color:var(--ink-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.viewer .tools{display:flex;gap:8px;align-items:center}
+.vbtn{height:40px;min-width:40px;padding:0 12px;border-radius:999px;border:1px solid var(--line-2);display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:.84rem;font-weight:600;background:rgba(255,255,255,.04)}
+.vbtn:hover{background:rgba(255,255,255,.1)}
+.vbtn svg{width:16px;height:16px}
+.viewer .canvas{flex:1;position:relative;overflow:hidden;touch-action:none;cursor:grab}
+.viewer .canvas.drag{cursor:grabbing}
+.viewer .canvas img{position:absolute;left:0;top:0;transform-origin:0 0;max-width:none;will-change:transform;user-select:none;-webkit-user-drag:none;pointer-events:none}
+.viewer .hint{position:absolute;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);pointer-events:none;white-space:nowrap}
+.viewer .loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--ink-3);font-family:var(--font-display);font-style:italic}
+body.locked{overflow:hidden}
 </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container">
-            <div class="logo">WEI JIAN</div>
-            <ul class="nav-links">
-                <li><a onclick="scrollToSection('hero')">Home</a></li>
-                <li><a onclick="scrollToSection('education')">Education & Projects</a></li>
-                <li><a onclick="scrollToSection('experience')">Experience</a></li>
-                <li><a onclick="scrollToSection('photography')">Photography</a></li>
-                <li><a onclick="scrollToSection('design')">Design</a></li>
-                <li><a onclick="scrollToSection('contact')">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<div class="grain" aria-hidden="true"></div>
+<div class="glow glow-a" aria-hidden="true"></div>
+<div class="glow glow-b" aria-hidden="true"></div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <figure class="profile-portrait"
-                style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/Wei%20Jian.png'); 
-                background-size: cover; 
-                background-position: center; 
-                background-repeat: no-repeat;">
-            </figure>
-            <div class="hero-text">
-                <h1>LOH WEI JIAN</h1>
-                <p>Mechanical Engineering Student • Photographer • Designer</p>
-                <a class="cta-button" href="#" onclick="openCvModal(); return false;">View My CV</a>
-            </div>
-        </div>
-    </section>
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Back to top">Wei<i>Jian</i></a>
+    <ul class="links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#photography">Photography</a></li>
+      <li><a href="#design">Design</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="menu" id="menu" aria-label="Mobile">
+  <a href="#about"><small>01</small>About</a>
+  <a href="#education"><small>02</small>Education</a>
+  <a href="#projects"><small>03</small>Projects</a>
+  <a href="#leadership"><small>04</small>Leadership</a>
+  <a href="#experience"><small>05</small>Experience</a>
+  <a href="#skills"><small>06</small>Skills</a>
+  <a href="#photography"><small>07</small>Photography</a>
+  <a href="#design"><small>08</small>Design</a>
+  <a href="#contact"><small>09</small>Contact</a>
+</nav>
 
-    <div class="container">
-        <!-- Combined Education & Projects Section -->
-        <section id="education" class="section">
-            <h2 class="animate-on-scroll fade-up">Education & Projects</h2>
-            
-            <!-- Education Header -->
-            <div class="education-header animate-on-scroll scale">
-                <h3>Bachelor of Mechanical Engineering</h3>
-                <p>Currently in 3rd Year</p>
-                <p>Universiti Malaya</p>
-                <div class="date">2023 - Present</div>
-            </div>
-
-            <!-- Projects Container -->
-            <div class="projects-container">
-                <!-- Project 1 - Right Side -->
-                <div class="project-item project-right animate-on-scroll fade-up">
-                    <div class="project-content">
-                        <h3>DESIGN ON SPUR GEAR SPEED REDUCER</h3>
-                        <p>
-                            Course: KIG2017 Design on Machine Elements<br>
-                            Credited: Leong Xuan Yao, Lin Joon Qy, Loh Wei Jian, Leow Jing Bang & Joyce Eue
-                        </p>
-                        <div class="date">Year 2 Semester 2</div>
-                    </div>
-                    <div class="project-image"
-                        style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/Design%20of%20Spur%20Gear%20Speed%20Reducer.png');
-                            background-size: contain;
-                            background-position: center;
-                            background-repeat: no-repeat;">
-                    </div>
-                </div>
-
-                <!-- Project 2 - Left Side -->
-                <div class="project-item project-left animate-on-scroll fade-up">
-                    <div class="project-content">
-                        <h3>ICE-CAP MAPPING DRONES</h3>
-                        <p>
-                            Course: KIG2012 Mechatronic I<br>
-                            Credited: Leow Jing Bang, Ng Xiu Li, Loh Wei Jian & Wan Aqif Danial
-                        </p>
-                        <div class="date">Year 2 Semester 1</div>
-                    </div>
-                    <div class="project-image"
-                        style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/MECHA%203.7.pdf.png');
-                            background-size: contain;
-                            background-position: center;
-                            background-repeat: no-repeat;">
-                    </div>
-                </div>
-
-                <!-- Project 3 - Right Side -->
-                <div class="project-item project-right animate-on-scroll fade-up">
-                    <div class="project-content">
-                        <h3>MOSQUARIUM</h3>
-                        <p>
-                            Course: KIG2016 Product Design & Innovation<br>
-                            Credited: Tang Jun Jie, Wong Jiahon, Loh Wei Jian, Ng Xiu Li, Darius Loh, Cheah Zhan Sen
-                        </p>
-                        <div class="date">Year 2 Semester 1</div>
-                    </div>
-                    <div class="project-image"
-                        style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/MOSQUARIUM%20POSTER.png');
-                            background-size: contain;
-                            background-position: center;
-                            background-repeat: no-repeat;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <h2 class="animate-on-scroll fade-up">Work Experience</h2>
-            <div class="grid grid-2">
-                <div class="card animate-on-scroll fade-left">
-                    <h3>Part-Time Waiter</h3>
-                    <p style="color: #8B0000;"><strong>De China Hot Pot</strong></p>
-                    <p>Waiter & Cashier</p>
-                    <div class="date">3 Months</div>
-                </div>
-                <div class="card animate-on-scroll fade-right">
-                    <h3>Part-Time Tutor</h3>
-                    <p style="color: #34699A;"><strong>KUMON</strong></p>
-                    <p>Syllabus: KSSR KSSM IGCSE Mathematics, Additional Mathematics & English</p>
-                    <div class="date">3 Months</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photography Section -->
-        <section id="photography" class="section">
-            <h2 class="animate-on-scroll fade-up">Photography Portfolio</h2>
-            <p style="text-align: center; margin-bottom: 0.5rem; color: #666;" class="animate-on-scroll fade-up">Hobbyist Photographer • Freelance Experience</p>
-
-            <!-- Photo Slider -->
-            <div class="photo-slider-wrapper animate-on-scroll fade-up">
-                <div class="photo-slider-track" id="photoSliderTrack">
-                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/DSC_4948.jpg')"></div>
-                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/61931CBB-6984-4C01-9FAC-E36FD29BF403.JPG')"></div>
-                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/2556554B-5D0D-4C0A-B2CA-5E36C0896EBC.JPG')"></div>
-                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0589.jpeg')"></div>
-                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0032.JPG')"></div>
-                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0545.jpg')"></div>
-                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0661.jpg')"></div>
-                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0797.jpg'); background-position: center 37%;"></div>
-                    <div class="photo-slide" style="background-image: url('https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_1058.jpg')"></div>
-                </div>
-                <button class="photo-slider-btn photo-slider-prev" id="photoSliderPrev" aria-label="Previous photo">&#8592;</button>
-                <button class="photo-slider-btn photo-slider-next" id="photoSliderNext" aria-label="Next photo">&#8594;</button>
-                <div class="photo-slider-dots" id="photoSliderDots"></div>
-            </div>
-        </section>
-
-        <!-- Design Section -->
-        <section class="section" id="design">
-            <h2 class="animate-on-scroll fade-up">Design Portfolio</h2>
-            <p class="animate-on-scroll fade-up" style="text-align: center; margin-bottom: 2rem; color: #666;">2 Years of Creative &amp; Media Technical Work</p>
-
-        <!-- Design Carousel -->
-        <div class="design-carousel-wrapper animate-on-scroll fade-up">
-            <button class="carousel-btn prev" id="designPrev" aria-label="Previous Slide">&lt;</button>
-            <div class="design-carousel-container" id="designCarousel">
-
-                <!-- Instagram Account 1 -->
-                <div class="design-carousel-item">
-                    <a href="https://www.instagram.com/esum_official" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-                        <div class="ig-content-placeholder">
-                            <img class="ig-preview-img"
-                                src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/Screenshot%202026-04-11%20172539.png"
-                                alt="Design preview for @esum_official" />
-                            <h3 class="ig-account-name">@esum_official</h3>
-                            <p class="ig-account-title">Engineering Society of Universiti Malaya</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Instagram Account 2 -->
-                <div class="design-carousel-item">
-                    <a href="https://www.instagram.com/imecheum" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-                        <div class="ig-content-placeholder">
-                            <h3 class="ig-account-name">@imecheum</h3>
-                            <p class="ig-account-title">IMechE UM Student Chapter</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Instagram Account 3 -->
-                <div class="design-carousel-item">
-                    <a href="https://www.instagram.com/daxiang_um" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-                        <div class="ig-content-placeholder">
-                            <h3 class="ig-account-name">@daxiang_um</h3>
-                            <p class="ig-account-title">Persatuan Bahasa Cina Universiti Malaya (PBCUM) 19th Crosstalk Performance Night Committee</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Instagram Account 4 -->
-                <div class="design-carousel-item">
-                    <a href="https://www.instagram.com/um.technothon" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-                        <div class="ig-content-placeholder">
-                            <h3 class="ig-account-name">@um.technothon</h3>
-                            <p class="ig-account-title">UM Technothon 2025</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            
-            <button class="carousel-btn next" id="designNext" aria-label="Next Slide">&gt;</button>
-
-                <!-- Carousel Indicators -->
-                <div class="carousel-indicators">
-                    <span class="indicator active" data-slide="0"></span>
-                    <span class="indicator" data-slide="1" role="button" tabindex="0" aria-label="Go to slide 2"></span>
-                    <span class="indicator" data-slide="2"></span>
-                    <span class="indicator" data-slide="3"></span>
-                </div>
-            </div>
-        </section>
+<main id="top">
+<!-- HERO -->
+<section class="hero" id="hero" style="padding:0;border:0">
+  <div class="wrap" style="padding-top:calc(var(--nav-h) + 24px)">
+    <div class="hero-copy">
+      <div class="hero-kicker rise d1"><span class="dot"></span>Manufacturing Engineering Intern · Plexus</div>
+      <h1 class="rise d2">Loh<span class="l2">Wei Jian</span></h1>
+      <p class="hero-sub rise d3">Third-year Mechanical Engineering student at Universiti Malaya who designs in SolidWorks by day, leads student chapters by evening, and shoots photographs whenever the light is good.</p>
+      <div class="hero-roles rise d4"><span>Engineer</span><span>Photographer</span><span>Designer</span></div>
+      <div class="cta rise d5">
+        <button class="btn primary" id="openCv">View my CV
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </button>
+        <a class="btn" href="#photography">See photography</a>
+      </div>
     </div>
+    <figure class="hero-figure">
+      <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp"
+           srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait-500.webp 500w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/hero/portrait.webp 1000w"
+           sizes="(max-width: 900px) 40vw, 300px" width="1000" height="2353" alt="Portrait of Loh Wei Jian" fetchpriority="high" decoding="async">
+    </figure>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</section>
 
-    <!-- CV Modal Viewer -->
-    <div id="cvModal" class="cv-modal" aria-hidden="true" role="dialog" aria-label="CV viewer">
-        <div class="cv-modal-content" role="document">
-            <button id="cvClose" class="cv-close-btn" aria-label="Close CV viewer">×</button>
-            <div id="cvImageContainer" class="cv-image-container">
-                <img id="cvImage" src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/Loh%20Wei%20Jian%20CV_page-0001.jpg" alt="Loh Wei Jian CV"/>
-            </div>
-            <div class="cv-controls">
-                <button id="cvZoomOut" class="cv-control-btn" aria-label="Zoom out">−</button>
-                <span class="cv-zoom-display" id="cvZoomDisplay">100%</span>
-                <button id="cvZoomIn" class="cv-control-btn" aria-label="Zoom in">+</button>
-                <button id="cvSwitchPageBtn" class="cv-control-btn" title="Switch Page" style="width: auto; padding: 0 12px; font-weight: bold; font-size: 14px;">
-                    Page 1
-                </button>
-                <button id="cvDownload" class="cv-download-btn" title="Download PDF" aria-label="Download PDF">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M12 3v10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M8.5 10.5L12 14l3.5-3.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow"><b>01</b> About</div><h2>Engineering with a <em class="ac">photographer's eye</em></h2></div>
+      <div class="num">01</div>
     </div>
+    <div class="about-grid">
+      <p class="about-text reveal">I'm a third-year Mechanical Engineering student at Universiti Malaya with hands-on experience in <em>SolidWorks design</em>, <em>ANSYS simulation</em> and Arduino-based prototyping. Outside the lab I've led departments across four student organisations at once, building websites, publicity and events. Currently I'm on a manufacturing engineering internship at Plexus in Penang.</p>
+      <div class="facts reveal" style="--d:.1s">
+        <div class="fact"><b>Based</b><span>Kuala Lumpur · from Ipoh, Perak</span></div>
+        <div class="fact"><b>Studying</b><span>B.Eng. Mechanical Engineering, Universiti Malaya</span></div>
+        <div class="fact"><b>Now</b><span>Manufacturing Engineering Intern, Plexus Corp., Bayan Lepas</span></div>
+        <div class="fact"><b>Languages</b><span>English · Malay · Mandarin</span></div>
+        <div class="fact"><b>Interests</b><span>Photography, graphic design, CAD, event organising</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer/Contact -->
-    <footer id="contact">
-        <div class="container">
-            <h2 style="color: white; margin-bottom: 2rem;">Get In Touch</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <a class="contact-link" href="mailto:weijianloh40@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <svg class="contact-icon icon-gmail" viewBox="0 0 24 24" aria-hidden="true">
-                            <rect x="2" y="4" width="20" height="16" rx="3" fill="#ffffff" stroke="#EA4335" stroke-width="2"/>
-                            <path d="M3 7l9 7 9-7" fill="none" stroke="#EA4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span>weijianloh40@gmail.com</span>
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <svg class="contact-icon icon-iphone" viewBox="0 0 24 24" aria-hidden="true">
-                        <rect x="7" y="2.5" width="10" height="19" rx="3" fill="none" stroke="#ffffff" stroke-width="2"/>
-                        <rect x="10.5" y="4" width="3" height="1.2" rx="0.6" fill="#ffffff"/>
-                        <rect x="10" y="19.5" width="4" height="1.2" rx="0.6" fill="#ffffff"/>
-                    </svg>
-                    <span>+60 11-1857 3899</span>
-                </div>
-                    <div class="contact-item">
-                        <span>📍</span>
-                        <span>Ipoh, Malaysia</span>
-                </div>
-                    <a class="contact-item contact-link" href="https://www.linkedin.com/in/weijian0227/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile (new tab)">
-                        <svg class="contact-icon icon-linkedin" viewBox="0 0 24 24" aria-hidden="true">
-                            <rect x="1.5" y="1.5" width="21" height="21" rx="3.5" fill="#0A66C2"/>
-                            <text x="6.6" y="16.7" fill="#ffffff" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700" font-size="11">in</text>
-                        </svg>
-                        <span>LinkedIn Profile</span>
-                    </a>
-                    <a class="contact-item contact-link" href="https://www.instagram.com/wei_jianloh/" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram profile (new tab)">
-                        <svg class="contact-icon icon-instagram" viewBox="0 0 24 24" aria-hidden="true">
-                            <defs>
-                                <linearGradient id="igGradient" x1="0" y1="0" x2="1" y2="1">
-                                    <stop offset="0%" stop-color="#F58529"/>
-                                    <stop offset="50%" stop-color="#DD2A7B"/>
-                                    <stop offset="100%" stop-color="#515BD4"/>
-                                </linearGradient>
-                            </defs>
-                            <rect x="1.5" y="1.5" width="21" height="21" rx="5" fill="url(#igGradient)"/>
-                            <circle cx="12" cy="12" r="5" fill="none" stroke="#ffffff" stroke-width="2"/>
-                            <circle cx="17.5" cy="6.5" r="1.5" fill="#ffffff"/>
-                        </svg>
-                        <span>Instagram: @wei_jianloh</span>
-                    </a>
-                </div>
-            <p style="margin-top: 2rem; opacity: 0.7;">© 2025 WEI JIAN. All rights reserved.</p>
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow"><b>02</b> Education</div><h2>Where the <em class="ac">fundamentals</em> come from</h2></div>
+      <div class="num">02</div>
+    </div>
+    <div class="edu">
+      <article class="card reveal">
+        <div><span class="date">2023 — Present</span><br><span class="date" style="color:var(--acc)">Expected 2027</span></div>
+        <div>
+          <h3>Bachelor of Mechanical Engineering</h3>
+          <p>Universiti Malaya · Faculty of Engineering</p>
+          <div class="chips">
+            <span class="chip">Machine Design</span><span class="chip">Materials Science</span><span class="chip">Mechanical Vibrations</span><span class="chip">Thermodynamics</span><span class="chip">Control Systems</span><span class="chip">Mechatronics</span><span class="chip">Engineering Mathematics</span><span class="chip">Programming</span>
+          </div>
         </div>
-    </footer>
-    
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Smooth scroll function
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-        
-        // CV Modal logic
-        function openCvModal() {
-            const modal = document.getElementById('cvModal');
-            if (modal) {
-                modal.classList.add('open');
-                modal.setAttribute('aria-hidden', 'false');
-                initializeCvInteractions();
-            }
-        }
+      </article>
+      <article class="card reveal" style="--d:.08s">
+        <div><span class="date">2022 — 2023</span></div>
+        <div>
+          <h3>Matriculation, Pure Science Stream</h3>
+          <p>Kolej Matrikulasi Perak</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-        function closeCvModal() {
-            const modal = document.getElementById('cvModal');
-            if (modal) {
-                modal.classList.remove('open');
-                modal.setAttribute('aria-hidden', 'true');
-            }
-        }
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow"><b>03</b> University projects</div><h2>Designed, simulated, <em class="ac">built</em></h2></div>
+      <div class="num">03</div>
+    </div>
+    <div class="projects">
+      <article class="card proj reveal">
+        <div class="poster" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer.webp" data-title="Design of Spur Gear Speed Reducer — KIG2017 poster">
+          <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer-640.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer-640.webp 640w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/spur-gear-reducer.webp 1200w" sizes="(max-width:760px) 92vw, 560px" width="1200" height="1699" loading="lazy" decoding="async" alt="Spur gear speed reducer project poster">
+          <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+        </div>
+        <div class="body">
+          <div class="top"><h3>Spur Gear Speed Reducer</h3><span class="date">June 2025</span></div>
+          <p>KIG2017 Design on Machine Elements</p>
+          <ul>
+            <li>Designed a 1:2 ratio speed reducer and validated it with FEA in SolidWorks and ANSYS.</li>
+            <li>Analysed von Mises stress, resultant displacement and factor of safety to refine the housing and gear pair.</li>
+          </ul>
+          <div class="team">With Leong Xuan Yao, Lin Joon Qy, Leow Jing Bang &amp; Joyce Eue</div>
+        </div>
+      </article>
 
-        function initializeCvInteractions() {
-            const container = document.getElementById('cvImageContainer');
-            const img = document.getElementById('cvImage');
-            const zoomInBtn = document.getElementById('cvZoomIn');
-            const zoomOutBtn = document.getElementById('cvZoomOut');
-            const downloadBtn = document.getElementById('cvDownload');
-            const closeBtn = document.getElementById('cvClose');
-            const zoomDisplay = document.getElementById('cvZoomDisplay');
+      <article class="card proj reveal" style="--d:.08s">
+        <div class="poster" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones.webp" data-title="Ice-Cap Mapping Drones — KIG2012 poster">
+          <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones-640.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones-640.webp 640w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/ice-cap-mapping-drones.webp 1200w" sizes="(max-width:760px) 92vw, 560px" width="1200" height="1600" loading="lazy" decoding="async" alt="Ice-cap mapping drones project poster">
+          <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+        </div>
+        <div class="body">
+          <div class="top"><h3>Ice-Cap Mapping Drones</h3><span class="date">January 2025</span></div>
+          <p>KIG2012 Mechatronics I · <span class="chip ac" style="padding:3px 9px;font-size:.7rem">SDG 13 Climate Action</span></p>
+          <ul>
+            <li>Teardown analysis of drone electronics; simulated transistor, pull-down resistor and decoupling capacitor behaviour in TinkerCAD.</li>
+            <li>Arduino control logic using PWM for motor speed and digital signal processing for switch-state monitoring.</li>
+          </ul>
+          <div class="team">With Leow Jing Bang, Ng Xiu Li &amp; Wan Aqif Danial</div>
+        </div>
+      </article>
 
-            let scale = 1;
-            let translateX = 0;
-            let translateY = 0;
-            let isDragging = false;
-            let lastX = 0;
-            let lastY = 0;
-            let fitScale = 1; // computed to show full image
+      <article class="card proj reveal">
+        <div class="poster" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium.webp" data-title="Mosquarium — KIG2016 poster">
+          <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium-640.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium-640.webp 640w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/projects/mosquarium.webp 1200w" sizes="(max-width:760px) 92vw, 560px" width="1200" height="1698" loading="lazy" decoding="async" alt="Mosquarium project poster">
+          <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+        </div>
+        <div class="body">
+          <div class="top"><h3>Mosquarium — Mosquito Trapper</h3><span class="date">January 2025</span></div>
+          <p>KIG2016 Product Design &amp; Innovation</p>
+          <ul>
+            <li>Integrated a UV light attraction system with an electric neutraliser grid.</li>
+            <li>Optimised for low energy consumption at 9 V / 4.5 W.</li>
+          </ul>
+          <div class="team">With Tang Jun Jie, Wong Jiahon, Ng Xiu Li, Darius Loh &amp; Cheah Zhan Sen</div>
+        </div>
+      </article>
 
-            // Fit image fully into container on open
-            function fitToContain() {
-                const containerRect = container.getBoundingClientRect();
-                // Use natural size if available, otherwise current rendered size
-                const naturalWidth = img.naturalWidth || img.width;
-                const naturalHeight = img.naturalHeight || img.height;
-                if (!naturalWidth || !naturalHeight) return;
-                const scaleX = containerRect.width / naturalWidth;
-                const scaleY = containerRect.height / naturalHeight;
-                fitScale = Math.min(scaleX, scaleY);
-                scale = fitScale;
-                // Center image
-                translateX = 0;
-                translateY = 0;
-            }
+      <article class="card proj noimg reveal" style="--d:.08s">
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 240 180" fill="none" stroke="rgba(165,150,255,.55)" stroke-width="1.2">
+            <path d="M20 120c40 20 160 20 200 0" /><path d="M30 105c40 18 140 18 180 0"/>
+            <path d="M40 60h160l-20 45H60z" stroke="rgba(243,239,231,.6)"/>
+            <path d="M120 60V20M100 20h40" stroke="rgba(243,239,231,.6)"/>
+            <circle cx="70" cy="140" r="10"/><circle cx="120" cy="150" r="14"/><circle cx="170" cy="140" r="10"/>
+            <path d="M70 130v-8M120 136v-10M170 130v-8" />
+            <path d="M0 165h240" stroke-dasharray="3 6"/>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="top"><h3>Eco-Friendly Barnacle Cleaner</h3><span class="date" style="color:#7CFF9B">Ongoing</span></div>
+          <p>Integrated Design Project · <span class="chip ac" style="padding:3px 9px;font-size:.7rem">SDG 14 Life Below Water</span></p>
+          <ul>
+            <li>User-requirement surveys and stakeholder analysis of traditional hull-maintenance pain points.</li>
+            <li>3D models and assembly drawings, with a decision matrix to evaluate concept options.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-            function render() {
-                img.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-                zoomDisplay.textContent = `${Math.round(scale * 100)}%`;
-                // Enable panning cursor only when zoomed in beyond fit
-                if (scale > fitScale * 1.02) {
-                    container.classList.add('can-pan');
-                } else {
-                    container.classList.remove('can-pan');
-                }
-            }
+<!-- LEADERSHIP -->
+<section id="leadership">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow"><b>04</b> Leadership &amp; co-curricular</div><h2>Four organisations, <em class="ac">one calendar</em></h2></div>
+      <div class="num">04</div>
+    </div>
+    <p class="lede reveal" style="margin-bottom:36px">Between 2023 and 2026 I served concurrently as director and executive across Universiti Malaya's engineering societies: running budgets, building websites and publicity, and organising visits from Penang to Korea and China. Swipe through the strips.</p>
+    <div class="orgs" id="orgs"></div>
+  </div>
+</section>
 
-            function clampScale(value) {
-                return Math.min(fitScale * 3, Math.max(fitScale, value));
-            }
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow"><b>05</b> Work experience</div><h2>From the <em class="ac">shop floor</em> to the stage</h2></div>
+      <div class="num">05</div>
+    </div>
+    <div class="timeline">
+      <article class="tl now reveal">
+        <div class="when"><span class="date">Jul 2026 — Present</span><span class="loc">Bayan Lepas, Penang · On-site</span></div>
+        <div class="with-photo">
+          <div>
+            <h3>Manufacturing Engineering Intern</h3>
+            <div class="co">Plexus Corp.</div>
+            <p>Internship in Product Engineering and Manufacturing Engineering at Plexus Manufacturing Sdn. Bhd., an electronics manufacturing services provider.</p>
+          </div>
+          <div class="photo" data-view="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/leadership/plexus-01-check-in-at-plexus-logo.webp" data-title="Check-in at Plexus, Bayan Lepas">
+            <img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/leadership/plexus-01-check-in-at-plexus-logo-480.webp" srcset="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/leadership/plexus-01-check-in-at-plexus-logo-480.webp 480w, https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/leadership/plexus-01-check-in-at-plexus-logo.webp 1000w" sizes="(max-width:760px) 90vw, 240px" width="1000" height="763" loading="lazy" decoding="async" alt="Wei Jian at the Plexus lobby wall">
+          </div>
+        </div>
+      </article>
+      <article class="tl reveal">
+        <div class="when"><span class="date">2024 — Present</span></div>
+        <div>
+          <h3>Freelance Photographer</h3>
+          <div class="co">Events · portraits · campus media</div>
+          <p>Event and portrait photography for student organisations and private clients; editing and delivery in Lightroom and Photoshop.</p>
+        </div>
+      </article>
+      <article class="tl reveal">
+        <div class="when"><span class="date">Jul 2025</span></div>
+        <div>
+          <h3>Event Crew</h3>
+          <div class="co">YE!LOO Concert ft. T-ARA, HYOLYN &amp; ZION.T</div>
+          <p>On-ground operations crew for a large-scale K-pop concert.</p>
+        </div>
+      </article>
+      <article class="tl reveal">
+        <div class="when"><span class="date">Jul — Oct 2023</span><span class="loc">Part-time</span></div>
+        <div>
+          <h3>Tutor, English &amp; Mathematics</h3>
+          <div class="co">Kumon Malaysia</div>
+          <p>Taught primary and secondary students across English, Modern and Additional Mathematics (KSSR, KSSM, IGCSE), adapting explanations to different age groups.</p>
+        </div>
+      </article>
+      <article class="tl reveal">
+        <div class="when"><span class="date">Jul — Oct 2022</span><span class="loc">Part-time</span></div>
+        <div>
+          <h3>Waiter &amp; Cashier</h3>
+          <div class="co">De China Hot Pot Restaurant</div>
+          <p>Front-of-house service and cashiering in a busy hot pot restaurant.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-            zoomInBtn.onclick = () => { scale = clampScale(scale * 1.2); render(); };
-            zoomOutBtn.onclick = () => { 
-                // Snap to fit
-                fitToContain();
-                scale = fitScale;
-                translateX = 0; translateY = 0;
-                render();
-            };
-            downloadBtn.onclick = () => {
-                // Download PDF version of CV
-                const link = document.createElement('a');
-                link.href = 'https://github.com/Wi-Jan/portfolio-images/raw/main/Loh%20Wei%20Jian%20CV.pdf';
-                link.download = 'Loh_Wei_Jian_CV.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            };
-            downloadBtn.onmouseenter = () => { downloadBtn.title = 'Download PDF'; };
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow"><b>06</b> Skills</div><h2>The <em class="ac">toolbox</em></h2></div>
+      <div class="num">06</div>
+    </div>
+    <div class="skills">
+      <div class="card skill reveal"><h3><span>01</span>CAD &amp; simulation</h3><div class="chips"><span class="chip">SolidWorks</span><span class="chip">ANSYS</span><span class="chip">FEA</span><span class="chip">Assembly drawings</span></div></div>
+      <div class="card skill reveal" style="--d:.06s"><h3><span>02</span>Electronics &amp; code</h3><div class="chips"><span class="chip">Arduino IDE</span><span class="chip">LabVIEW</span><span class="chip">EasyEDA</span><span class="chip">TinkerCAD</span><span class="chip">MATLAB</span><span class="chip">C++</span><span class="chip">Python</span></div></div>
+      <div class="card skill reveal" style="--d:.12s"><h3><span>03</span>Creative</h3><div class="chips"><span class="chip">Photography</span><span class="chip">Adobe Photoshop</span><span class="chip">Adobe Illustrator</span><span class="chip">Lightroom</span><span class="chip">Web UI/UX</span></div></div>
+      <div class="card skill reveal"><h3><span>04</span>Office</h3><div class="chips"><span class="chip">Excel</span><span class="chip">PowerPoint</span><span class="chip">Google Workspace</span></div></div>
+      <div class="card skill reveal" style="--d:.06s"><h3><span>05</span>Soft skills</h3><div class="chips"><span class="chip">Leadership</span><span class="chip">Cross-functional coordination</span><span class="chip">Communication</span><span class="chip">Time management</span><span class="chip">Adaptability</span></div></div>
+      <div class="card skill reveal" style="--d:.12s"><h3><span>06</span>Languages</h3><div class="chips"><span class="chip">Mandarin · native</span><span class="chip">English</span><span class="chip">Malay</span></div></div>
+    </div>
+  </div>
+</section>
 
-            const switchPageBtn = document.getElementById('cvSwitchPageBtn');
-            const cvImageElement = document.getElementById('cvImage');
+<!-- PHOTOGRAPHY -->
+<section id="photography">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow"><b>07</b> Photography</div><h2>Light, <em class="ac">caught</em></h2></div>
+      <div class="num">07</div>
+    </div>
+    <p class="lede reveal" style="margin-bottom:8px">Hobbyist turned freelance. Street, travel and portrait work, mostly from Malaysia and China. Tap a photo to view it full-screen.</p>
+  </div>
+  <div class="cf reveal" id="cf" aria-roledescription="carousel" aria-label="Photography">
+    <div class="cf-stage" id="cfStage"></div>
+    <div class="wrap cf-ui">
+      <button class="cf-btn" id="cfPrev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div class="cf-dots" id="cfDots"></div>
+      <div class="cf-count" id="cfCount">1 / 1</div>
+      <button class="cf-btn" id="cfNext" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+</section>
 
-            const page1Url = 'https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/Loh%20Wei%20Jian%20CV_page-0001.jpg';
-            const page2Url = 'https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/Loh%20Wei%20Jian%20CV_page-0002.jpg';
-            let currentCVPage = 1;
+<!-- DESIGN -->
+<section id="design">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow"><b>08</b> Design &amp; media</div><h2>Two years of <em class="ac">publicity</em> work</h2></div>
+      <div class="num">08</div>
+    </div>
+    <p class="lede reveal" style="margin-bottom:36px">Posters, social content, event branding and organisational websites for the societies I served. The feeds below carry most of it.</p>
+    <div class="ig-grid">
+      <a class="card ig featured reveal" href="https://www.instagram.com/esum_official" target="_blank" rel="noopener noreferrer">
+        <div class="txt">
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span>
+          <div><h3>@esum_official</h3><p>Engineering Society of Universiti Malaya · Director 2024/25 · Executive 2023/24. Feed design, event posters and the society website.</p><span class="go">Open on Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+        </div>
+        <div class="shot"><img src="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/design/esum-instagram.webp" width="900" height="378" loading="lazy" decoding="async" alt="Screenshot of the @esum_official Instagram profile"></div>
+      </a>
+      <a class="card ig reveal" style="--d:.06s" href="https://www.instagram.com/imecheum" target="_blank" rel="noopener noreferrer">
+        <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span>
+        <div><h3>@imecheum</h3><p>IMechE UM Student Chapter · Multimedia</p><span class="go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+      </a>
+      <a class="card ig reveal" style="--d:.12s" href="https://www.instagram.com/um.technothon" target="_blank" rel="noopener noreferrer">
+        <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span>
+        <div><h3>@um.technothon</h3><p>UM Technothon 2025 · Director</p><span class="go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+      </a>
+      <a class="card ig reveal" style="--d:.18s" href="https://www.instagram.com/daxiang_um" target="_blank" rel="noopener noreferrer">
+        <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span>
+        <div><h3>@daxiang_um</h3><p>PBCUM 19th Crosstalk Performance Night · Director</p><span class="go">Open <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
 
-            switchPageBtn.onclick = () => {
-                if (currentCVPage === 1) {
-                    cvImageElement.src = page2Url;
-                    switchPageBtn.innerText = 'Page 2';
-                    currentCVPage = 2;
-                } else {
-                    cvImageElement.src = page1Url;
-                    switchPageBtn.innerText = 'Page 1';
-                    currentCVPage = 1;
-                }
-            };
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap contact">
+    <div class="reveal">
+      <div class="eyebrow"><b>09</b> Contact</div>
+      <h2>Let's <em class="ac">talk.</em></h2>
+      <p class="lede">Open to internship conversations, photography commissions and design collaborations. Email is fastest.</p>
+      <div class="cta"><button class="btn primary" id="openCv2">View my CV</button><a class="btn" href="https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/LOH%20WEI%20JIAN_CV.pdf" target="_blank" rel="noopener">Download PDF</a></div>
+    </div>
+    <div class="clist reveal" style="--d:.1s">
+      <a class="row" href="mailto:weijianloh40@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></span><div><b>Email</b><span>weijianloh40@gmail.com</span></div><span class="arr">↗</span></a>
+      <a class="row" href="tel:+601118573899"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2.5" width="10" height="19" rx="3"/><path d="M11 18.5h2"/></svg></span><div><b>Phone</b><span>+60 11-1857 3899</span></div><span class="arr">↗</span></a>
+      <a class="row" href="https://www.linkedin.com/in/weijian0227/" target="_blank" rel="noopener noreferrer"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5v9M6.5 5.6v.1M10.5 17.5v-5a2.5 2.5 0 0 1 5 0v5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><div><b>LinkedIn</b><span>linkedin.com/in/weijian0227</span></div><span class="arr">↗</span></a>
+      <a class="row" href="https://www.instagram.com/wei_jianloh/" target="_blank" rel="noopener noreferrer"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><div><b>Instagram</b><span>@wei_jianloh</span></div><span class="arr">↗</span></a>
+      <a class="row" href="https://linktr.ee/weijianloh40" target="_blank" rel="noopener noreferrer"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v18M5 9l7 5 7-5M5 15l7-5 7 5"/></svg></span><div><b>Linktree</b><span>linktr.ee/weijianloh40</span></div><span class="arr">↗</span></a>
+      <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>Location</b><span>Kuala Lumpur / Ipoh, Malaysia</span></div><span></span></div>
+    </div>
+  </div>
+</section>
+</main>
 
-            let cvTouchStartX = 0;
-            let cvTouchEndX = 0;
+<footer>
+  <div class="wrap"><span>© 2026 Loh Wei Jian</span><span>Designed &amp; built with care · Universiti Malaya</span></div>
+</footer>
 
-            // 监听手指按下
-            cvImageElement.addEventListener('touchstart', (e) => {
-                // 只有单指触摸时才记录，避免干扰双指缩放 (Pinch to zoom)
-                if (e.touches.length === 1) {
-                    cvTouchStartX = e.touches[0].clientX;
-                }
-            }, { passive: true });
+<!-- VIEWER -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="bar">
+    <div class="title" id="vTitle"></div>
+    <div class="tools">
+      <button class="vbtn" id="vOut" aria-label="Zoom out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></button>
+      <span class="vbtn" id="vPct" style="min-width:64px;pointer-events:none">100%</span>
+      <button class="vbtn" id="vIn" aria-label="Zoom in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+      <a class="vbtn" id="vDl" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v11M8 10l4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span class="vdl-label">PDF</span></a>
+      <button class="vbtn" id="vClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+  <div class="canvas" id="vCanvas">
+    <div class="loading" id="vLoading">loading…</div>
+    <img id="vImg" alt="">
+  </div>
+  <div class="hint" id="vHint">Pinch or scroll to zoom · drag to pan · double-tap to reset</div>
+</div>
 
-            // 监听手指抬起
-            cvImageElement.addEventListener('touchend', (e) => {
-                // 只有单指离开时才触发
-                if (e.changedTouches.length === 1) {
-                    cvTouchEndX = e.changedTouches[0].clientX;
-                    handleCVSwipe();
-                }
-            }, { passive: true });
+<script>
+/* ═════════════════════════════════════════════════════════════
+   CONTENT DATA — edit these arrays to add or reorder photos.
+   Every image lives in the portfolio-images repo under /web.
+   ═════════════════════════════════════════════════════════════ */
+const IMG = 'https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/web/';
 
-            function handleCVSwipe() {
-                const swipeDistance = cvTouchStartX - cvTouchEndX;
-                const minSwipeDistance = 50; // 设定最小滑动距离(像素)，避免用户只是轻点屏幕就不小心翻页
+/* Photography coverflow.  file = base name in web/photography (without extension).
+   Each photo needs two files: NAME.webp (1600px) and NAME-800.webp (800px).
+   o = 'l' landscape or 'p' portrait.  */
+const PHOTOS = [
+  { file:'p01-street-lanterns', o:'l', alt:'Street lined with red lanterns' },
+  { file:'p10-opera',           o:'p', alt:'Chinese opera performer in white robes' },
+  { file:'p02-temple-eaves',    o:'l', alt:'Ornate temple roof eaves' },
+  { file:'p06-lakeside',        o:'p', alt:'Two people by a winter lake' },
+  { file:'p05-blossoms',        o:'l', alt:'Pink blossoms against blue sky' },
+  { file:'p11-lantern-tower',   o:'p', alt:'Lantern-lit tower at dusk' },
+  { file:'p07-colonnade',       o:'l', alt:'Stone colonnade among trees' },
+  { file:'p03-pond-pines',      o:'p', alt:'Pines reflected in a rocky pond' },
+  { file:'p04-cafe-portrait',   o:'l', alt:'Portrait in a café' },
+  { file:'p09-pavilion-gate',   o:'p', alt:'Red pavilion seen through a gate' },
+  { file:'p08-career-day',      o:'l', alt:'Portrait at a career day' },
+];
 
-                // 【重要安全防线】：防止放大时滑动翻页和拖拽冲突
-                // 如果你的代码里缩放倍数变量叫 scale，当 scale > 1（图片被放大时），不触发翻页
-                if (typeof scale !== 'undefined' && scale > 1) return;
+/* Leadership organisations and their photo strips (files in web/leadership). */
+const ORGS = [
+  { name:'IMechE UM Student Chapter', sub:'Institution of Mechanical Engineers — Universiti Malaya. Treasury, industrial relations, multimedia and a mobility programme to KAIST, South Korea.',
+    roles:[['Treasurer','Jul 2025 — Present'],['Director','Aug 2024 — Jul 2025'],['Executive','Mar 2024 — Aug 2024']],
+    photos:[
+      ['imeche-treasurer-01-visit-to-kaist-korea','Visit to KAIST, Korea'],
+      ['imeche-treasurer-04-visit-to-korea-institute-of-machinery-an','Korea Institute of Machinery & Materials'],
+      ['imeche-treasurer-02-visit-to-sm-instruments-korea','Visit to SM Instruments, Korea'],
+      ['imeche-treasurer-05-visit-to-etri-korea','Visit to ETRI, Korea'],
+      ['imeche-treasurer-03-visit-to-continental-korea','Visit to Continental, Korea'],
+      ['imeche-director-03-future-city-case-study-competition','Future City Case Study Competition'],
+      ['imeche-director-01-40th-international-electronics-manufactu','40th International Electronics Manufacturing Technology'],
+      ['imeche-treasurer-06-board-of-directors','Board of Directors'],
+      ['imeche-director-04-orientation-day-2024-2025','Orientation Day 2024/25'],
+      ['imeche-treasurer-08-imeche-um-x-utp-student-chapter','IMechE UM × UTP Student Chapter'],
+      ['imeche-treasurer-09-family-day','Family Day'],
+      ['imeche-director-02-club-family-day','Club Family Day'],
+      ['imeche-treasurer-07-annual-general-meeting','Annual General Meeting'],
+    ]},
+  { name:'Engineering Society of Universiti Malaya', sub:'Faculty-wide society. Publicity, website and outreach visits to USM, UTP, Tianjin University and Peking University.',
+    roles:[['Director','Aug 2024 — Jul 2025'],['Executive','Oct 2023 — Jul 2024']],
+    photos:[
+      ['esum-director-03-board-of-directors','Board of Directors, FKUM'],
+      ['esum-director-06-visit-to-peking-university','Visit to Peking University'],
+      ['esum-director-04-visit-to-tianjin-university','Visit to Tianjin University'],
+      ['esum-director-02-visit-to-utp','Visit to UTP'],
+      ['esum-director-01-visit-to-usm-engineering-campus','Visit to USM Engineering Campus'],
+      ['esum-exec-02-esum-gala-night','ESUM Gala Night'],
+      ['esum-director-05-annual-general-meeting','Annual General Meeting'],
+      ['esum-exec-01-annual-general-meeting','Annual General Meeting 2024'],
+    ]},
+  { name:'IEM UM Student Section', sub:'Institution of Engineers Malaysia student section. Created the section logo as an executive; led visits as director.',
+    roles:[['Director','Aug 2024 — Jul 2025'],['Executive','Dec 2023 — Jul 2024']],
+    photos:[
+      ['iem-director-01-visit-to-tianjin-university','Visit to Tianjin University'],
+      ['iem-director-02-visit-to-uitm-shah-alam','Visit to UiTM Shah Alam'],
+    ]},
+  { name:'UM Technothon', sub:'University-level technology competition, 2025 edition.',
+    roles:[['Director','Dec 2024 — Jul 2025']],
+    photos:[ ['technothon-01-department-photo','Department photo'] ]},
+  { name:'Crosstalk Performance Night · PBCUM', sub:'Persatuan Bahasa Cina Universiti Malaya annual crosstalk (相声) show, 18th and 19th editions.',
+    roles:[['Director, 19th edition','Aug 2024 — Jun 2025'],['Executive, 18th edition','Nov 2023 — Jul 2024']],
+    photos:[
+      ['crosstalk-director-01-19th-crosstalk-performance-night','19th Crosstalk Performance Night'],
+      ['crosstalk-exec-01-club-photo','Club photo, 18th edition'],
+    ]},
+];
 
-                if (swipeDistance > minSwipeDistance) {
-                    // 向左滑动 (Swipe Left) -> 切换到第二页
-                    if (currentCVPage === 1) {
-                        switchPageBtn.click(); // 直接调用刚刚写的按钮点击逻辑，省时省力
-                    }
-                } else if (swipeDistance < -minSwipeDistance) {
-                    // 向右滑动 (Swipe Right) -> 切换回第一页
-                    if (currentCVPage === 2) {
-                        switchPageBtn.click();
-                    }
-                }
-            }
+const CV_IMAGE = IMG + 'cv/loh-wei-jian-cv-page-1.jpg';
+const CV_PDF   = 'https://raw.githubusercontent.com/Wi-Jan/portfolio-images/main/LOH%20WEI%20JIAN_CV.pdf';
 
-            closeBtn.addEventListener('click', closeCvModal);
+/* ═════════════════════════════════════════════════════════════
+   RUNTIME
+   ═════════════════════════════════════════════════════════════ */
+(() => {
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            // Click outside content to close
-            document.getElementById('cvModal').addEventListener('click', (e) => {
-                if (e.target.id === 'cvModal') closeCvModal();
-            });
+/* ---------- NAV: glass on scroll, hide on scroll-down (rAF throttled) ---------- */
+const nav = $('#nav');
+let lastY = 0, ticking = false;
+function onScroll(){
+  const y = window.scrollY;
+  nav.classList.toggle('scrolled', y > 24);
+  if (y > 320 && y > lastY + 6) nav.classList.add('hidden');
+  else if (y < lastY - 6 || y < 120) nav.classList.remove('hidden');
+  lastY = y; ticking = false;
+}
+addEventListener('scroll', () => { if(!ticking){ requestAnimationFrame(onScroll); ticking = true; } }, {passive:true});
 
-            // Drag to pan
-            container.onmousedown = (e) => {
-                if (!(scale > fitScale * 1.02)) return; // disable drag when at fit scale
-                isDragging = true;
-                container.classList.add('dragging');
-                lastX = e.clientX;
-                lastY = e.clientY;
-            };
-            window.onmouseup = () => {
-                isDragging = false;
-                container.classList.remove('dragging');
-            };
-            window.onmousemove = (e) => {
-                if (!isDragging) return;
-                translateX += e.clientX - lastX;
-                translateY += e.clientY - lastY;
-                lastX = e.clientX;
-                lastY = e.clientY;
-                constrainWithinBounds();
-                render();
-            };
+/* mobile menu */
+const burger = $('#burger'), menu = $('#menu');
+function setMenu(open){
+  burger.classList.toggle('open', open); menu.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  document.body.classList.toggle('locked', open);
+}
+burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+$$('#menu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
-            // Wheel zoom
-            container.addEventListener('wheel', (e) => {
-                e.preventDefault();
-                const delta = e.deltaY < 0 ? 1.1 : 0.9;
-                const prevScale = scale;
-                scale = clampScale(scale * delta);
-                // Keep image centered while zooming
-                if (scale < prevScale) {
-                    // On zoom out, nudge towards center
-                    translateX *= scale / prevScale;
-                    translateY *= scale / prevScale;
-                }
-                if (Math.abs(scale - fitScale) < 0.001) { translateX = 0; translateY = 0; }
-                constrainWithinBounds();
-                render();
-            }, { passive: false });
+/* active link highlight */
+const sections = $$('main section[id]');
+const linkFor = id => $(`#navLinks a[href="#${id}"]`);
+const spy = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting){ $$('#navLinks a').forEach(a => a.classList.remove('active')); const l = linkFor(e.target.id); if (l) l.classList.add('active'); } });
+}, { rootMargin:'-45% 0px -50% 0px' });
+sections.forEach(s => spy.observe(s));
 
-            // Touch support
-            let touchStartDist = 0;
-            let startScale = 1;
-            container.addEventListener('touchstart', (e) => {
-                if (e.touches.length === 2) {
-                    const dx = e.touches[0].clientX - e.touches[1].clientX;
-                    const dy = e.touches[0].clientY - e.touches[1].clientY;
-                    touchStartDist = Math.hypot(dx, dy);
-                    startScale = scale;
-                } else if (e.touches.length === 1 && scale > fitScale * 1.02) {
-                    isDragging = true;
-                    container.classList.add('dragging');
-                    lastX = e.touches[0].clientX;
-                    lastY = e.touches[0].clientY;
-                }
-            }, { passive: true });
-            container.addEventListener('touchmove', (e) => {
-                if (e.touches.length === 2) {
-                    e.preventDefault();
-                    const dx = e.touches[0].clientX - e.touches[1].clientX;
-                    const dy = e.touches[0].clientY - e.touches[1].clientY;
-                    const dist = Math.hypot(dx, dy);
-                    scale = clampScale(startScale * (dist / touchStartDist));
-                    constrainWithinBounds();
-                    render();
-                } else if (e.touches.length === 1 && isDragging) {
-                    e.preventDefault();
-                    translateX += e.touches[0].clientX - lastX;
-                    translateY += e.touches[0].clientY - lastY;
-                    lastX = e.touches[0].clientX;
-                    lastY = e.touches[0].clientY;
-                    constrainWithinBounds();
-                    render();
-                }
-            }, { passive: false });
-            
-            function constrainWithinBounds() {
-                // When zoomed in, constrain panning so image doesn't reveal background beyond container edge
-                if (scale <= fitScale * 1.02) { translateX = 0; translateY = 0; return; }
-                const cont = container.getBoundingClientRect();
-                const natW = img.naturalWidth || img.width;
-                const natH = img.naturalHeight || img.height;
-                const scaledW = natW * scale;
-                const scaledH = natH * scale;
-                const halfVisibleW = cont.width / 2;
-                const halfVisibleH = cont.height / 2;
-                const halfImageW = scaledW / 2;
-                const halfImageH = scaledH / 2;
-                const maxX = Math.max(0, halfImageW - halfVisibleW);
-                const maxY = Math.max(0, halfImageH - halfVisibleH);
-                translateX = Math.min(maxX, Math.max(-maxX, translateX));
-                translateY = Math.min(maxY, Math.max(-maxY, translateY));
-            }
-            container.addEventListener('touchend', () => {
-                isDragging = false;
-                container.classList.remove('dragging');
-            });
+/* ---------- Reveal on scroll (once) ---------- */
+const rev = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); rev.unobserve(e.target); } });
+}, { threshold:.12, rootMargin:'0px 0px -6% 0px' });
+const observeReveals = root => $$('.reveal', root).forEach(el => rev.observe(el));
 
-            // Double click toggles between fit and 2x zoom
-            container.addEventListener('dblclick', () => {
-                if (scale <= fitScale * 1.05) {
-                    scale = clampScale(fitScale * 2);
-                } else {
-                    scale = fitScale; translateX = 0; translateY = 0;
-                }
-                render();
-            });
+/* card spotlight follows pointer (desktop only, cheap: one CSS var) */
+if (matchMedia('(hover:hover)').matches){
+  document.addEventListener('pointermove', e => {
+    const c = e.target.closest('.card'); if(!c) return;
+    const r = c.getBoundingClientRect(); c.style.setProperty('--mx', ((e.clientX - r.left)/r.width*100) + '%');
+  }, {passive:true});
+}
 
-            // Recalculate on resize while modal is open
-            const onResize = () => { const wasFit = Math.abs(scale - fitScale) < 0.001; fitToContain(); if (wasFit) { scale = fitScale; translateX = 0; translateY = 0; } render(); };
-            window.addEventListener('resize', onResize);
+/* ---------- Leadership strips ---------- */
+const orgsEl = $('#orgs');
+orgsEl.innerHTML = ORGS.map((o, i) => `
+  <article class="card org reveal" style="--d:${i*0.05}s">
+    <div class="head">
+      <div><h3>${o.name}</h3><p>${o.sub}</p></div>
+      <div class="roles">${o.roles.map(r => `<div><b>${r[0]}</b><small>${r[1]}</small></div>`).join('')}</div>
+    </div>
+    <div class="strip-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg> ${o.photos.length} photo${o.photos.length>1?'s':''} · swipe</div>
+    <div class="strip">
+      ${o.photos.map(p => `
+        <figure data-view="${IMG}leadership/${p[0]}.webp" data-title="${o.name} — ${p[1]}">
+          <img src="${IMG}leadership/${p[0]}-480.webp" srcset="${IMG}leadership/${p[0]}-480.webp 480w, ${IMG}leadership/${p[0]}.webp 1000w" sizes="(max-width:760px) 72vw, 300px" loading="lazy" decoding="async" alt="${p[1]}" width="480" height="320">
+          <figcaption>${p[1]}</figcaption>
+        </figure>`).join('')}
+    </div>
+  </article>`).join('');
 
-            // Ensure image loaded before fitting
-            const doInitialFit = () => { fitToContain(); render(); };
-            if (img.complete && img.naturalWidth) { doInitialFit(); }
-            else { img.addEventListener('load', doInitialFit, { once: true }); }
-        }
-        // Simple Intersection Observer for animations
-        const animationObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('hidden');
-                } else {
-                    entry.target.classList.add('hidden');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        });
+/* ---------- Photography coverflow ---------- */
+const stage = $('#cfStage'), dotsEl = $('#cfDots'), countEl = $('#cfCount');
+const N = PHOTOS.length; let cur = 0, timer = null, visible = false;
+stage.innerHTML = PHOTOS.map((p, i) => `
+  <div class="cf-slide" data-i="${i}">
+    <img src="${IMG}photography/${p.file}-800.webp" srcset="${IMG}photography/${p.file}-800.webp 800w, ${IMG}photography/${p.file}.webp 1600w"
+         sizes="(max-width:760px) 70vw, 760px" alt="${p.alt}" loading="${i<3?'eager':'lazy'}" decoding="async">
+  </div>`).join('');
+dotsEl.innerHTML = PHOTOS.map((_, i) => `<button class="cf-dot" aria-label="Go to photo ${i+1}" data-i="${i}"></button>`).join('');
+const slides = $$('.cf-slide', stage), dots = $$('.cf-dot', dotsEl);
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // Apply animation observer
-            const animatedElements = document.querySelectorAll('.animate-on-scroll');
-            animatedElements.forEach(element => {
-                animationObserver.observe(element);
-                const rect = element.getBoundingClientRect();
-                if (rect.top > window.innerHeight || rect.bottom < 0) {
-                    element.classList.add('hidden');
-                }
-            });
+function layout(){
+  const H = stage.clientHeight, W = stage.clientWidth, mobile = W < 760;
+  const h0 = H * (mobile ? .96 : .94);
+  const dims = o => o === 'p' ? [h0 * 2/3, h0] : [Math.min(h0 * 1.5, W * (mobile ? .82 : .66)), h0];
+  const gap = mobile ? 10 : 22;
+  const s1 = mobile ? .78 : .74, s2 = mobile ? .62 : .58;
+  const [aw] = dims(PHOTOS[cur].o);
+  for (let k = 0; k < N; k++){
+    const el = slides[k]; const d = ((k - cur) % N + N) % N; const rel = d > N/2 ? d - N : d; // -N/2..N/2
+    const [w, h] = dims(PHOTOS[k].o);
+    el.style.width = w + 'px'; el.style.height = h + 'px';
+    let x = 0, s = 1, op = 1, dim = 0, z = 5;
+    if (rel !== 0){
+      const a = Math.abs(rel), sign = Math.sign(rel);
+      const [nw] = dims(PHOTOS[(cur + sign + N) % N].o);
+      const off1 = aw/2 + gap + (nw * s1)/2;
+      if (a === 1){ x = sign * off1; s = s1; op = 1; dim = .35; z = 4; }
+      else if (a === 2 && !mobile){ const [nw2] = dims(PHOTOS[(cur + 2*sign + N) % N].o); x = sign * (off1 + (nw*s1)/2 + gap + (nw2*s2)/2); s = s2; op = 1; dim = .6; z = 3; }
+      else { x = sign * (W/2 + w); s = .5; op = 0; dim = .8; z = 1; }
+    }
+    el.style.zIndex = z; el.style.opacity = op; el.style.setProperty('--dim', dim);
+    el.style.transform = `translate(-50%,-50%) translateX(${x}px) scale(${s})`;
+    el.classList.toggle('is-active', rel === 0);
+  }
+  dots.forEach((d, i) => d.classList.toggle('on', i === cur));
+  countEl.textContent = `${cur+1} / ${N}`;
+}
+function go(i){ cur = (i + N) % N; layout(); }
+$('#cfPrev').addEventListener('click', () => { go(cur-1); restart(); });
+$('#cfNext').addEventListener('click', () => { go(cur+1); restart(); });
+dots.forEach(d => d.addEventListener('click', () => { go(+d.dataset.i); restart(); }));
+stage.addEventListener('click', e => {
+  const el = e.target.closest('.cf-slide'); if (!el || dragged) return;
+  const i = +el.dataset.i;
+  if (i === cur) openViewer(IMG + 'photography/' + PHOTOS[cur].file + '.webp', PHOTOS[cur].alt);
+  else { const d = ((i - cur) % N + N) % N; go(d > N/2 ? cur-1 : cur+1); restart(); }
+});
+/* swipe: pointer events, vertical scroll untouched via touch-action: pan-y */
+let sx = 0, sy = 0, dragging = false, dragged = false;
+stage.addEventListener('pointerdown', e => { sx = e.clientX; sy = e.clientY; dragging = true; dragged = false; }, {passive:true});
+stage.addEventListener('pointermove', e => { if (dragging && Math.abs(e.clientX - sx) > 8) dragged = true; }, {passive:true});
+stage.addEventListener('pointerup', e => {
+  if (!dragging) return; dragging = false;
+  const dx = e.clientX - sx, dy = e.clientY - sy;
+  if (Math.abs(dx) > 36 && Math.abs(dx) > Math.abs(dy)){ go(dx < 0 ? cur+1 : cur-1); restart(); }
+  setTimeout(() => dragged = false, 0);
+}, {passive:true});
+stage.addEventListener('pointercancel', () => dragging = false);
+document.addEventListener('keydown', e => {
+  if ($('#viewer').classList.contains('open')) return;
+  if (!visible) return;
+  if (e.key === 'ArrowRight'){ go(cur+1); restart(); } else if (e.key === 'ArrowLeft'){ go(cur-1); restart(); }
+});
+/* gentle autoplay only while on screen and not hovered */
+function restart(){ clearInterval(timer); if (reduced || !visible) return; timer = setInterval(() => go(cur+1), 5200); }
+const cfWatch = new IntersectionObserver(es => { visible = es[0].isIntersecting; restart(); }, { threshold:.35 });
+cfWatch.observe(stage);
+stage.addEventListener('pointerenter', () => clearInterval(timer));
+stage.addEventListener('pointerleave', restart);
+let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(layout, 120); }, {passive:true});
+layout();
+/* run first layout without transition so nothing flies in */
+slides.forEach(s => s.style.transition = 'none'); requestAnimationFrame(() => requestAnimationFrame(() => slides.forEach(s => s.style.transition = '')));
 
-            // Carousel logic
-            const carousel = document.getElementById('designCarousel');
-            const prevBtn = document.getElementById('designPrev');
-            const nextBtn = document.getElementById('designNext');
-            const indicators = document.querySelectorAll('.indicator');
-            const totalSlides = document.querySelectorAll('.design-carousel-item').length;
-            let currentIndex = 0;
+/* ---------- Viewer: fit, pinch, wheel, drag, double-tap ---------- */
+const viewer = $('#viewer'), vImg = $('#vImg'), vCanvas = $('#vCanvas'), vTitle = $('#vTitle'), vPct = $('#vPct'), vDl = $('#vDl'), vLoading = $('#vLoading');
+let scale = 1, fit = 1, tx = 0, ty = 0, natW = 0, natH = 0;
+const pointers = new Map(); let pinchStart = 0, pinchScale = 1, lastTap = 0, panStart = null;
+function render(){ vImg.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`; vPct.textContent = Math.round(scale/fit*100) + '%'; }
+function clamp(){
+  const cw = vCanvas.clientWidth, ch = vCanvas.clientHeight, w = natW*scale, h = natH*scale;
+  tx = w <= cw ? (cw - w)/2 : Math.min(0, Math.max(cw - w, tx));
+  ty = h <= ch ? (ch - h)/2 : Math.min(0, Math.max(ch - h, ty));
+}
+function fitImage(){
+  natW = vImg.naturalWidth; natH = vImg.naturalHeight; if(!natW) return;
+  const cw = vCanvas.clientWidth, ch = vCanvas.clientHeight;
+  fit = Math.min(cw/natW, ch/natH, 1.5); scale = fit; clamp(); render();
+}
+function zoomAt(f, cx, cy){
+  const ns = Math.min(fit*5, Math.max(fit, scale*f)); const r = ns/scale;
+  tx = cx - (cx - tx)*r; ty = cy - (cy - ty)*r; scale = ns; clamp(); render();
+}
+function openViewer(src, title, pdf){
+  vTitle.textContent = title || ''; vDl.hidden = !pdf; if (pdf) vDl.href = pdf;
+  vLoading.style.display = 'flex'; vImg.style.opacity = 0; vImg.src = src; vImg.alt = title || '';
+  viewer.classList.add('open'); document.body.classList.add('locked');
+  const done = () => { vLoading.style.display = 'none'; vImg.style.opacity = 1; fitImage(); };
+  if (vImg.complete && vImg.naturalWidth) done(); else vImg.onload = done;
+}
+function closeViewer(){ viewer.classList.remove('open'); document.body.classList.remove('locked'); }
+$('#vClose').addEventListener('click', closeViewer);
+$('#vIn').addEventListener('click', () => zoomAt(1.35, vCanvas.clientWidth/2, vCanvas.clientHeight/2));
+$('#vOut').addEventListener('click', () => zoomAt(1/1.35, vCanvas.clientWidth/2, vCanvas.clientHeight/2));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeViewer(); });
+vCanvas.addEventListener('wheel', e => { e.preventDefault(); const r = vCanvas.getBoundingClientRect(); zoomAt(e.deltaY < 0 ? 1.12 : 1/1.12, e.clientX - r.left, e.clientY - r.top); }, {passive:false});
+vCanvas.addEventListener('pointerdown', e => {
+  vCanvas.setPointerCapture(e.pointerId); pointers.set(e.pointerId, {x:e.clientX, y:e.clientY});
+  if (pointers.size === 1){ panStart = {x:e.clientX - tx, y:e.clientY - ty}; vCanvas.classList.add('drag'); }
+  if (pointers.size === 2){ const [a,b] = [...pointers.values()]; pinchStart = Math.hypot(a.x-b.x, a.y-b.y); pinchScale = scale; }
+});
+vCanvas.addEventListener('pointermove', e => {
+  if (!pointers.has(e.pointerId)) return; pointers.set(e.pointerId, {x:e.clientX, y:e.clientY});
+  if (pointers.size === 2){
+    const [a,b] = [...pointers.values()]; const d = Math.hypot(a.x-b.x, a.y-b.y); const r = vCanvas.getBoundingClientRect();
+    const cx = (a.x+b.x)/2 - r.left, cy = (a.y+b.y)/2 - r.top; const target = Math.min(fit*5, Math.max(fit, pinchScale * d/pinchStart));
+    zoomAt(target/scale, cx, cy);
+  } else if (panStart){ tx = e.clientX - panStart.x; ty = e.clientY - panStart.y; clamp(); render(); }
+});
+const up = e => {
+  pointers.delete(e.pointerId);
+  if (pointers.size === 0){
+    vCanvas.classList.remove('drag'); panStart = null;
+    const now = Date.now(); if (now - lastTap < 300){ const r = vCanvas.getBoundingClientRect(); if (scale > fit*1.05){ scale = fit; clamp(); render(); } else zoomAt(2.2, e.clientX - r.left, e.clientY - r.top); } lastTap = now;
+  } else if (pointers.size === 1){ const p = [...pointers.values()][0]; panStart = {x:p.x - tx, y:p.y - ty}; }
+};
+vCanvas.addEventListener('pointerup', up); vCanvas.addEventListener('pointercancel', up);
+addEventListener('resize', () => { if (viewer.classList.contains('open')) fitImage(); });
 
-            
-            function updateCarousel(index) {
-                carousel.style.transform = `translateX(${-index * 100}%)`;
-                indicators.forEach((i, idx) => {
-                    i.classList.toggle('active', idx === index);
-                });
-            }
+/* open viewer from any [data-view] element (posters, strips, photos) */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-view]'); if (!t) return;
+  openViewer(t.dataset.view, t.dataset.title || '');
+});
+const openCv = () => openViewer(CV_IMAGE, 'Loh Wei Jian — CV', CV_PDF);
+$('#openCv').addEventListener('click', openCv); $('#openCv2').addEventListener('click', openCv);
 
-            prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                updateCarousel(currentIndex);
-            });
+/* smooth anchor scroll offset for the fixed nav (CSS scroll-margin) */
+sections.forEach(s => s.style.scrollMarginTop = '48px');
 
-            nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                updateCarousel(currentIndex);
-            });
-
-            indicators.forEach(indicator => {
-                indicator.addEventListener('click', () => {
-                    currentIndex = parseInt(indicator.dataset.slide);
-                    updateCarousel(currentIndex);
-                });
-            });
-
-            // Enhanced mobile swipe gesture
-            let startX = 0;
-            let startY = 0;
-            let isDragging = false;
-            
-            carousel.addEventListener('touchstart', e => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                isDragging = true;
-            }, { passive: true });
-
-            carousel.addEventListener('touchmove', e => {
-                if (!isDragging) return;
-                const currentX = e.touches[0].clientX;
-                const currentY = e.touches[0].clientY;
-                const deltaX = Math.abs(currentX - startX);
-                const deltaY = Math.abs(currentY - startY);
-                
-                // Prevent vertical scrolling if horizontal swipe is detected
-                if (deltaX > deltaY && deltaX > 10) {
-                    e.preventDefault();
-                }
-            }, { passive: false });
-
-            carousel.addEventListener('touchend', e => {
-                if (!isDragging) return;
-                const endX = e.changedTouches[0].clientX;
-                const endY = e.changedTouches[0].clientY;
-                const deltaX = Math.abs(endX - startX);
-                const deltaY = Math.abs(endY - startY);
-                
-                // More sensitive swipe detection for mobile
-                if (deltaX > 20 && deltaX > deltaY) {
-                    if (startX - endX > 20) nextBtn.click(); // swipe left
-                    if (endX - startX > 20) prevBtn.click(); // swipe right
-                }
-                isDragging = false;
-            }, { passive: true });
-
-            // Init first load
-            updateCarousel(currentIndex);
-            
-            // Additional touch handling for better mobile support
-            const wrapper = document.querySelector('.design-carousel-wrapper');
-            wrapper.addEventListener('touchstart', e => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                isDragging = true;
-            }, { passive: true });
-
-            wrapper.addEventListener('touchend', e => {
-                if (!isDragging) return;
-                const endX = e.changedTouches[0].clientX;
-                const endY = e.changedTouches[0].clientY;
-                const deltaX = Math.abs(endX - startX);
-                const deltaY = Math.abs(endY - startY);
-                
-                // Very sensitive swipe detection
-                if (deltaX > 15 && deltaX > deltaY) {
-                    if (startX - endX > 15) nextBtn.click(); // swipe left
-                    if (endX - startX > 15) prevBtn.click(); // swipe right
-                }
-                isDragging = false;
-            }, { passive: true });
-            });
-
-            // Enhanced navigation behavior
-            let lastScrollTop = 0;
-            const navbar = document.getElementById('navbar');
-            const scrollThreshold = 100;
-            const hideThreshold = 200;
-            let isNavbarHidden = false;
-            
-            function updateNav() {
-                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                
-                if (currentScroll > scrollThreshold) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-                
-                if (currentScroll > hideThreshold) {
-                    if (currentScroll > lastScrollTop + 5 && !isNavbarHidden) {
-                        navbar.classList.add('nav-hidden');
-                        isNavbarHidden = true;
-                    } else if (currentScroll < lastScrollTop - 5 && isNavbarHidden) {
-                        navbar.classList.remove('nav-hidden');
-                        isNavbarHidden = false;
-                    }
-                } else {
-                    if (isNavbarHidden) {
-                        navbar.classList.remove('nav-hidden');
-                        isNavbarHidden = false;
-                    }
-                }
-                
-                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-            }
-            
-            // Throttled scroll event
-            let ticking = false;
-            window.addEventListener('scroll', () => {
-                if (!ticking) {
-                    requestAnimationFrame(() => {
-                        updateNav();
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            });
-
-            // Add parallax effect to hero
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const hero = document.querySelector('.hero');
-                const rate = scrolled * -0.5;
-                hero.style.transform = `translateY(${rate}px)`;
-        });
-    
-    document.addEventListener("DOMContentLoaded", function () {
-        const carousel = document.getElementById('designCarousel');
-        const prevBtn = document.getElementById('designPrev');
-        const nextBtn = document.getElementById('designNext');
-        const indicators = document.querySelectorAll('.indicator');
-
-        const totalSlides = document.querySelectorAll('.design-carousel-item').length;
-        let currentIndex = 0;
-
-        function updateCarousel(index) {
-            const offset = -index * 100;
-            carousel.style.transform = `translateX(${offset}%)`;
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-            if (indicators[index]) {
-                indicators[index].classList.add('active');
-            }
-        }
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateCarousel(currentIndex);
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateCarousel(currentIndex);
-        });
-
-        indicators.forEach(indicator => {
-            indicator.addEventListener('click', () => {                
-              currentIndex = parseInt(indicator.dataset.slide);
-              updateCarousel(currentIndex);
-              });
-        });
-
-        // Initial load
-        updateCarousel(currentIndex);
-    });
-
-    // Preload all photo slider images
-    (function() {
-        const urls = [
-            'https://github.com/Wi-Jan/portfolio-images/raw/main/DSC_4948.jpg',
-            'https://github.com/Wi-Jan/portfolio-images/raw/main/61931CBB-6984-4C01-9FAC-E36FD29BF403.JPG',
-            'https://github.com/Wi-Jan/portfolio-images/raw/main/2556554B-5D0D-4C0A-B2CA-5E36C0896EBC.JPG',
-            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0589.jpeg',
-            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0032.JPG',
-            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0545.jpg',
-            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0661.jpg',
-            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_0797.jpg',
-            'https://github.com/Wi-Jan/portfolio-images/raw/main/IMG_1058.jpg'
-        ];
-        urls.forEach(url => { const img = new Image(); img.src = url; });
-    })();
-
-    (function() {
-        const track   = document.getElementById('photoSliderTrack');
-        const prevBtn = document.getElementById('photoSliderPrev');
-        const nextBtn = document.getElementById('photoSliderNext');
-        const dotsEl  = document.getElementById('photoSliderDots');
-        const slides  = Array.from(track.querySelectorAll('.photo-slide'));
-        const total   = slides.length;
-        let current   = 0;
-
-        // Build dot indicators
-        slides.forEach((_, i) => {
-            const d = document.createElement('button');
-            d.className = 'photo-slider-dot' + (i === 0 ? ' active' : '');
-            d.setAttribute('aria-label', 'Go to photo ' + (i + 1));
-            d.addEventListener('click', () => goTo(i));
-            dotsEl.appendChild(d);
-        });
-
-        function goTo(index) {
-            current = (index + total) % total;
-            renderSlides();
-        }
-
-        function renderSlides() {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('ps-active', 'ps-prev', 'ps-next', 'ps-hidden');
-                const diff = (i - current + total) % total;
-                if (diff === 0) {
-                    slide.classList.add('ps-active');
-                } else if (diff === 1) {
-                    slide.classList.add('ps-next');
-                } else if (diff === total - 1) {
-                    slide.classList.add('ps-prev');
-                } else {
-                    slide.classList.add('ps-hidden');
-                }
-            });
-            // update dots
-            dotsEl.querySelectorAll('.photo-slider-dot').forEach((d, i) => {
-                d.classList.toggle('active', i === current);
-            });
-        }
-
-        prevBtn.addEventListener('click', () => goTo(current - 1));
-        nextBtn.addEventListener('click', () => goTo(current + 1));
-
-        // Click on side slides to navigate
-        slides.forEach((slide, i) => {
-            slide.addEventListener('click', () => {
-                if (slide.classList.contains('ps-prev')) goTo(current - 1);
-                else if (slide.classList.contains('ps-next')) goTo(current + 1);
-            });
-        });
-
-        // Touch/swipe support
-        let touchStartX = 0;
-        track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-        track.addEventListener('touchend', e => {
-            const dx = e.changedTouches[0].clientX - touchStartX;
-            if (Math.abs(dx) > 40) dx < 0 ? goTo(current + 1) : goTo(current - 1);
-        }, { passive: true });
-
-        renderSlides();
-    })();
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el = entry.target;
-                el.style.backgroundImage = `url('${el.dataset.bg}')`;
-                observer.unobserve(el);
-            }
-        });
-    });
-
-    document.querySelectorAll('.lazy-bg').forEach(el => observer.observe(el));
-
+observeReveals(document);
+})();
 </script>
-
 </body>
 </html>

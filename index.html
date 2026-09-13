@@ -778,6 +778,14 @@ function setMenu(open){
   burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   document.body.classList.toggle('locked', open);
 }
+/* brand "back to top": scroll without leaving #top in the address bar */
+$('.brand').addEventListener('click', e => {
+  e.preventDefault();
+  setMenu(false);
+  window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+});
+
 burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
 $$('#menu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 

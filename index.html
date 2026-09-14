@@ -73,6 +73,8 @@ h3{font-size:clamp(1.15rem,1.7vw,1.35rem);font-weight:700}
 .links a{position:relative;display:block;padding:8px 10px;border-radius:8px;font-size:.86rem;white-space:nowrap;font-weight:500;color:var(--ink-2);transition:color .2s,background .2s}
 .links a:hover{color:var(--ink);background:var(--bg-2)}
 .links a.active{color:var(--acc);font-weight:600}
+.links a.ext{color:var(--acc);font-weight:600;background:var(--acc-soft);margin-left:6px}
+.links a.ext:hover{background:#dbe6ff;color:var(--acc-2)}
 .links a.active::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;border-radius:2px;background:var(--acc)}
 .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;white-space:nowrap;flex:0 0 auto;border-radius:999px;background:var(--ink);color:#fff;font-weight:600;font-size:.85rem;transition:background .2s,transform .2s var(--ease)}
 .nav-cta:hover{background:var(--acc);transform:translateY(-1px)}
@@ -332,6 +334,7 @@ body.locked{overflow:hidden}
       <li><a href="#photography">Photography</a></li>
       <li><a href="#design">Design</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a class="ext" href="https://claude.ai/code/artifact/5418eca0-81a2-49f1-bc9c-79559176b773" target="_blank" rel="noopener">Logbook</a></li>
     </ul>
     <button class="nav-cta" id="navCv">View CV</button>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
@@ -347,6 +350,7 @@ body.locked{overflow:hidden}
   <a href="#photography">Photography<small>07</small></a>
   <a href="#design">Design<small>08</small></a>
   <a href="#contact">Contact<small>09</small></a>
+  <a href="https://claude.ai/code/artifact/5418eca0-81a2-49f1-bc9c-79559176b773" target="_blank" rel="noopener">Internship Logbook<small>↗</small></a>
 </nav>
 
 <main id="top">
